@@ -1,0 +1,8 @@
+#!name= 波点音乐签到
+#!desc= 波点音乐获取Cookie
+
+[Script]
+BDYYCookie = type=http-request, pattern=^https?:\/\/bd-api\.kuwo\.cn\/api\/ucenter\/users\/pub.+uid=\d+&token=, max-size=3145728, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/Bdyy/bdyy.js, timeout=60, script-update-interval=0
+
+[MITM]
+hostname = %APPEND% bd-api.kuwo.cn

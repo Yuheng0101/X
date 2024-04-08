@@ -1,0 +1,12 @@
+#!name = 波点音乐签到
+#!desc = 波点音乐获取Cookie
+#!openUrl = 
+#!icon = https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/05/b9/57/05b9577c-3773-cd2b-5a99-49c0dc3f331d/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/120x120.png
+#!author = 𝘠𝘶𝘩𝘦𝘯𝘨
+#!date = 2023-11-02
+
+[Script]
+http-request ^https?:\/\/bd-api\.kuwo\.cn\/api\/ucenter\/users\/pub.+uid=\d+&token= script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/Bdyy/bdyy.js, timeout=60, tag=BDYYCookie
+
+[Mitm]
+hostname = bd-api.kuwo.cn
