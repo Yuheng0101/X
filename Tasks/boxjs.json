@@ -710,7 +710,8 @@
         "cheerio.js",
         "Buffer.js",
         "xmldom.js",
-        "moment.js"
+        "moment.js",
+        "crypto.js"
       ],
       "settings": [
         {
@@ -756,6 +757,14 @@
         {
           "id": "moment.js",
           "name": "moment",
+          "val": null,
+          "type": "textarea",
+          "rows": 5,
+          "desc": ""
+        },
+        {
+          "id": "crypto.js",
+          "name": "crypto",
           "val": null,
           "type": "textarea",
           "rows": 5,
