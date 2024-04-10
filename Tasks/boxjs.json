@@ -854,6 +854,65 @@
         "https://raw.githubusercontent.com/githubdulong/Script/master/Images/testflight.png"
       ],
       "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js"
+    },
+    {
+      "id": "yuheng.4ksj",
+      "name": "4K世界自动签到",
+      "descs_html": [
+        "<p style='color:#3498db;text-align:center;'>说明请查看脚本注释👇</p>",
+        "<a style='color:#686de0;display:block;text-align:center;' target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/4ksj.js'>脚本链接</a>"
+      ],
+      "keys": [
+        "4k_wrold_debug",
+        "4k_world_split_char",
+        "4k_world_accounts",
+        "4k_world_passwords",
+        "4k_world_cookies"
+      ],
+      "settings": [
+        {
+          "id": "4k_wrold_debug",
+          "name": "是否开启调试模式",
+          "val": false,
+          "type": "boolean",
+          "desc": ""
+        },
+        {
+          "id": "4k_world_split_char",
+          "name": "多账号分隔符, 默认即可",
+          "val": "&",
+          "type": "text",
+          "desc": ""
+        },
+        {
+          "id": "4k_world_accounts",
+          "name": "登录账号",
+          "val": null,
+          "type": "text",
+          "desc": ""
+        },
+        {
+          "id": "4k_world_passwords",
+          "name": "登录密码",
+          "val": null,
+          "type": "text",
+          "desc": ""
+        },
+        {
+          "id": "4k_world_cookies",
+          "name": "用户 COOKIE",
+          "val": null,
+          "type": "text",
+          "desc": ""
+        }
+      ],
+      "author": "@yuheng",
+      "repo": "https://github.com/Yuheng0101/X",
+      "icons": [
+        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/4ksj.png",
+        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/4ksj.png"
+      ],
+      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/4ksj.js"
     }
   ]
 }
