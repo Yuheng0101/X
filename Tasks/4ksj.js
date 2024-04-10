@@ -197,8 +197,7 @@ class World4K {
                 const cookie = `HxHg_2132_saltkey=${saltkey || this.saltkey}; HxHg_2132_auth=${auth};`
                 this.updateCookie(cookie)
                 // -------------------
-                this.username = /\s(\w+)，现在将转入登录前页面/.exec(response.body)?.[1] || ''
-                $.debug(`[${this.username}] 登录成功: ${this.username}`, `COOKIE: ${cookie}`)
+                $.debug(`[${this.user}] 登录成功 COOKIE: ${cookie}`)
             } else {
                 const errorMsg = /errorhandle_\(\'(.+?)\'/.exec(response.body)?.[1] || '未知错误'
                 $.error(`登录失败: ${errorMsg}`)
@@ -432,7 +431,7 @@ async function fetchData(o) {
             params, // 请求参数 ➟ get/psot
             dataType = 'form', // 请求数据类型
             deviceType = 'mobile', // 设备类型
-            resultType = 'data', // 返回数据类型
+            resultType = 'buffer', // 返回数据类型
             timeout = 1e4, // 超时时间
             useProxy = false, // 是否使用代理
             autoCookie = false, // 是否自动携带cookie
@@ -459,6 +458,8 @@ async function fetchData(o) {
             url,
             method,
             headers,
+            'binary-mode': resultType == 'buffer',
+            responseType: resultType == 'response' ? 'arraybuffer' : 'text',
             // Surge/Loon新增字段
             'auto-cookie': autoCookie,
             // env.js默认重定向字段
@@ -500,7 +501,20 @@ async function fetchData(o) {
                     $.log(`请求接口: ${u} 异常: ${errorMsg}`)
                     reject(errorMsg)
                 } else {
-                    resolve(resultType === 'response' ? response : $.toObj(data) || data)
+                    const _decode = (response) => {
+                        const buffer = response.rawBody ?? response.body
+                        const decoder = new TextDecoder($.encoding)
+                        return decoder.decode(new Uint8Array(buffer))
+                    }
+                    resolve(
+                        resultType === 'buffer'
+                            ? $.isQuanX()
+                                ? response.body
+                                : _decode(response)
+                            : resultType === 'response'
+                            ? response
+                            : $.toObj(data) || data
+                    )
                 }
             })
         })
