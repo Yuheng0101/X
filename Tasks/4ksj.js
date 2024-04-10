@@ -4,7 +4,7 @@
  * @feedback https://t.me/yqc_777/
  * @author 𝐘𝐇
  * @update 20240410
- * @version 1.0.0
+ * @version 1.0.1
  ******************************************
 脚本声明:
 1. 本脚本仅用于学习研究，禁止用于商业用途
@@ -334,11 +334,13 @@ class World4K {
         }
         if (world.userInfo.status != 1) {
             await world.signIn()
+            $.message.push(`签到结果：${world.userInfo.signText}`)
             if (world.userInfo.status == 1) {
                 await world.userinfo()
             }
+        } else {
+            $.message.push(`签到结果：${world.userInfo.signText}`)
         }
-        $.message.push(`签到结果：${world.userInfo.signText}`)
         $.message.push(world.userInfo.dynamic)
         await showMsg($.name, `用户昵称：${world.userInfo.nick}(${world.uid})`, $.message.join('\n'))
         $.message = []
@@ -459,7 +461,6 @@ async function fetchData(o) {
             method,
             headers,
             'binary-mode': resultType == 'buffer',
-            responseType: resultType == 'response' ? 'arraybuffer' : 'text',
             // Surge/Loon新增字段
             'auto-cookie': autoCookie,
             // env.js默认重定向字段
