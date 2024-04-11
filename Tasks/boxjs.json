@@ -915,16 +915,13 @@
       "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/4ksj.js"
     },
     {
-      "id": "yuheng.javday",
+      "id": "yuheng.javday1",
       "name": "𝐉𝐀𝐕𝐃𝐚𝐲每日推荐",
       "descs_html": [
         "<p style='color:#3498db;text-align:center;'>说明请查看脚本注释👇</p>",
         "<a style='color:#686de0;display:block;text-align:center;' target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/javday.js'>脚本链接</a>"
       ],
-      "keys": [
-        "javday_wrold_debug",
-        "javday_type"
-      ],
+      "keys": ["javday_wrold_debug", "javday_type", "javday_item_type"],
       "settings": [
         {
           "id": "javday_wrold_debug",
@@ -963,6 +960,23 @@
             {
               "key": "蘿莉社",
               "label": "蘿莉社"
+            }
+          ]
+        },
+        {
+          "id": "javday_item_type",
+          "name": "选择类型",
+          "val": "随机",
+          "type": "radios",
+          "desc": "选择推送类型, 默认'随机'",
+          "items": [
+            {
+              "key": "最新",
+              "label": "最新"
+            },
+            {
+              "key": "随机",
+              "label": "随机"
             }
           ]
         }

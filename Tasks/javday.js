@@ -3,7 +3,7 @@
  * @channel https://t.me/yqc_123/
  * @feedback https://t.me/yqc_777/
  * @update 20240411
- * @version 1.0.1
+ * @version 1.0.2
  ******************************************
 脚本声明:
 1. 本脚本仅用于学习研究，禁止用于商业用途
@@ -76,6 +76,8 @@ $.headers = { 'user-agent': `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebK
 // 缓存区域
 const USER_TYPE = ($.isNode() ? process.env.JAVDAY_TYPE : $.getdata('javday_type')) || '人氣系列'
 $.debug(`🔰 用户选择: ${USER_TYPE}`)
+const LIST_TYPE = (($.isNode() ? process.env.JAVDAY_ITEM_TYPE : $.getdata('javday_item_type')) || '随机')
+$.debug(`🔰 类型选择: ${LIST_TYPE}`)
 class JAVDay {
     async getList() {
         try {
@@ -102,7 +104,8 @@ class JAVDay {
         }
     }
     async getDetail() {
-        const { title, thumb, link } = this.list[0]
+        const index = LIST_TYPE == '随机' ? Math.floor(Math.random() * this.list.length) : 0
+        const { title, thumb, link } = this.list[index]
         $.debug(`🔰 获取详情: ${title}`)
         try {
             const otps = {
