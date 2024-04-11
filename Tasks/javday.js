@@ -3,7 +3,7 @@
  * @channel https://t.me/yqc_123/
  * @feedback https://t.me/yqc_777/
  * @update 20240411
- * @version 1.0.0
+ * @version 1.0.1
  ******************************************
 脚本声明:
 1. 本脚本仅用于学习研究，禁止用于商业用途
@@ -236,7 +236,16 @@ async function showMsg(n, o, i, t) {
     }
     // 新版surge
     else if ($.isSurge()) {
-        $notification.post(n, o, i, t)
+        if (typeof t === 'object') {
+            if (t?.['text']) {
+                Object.assign(t, { action: 'clipboard', text: t['text'] })
+            } else if (t?.['open-url']) {
+                Object.assign(t, { action: 'open-url', url: t['open-url'] })
+            }
+            $notification.post(n, o, i, t)
+        } else {
+            $.msg(n, o, i, t)
+        }
     }
     // iOS16存在媒体链接不通知
     else if ($.isLoon()) {
