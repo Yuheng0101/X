@@ -179,7 +179,7 @@ class World4K {
                 body: {
                     formhash: this.formhash,
                     referer: encodeURIComponent(`${baseURL}/qiandao.php`),
-                    username: this.user,
+                    username: escape(this.user),
                     password: this.pwd,
                     questionid: 0,
                     answer: ''
@@ -320,6 +320,7 @@ class World4K {
     if (ACCOUNT_ARR.length !== PASSWORD_ARR.length) return $.msg($.name, '账号长度与密码长度不一致')
     await showNotice()
     await loadRemoteScriptByCache('https://cdn.jsdelivr.net/gh/Yuheng0101/X@main/Utils/cheerio.js', 'createCheerio', 'cheerio')
+    await loadRemoteScriptByCache('https://cdn.jsdelivr.net/gh/Yuheng0101/X@main/Utils/iconv-lite.js', 'loadIconv', 'iconv')
     for (let i = 0; i < ACCOUNT_ARR.length; i++) {
         const world = new World4K(ACCOUNT_ARR[i], PASSWORD_ARR[i])
         await world.userinfo()
@@ -346,6 +347,22 @@ class World4K {
         $.message = []
     }
 })().finally(() => $.done({ ok: 1 }))
+function escape(str) {
+    const iconv = $.isNode() ? require('iconv-lite') : $.iconv
+    const zhReg =
+        /^(?:[\u3400-\u4DB5\u4E00-\u9FEA\uFA0E\uFA0F\uFA11\uFA13\uFA14\uFA1F\uFA21\uFA23\uFA24\uFA27-\uFA29]|[\uD840-\uD868\uD86A-\uD86C\uD86F-\uD872\uD874-\uD879][\uDC00-\uDFFF]|\uD869[\uDC00-\uDED6\uDF00-\uDFFF]|\uD86D[\uDC00-\uDF34\uDF40-\uDFFF]|\uD86E[\uDC00-\uDC1D\uDC20-\uDFFF]|\uD873[\uDC00-\uDEA1\uDEB0-\uDFFF]|\uD87A[\uDC00-\uDFE0])+$/
+    return Array.from(str)
+        .map((char) =>
+            zhReg.test(char)
+                ? iconv
+                      .encode(char, $.encoding)
+                      .toString('hex')
+                      .toUpperCase()
+                      .replace(/(\w{2})/g, '%$1')
+                : char
+        )
+        .join('')
+}
 // 免责声明
 async function showNotice() {
     $.log('==============📣免责声明📣==============')
