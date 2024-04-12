@@ -712,7 +712,7 @@
         "xmldom.js",
         "moment.js",
         "crypto.js",
-        "iconv-lite.js"
+        "iconv.js"
       ],
       "settings": [
         {
@@ -772,7 +772,7 @@
           "desc": ""
         },
         {
-          "id": "iconv-lite.js",
+          "id": "iconv.js",
           "name": "iconv-lite",
           "val": null,
           "type": "textarea",
