@@ -711,7 +711,8 @@
         "Buffer.js",
         "xmldom.js",
         "moment.js",
-        "crypto.js"
+        "crypto.js",
+        "iconv-lite.js"
       ],
       "settings": [
         {
@@ -765,6 +766,14 @@
         {
           "id": "crypto.js",
           "name": "crypto",
+          "val": null,
+          "type": "textarea",
+          "rows": 5,
+          "desc": ""
+        },
+        {
+          "id": "iconv-lite.js",
+          "name": "iconv-lite",
           "val": null,
           "type": "textarea",
           "rows": 5,
