@@ -755,8 +755,8 @@
           "desc": ""
         },
         {
-          "id": "moment.js",
-          "name": "moment",
+          "id": "dayjs.js",
+          "name": "dayjs",
           "val": null,
           "type": "textarea",
           "rows": 5,
