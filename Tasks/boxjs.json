@@ -16,6 +16,7 @@
         "<p style='margin-left:20px;color:#ff0000;font-weight:900;font-size:30px;'>不懂请不要乱动! </p>"
       ],
       "keys": [
+        "moyu__notify_with_media",
         "moyu_show_another_date",
         "moyu_show_almanac",
         "moyu_custom_notify_img",
@@ -23,6 +24,13 @@
         "moyu_festival_conf"
       ],
       "settings": [
+        {
+          "id": "moyu__notify_with_media",
+          "name": "是否通知带图片",
+          "val": true,
+          "type": "boolean",
+          "desc": ""
+        },
         {
           "id": "moyu_show_another_date",
           "name": "当传入日期为阳历时, 是否展示农历, 当传入阴历时, 是否展示阳历",
