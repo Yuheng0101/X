@@ -317,7 +317,7 @@ const notify = async () => {
     // 发送通知
     const imageUrl = $.CUSTOM_NOTIFY_IMG || $.images[Math.floor(Math.random() * $.images.length)]
     $.debug(`🎬 通知图片: ${imageUrl}`)
-    await showMsg(title, subTitle, content, { $media: imageUrl })
+    await showMsg(title, subTitle, content, { mediaUrl: imageUrl })
 }
 /** 阴历转阳历 */
 function Lunar2Solar(year, month, day) {
