@@ -16,7 +16,8 @@
         "<p style='margin-left:20px;color:#ff0000;font-weight:900;font-size:30px;'>不懂请不要乱动! </p>"
       ],
       "keys": [
-        "moyu__notify_with_media",
+        "moyu_notify_with_media",
+        "moyu_debug",
         "moyu_show_another_date",
         "moyu_show_almanac",
         "moyu_custom_notify_img",
@@ -25,9 +26,16 @@
       ],
       "settings": [
         {
-          "id": "moyu__notify_with_media",
+          "id": "moyu_notify_with_media",
           "name": "是否通知带图片",
           "val": true,
+          "type": "boolean",
+          "desc": ""
+        },
+        {
+          "id": "moyu_debug",
+          "name": "是否开启调试模式",
+          "val": false,
           "type": "boolean",
           "desc": ""
         },

@@ -117,7 +117,7 @@ const calendar = { lunarInfo: [19416, 19168, 42352, 21717, 53856, 55632, 91476, 
 // ----------------------------------
 // 配置项
 // 这里兼容iOS 16系统上有媒体链接Loon/Surge上不通知的问题
-$.notifyWithMedia = $.getdata(`${$.scriptname.toLowerCase()}_notify_with_media`) || true
+$.notifyWithMedia = $.toObj($.getdata(`${$.scriptname.toLowerCase()}_notify_with_media`))
 $.debug(`🔰 媒体通知: ${$.notifyWithMedia ? '开启' : '关闭'}`)
 // 开发者模式
 $.logLevel = $.toObj($.isNode() ? process.env[`${$.scriptname}_DEBUG`] : $.getdata(`${$.scriptname.toLowerCase()}_debug`)) ? 'debug' : 'info'
@@ -316,6 +316,7 @@ const notify = async () => {
     }
     // 发送通知
     const imageUrl = $.CUSTOM_NOTIFY_IMG || $.images[Math.floor(Math.random() * $.images.length)]
+    $.debug(`🎬 通知图片: ${imageUrl}`)
     await showMsg(title, subTitle, content, { $media: imageUrl })
 }
 /** 阴历转阳历 */
