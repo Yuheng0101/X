@@ -797,7 +797,7 @@
         "cheerio.js",
         "Buffer.js",
         "xmldom.js",
-        "moment.js",
+        "dayjs.js",
         "crypto.js",
         "iconv.js"
       ],
