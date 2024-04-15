@@ -266,7 +266,7 @@ class HL {
         for (let i = 0; i < hl.list.length; i++) {
             const { title, date = '', link, thumb, status = '' } = hl.list[i]
             const $media = $.isSurge() ? thumb : ''
-            const $open = `${hl.baseURL}${link}`
+            const $open = /^http/.test(link) ? link : `${hl.baseURL}${link}`
             let content = ``
             status && (content += `[${status}]`)
             title && (content += `${title}`)
