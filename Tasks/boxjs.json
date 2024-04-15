@@ -416,14 +416,85 @@
       "descs_html": [
         "<a target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/hlbdy.js'>跳转脚本</a>"
       ],
-      "keys": ["hlbdy_nav_url"],
+      "keys": [
+        "hlbdy_notify_with_media",
+        "hlbdy_debug",
+        "hlbdy_type",
+        "hlbdy_notify_type"
+      ],
       "settings": [
         {
-          "id": "hlbdy_nav_url",
-          "name": "黑料最新域名",
-          "val": "https://155.fun",
-          "type": "text",
-          "desc": "配置最新导航域名"
+          "id": "hlbdy_notify_type",
+          "name": "通知类型",
+          "val": "0",
+          "type": "radios",
+          "desc": "默认组合通知(没有媒体通知), Surge用户建议使用单独通知",
+          "items": [
+            {
+              "key": "0",
+              "label": "组合通知"
+            },
+            {
+              "key": "1",
+              "label": "单独通知"
+            }
+
+          ]
+        },
+        {
+          "id": "hlbdy_notify_with_media",
+          "name": "是否开启媒体通知",
+          "val": true,
+          "type": "boolean",
+          "desc": "iOS16.5.x~iOS16.7.x用户请关闭该选项, 默认开启"
+        },
+        {
+          "id": "hlbdy_debug",
+          "name": "是否开启调试模式",
+          "val": false,
+          "type": "boolean",
+          "desc": "默认关闭"
+        },
+        {
+          "id": "hlbdy_type",
+          "name": "是否开启媒体通知",
+          "val": "最新黑料",
+          "type": "radios",
+          "desc": "默认最新黑料",
+          "items": [
+            {
+              "key": "最新黑料",
+              "label": "最新黑料"
+            },
+            {
+              "key": "今日黑料",
+              "label": "今日黑料"
+            },
+            {
+              "key": "今日热搜",
+              "label": "今日热搜"
+            },
+            {
+              "key": "热门大瓜",
+              "label": "热门大瓜"
+            },
+            {
+              "key": "每日TOP10",
+              "label": "每日TOP10"
+            },
+            {
+              "key": "网红乱象",
+              "label": "网红乱象"
+            },
+            {
+              "key": "原创社区",
+              "label": "原创社区"
+            },
+            {
+              "key": "独家爆料",
+              "label": "独家爆料"
+            }
+          ]
         }
       ],
       "author": "@yuheng",
@@ -432,7 +503,7 @@
         "https://raw.githubusercontent.com/Toperlock/Quantumult/main/icon/heiliao.png",
         "https://raw.githubusercontent.com/Toperlock/Quantumult/main/icon/heiliao.png"
       ],
-      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/hlbdy.js"
+      "script": "http://192.168.68.169:5501/NewProject/Task/%E9%BB%91%E6%96%99%E4%B8%8D%E6%89%93%E7%83%8A/hlbdy.js"
     },
     {
       "id": "yuheng.xsy",
