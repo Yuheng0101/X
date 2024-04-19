@@ -796,7 +796,6 @@
         "JSEncrypt.js",
         "cheerio.js",
         "Buffer.js",
-        "xmldom.js",
         "dayjs.js",
         "crypto.js",
         "iconv.js"
@@ -829,14 +828,6 @@
         {
           "id": "Buffer.js",
           "name": "Buffer",
-          "val": null,
-          "type": "textarea",
-          "rows": 5,
-          "desc": ""
-        },
-        {
-          "id": "xmldom.js",
-          "name": "xmldom(DOMParser)",
           "val": null,
           "type": "textarea",
           "rows": 5,
