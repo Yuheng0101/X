@@ -371,32 +371,33 @@ async function showNotice() {
  * @returns
  */
 function loadRemoteScriptByCache(scriptUrl, functionName, scriptName) {
-  const cacheName = `${scriptName}.js`;
-  const cache = $.getdata(cacheName) || ``;
+  const cacheName = `${scriptName}.js`
+  const cache = $.getdata(cacheName) || ``
   // ------------
   // 统一旧版 cheerio 缓存名
-  $.getdata(`cheerio__code`) && $.setdata(``, `cheerio__code`);
+  $.getdata(`cheerio__code`) && $.setdata(``, `cheerio__code`)
   // ------------
   return new Promise((resolve, reject) => {
-    if (cache) {
-      eval(cache), ($[scriptName] = eval(functionName)());
-      console.log(`☑️ 缓存加载${functionName}成功`);
-      resolve();
-    } else {
-      fetchData({ url: scriptUrl, useProxy: $.useProxy })
-        .then((script) => {
-          eval(script), ($[scriptName] = eval(functionName)());
-          console.log(`☑️ 远程加载${functionName}成功`);
-          $.setdata(script, cacheName);
-          console.log(`☑️ 缓存${functionName}成功`);
-          resolve();
-        })
-        .catch((err) => {
-          $.error(`⚠️ 远程加载${functionName}失败`, err);
-          reject(err);
-        });
-    }
-  });
+      if (cache) {
+          eval(cache), ($[scriptName] = eval(functionName)())
+          console.log(`☑️ 缓存加载${functionName}成功`)
+          resolve()
+      } else {
+          $.http
+              .get(scriptUrl)
+              .then(({ body: script }) => {
+                  eval(script), ($[scriptName] = eval(functionName)())
+                  console.log(`☑️ 远程加载${functionName}成功`)
+                  $.setdata(script, cacheName)
+                  console.log(`☑️ 缓存${functionName}成功`)
+                  resolve()
+              })
+              .catch((err) => {
+                  $.error(`⚠️ 远程加载${functionName}失败`, err)
+                  reject(err)
+              })
+      }
+  })
 }
 // prettier-ignore
 function operator(r){const e=["𝟎","𝟏","𝟐","𝟑","𝟒","𝟓","𝟔","𝟕","𝟖","𝟗","𝐚","𝐛","𝐜","𝐝","𝐞","𝐟","𝐠","𝐡","𝐢","𝐣","𝐤","𝐥","𝐦","𝐧","𝐨","𝐩","𝐪","𝐫","𝐬","𝐭","𝐮","𝐯","𝐰","𝐱","𝐲","𝐳","𝐀","𝐁","𝐂","𝐃","𝐄","𝐅","𝐆","𝐇","𝐈","𝐉","𝐊","𝐋","𝐌","𝐍","𝐎","𝐏","𝐐","𝐑","𝐒","𝐓","𝐔","𝐕","𝐖","𝐗","𝐘","𝐙"],o={48:0,49:1,50:2,51:3,52:4,53:5,54:6,55:7,56:8,57:9,65:36,66:37,67:38,68:39,69:40,70:41,71:42,72:43,73:44,74:45,75:46,76:47,77:48,78:49,79:50,80:51,81:52,82:53,83:54,84:55,85:56,86:57,87:58,88:59,89:60,90:61,97:10,98:11,99:12,100:13,101:14,102:15,103:16,104:17,105:18,106:19,107:20,108:21,109:22,110:23,111:24,112:25,113:26,114:27,115:28,116:29,117:30,118:31,119:32,120:33,121:34,122:35};return r.replace(/[0-9A-z]/g,(r=>e[o[r.charCodeAt(0)]]))}
