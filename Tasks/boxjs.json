@@ -438,7 +438,6 @@
               "key": "1",
               "label": "单独通知"
             }
-
           ]
         },
         {
@@ -1075,6 +1074,103 @@
         "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/javday.png"
       ],
       "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/javday.js"
+    },
+    {
+      "id": "yuheng.meitu",
+      "name": "美图鉴赏",
+      "descs_html": [
+        "<p style='color:#3498db;text-align:center;'>希望使用脚本让你快乐每一天😊</p>"
+      ],
+      "keys": ["meitu_type"],
+      "settings": [
+        {
+          "id": "meitu_type",
+          "name": "推荐类型",
+          "val": "1024",
+          "type": "radios",
+          "desc": "选择图源, 默认'1024'",
+          "items": [
+            {
+              "key": "4KHD - popular",
+              "label": "4KHD - popular"
+            },
+            {
+              "key": "4KHD - cosplay",
+              "label": "4KHD - cosplay"
+            },
+            {
+              "key": "4KHD - album",
+              "label": "4KHD - album"
+            },
+            {
+              "key": "115ZY - 街拍偷拍",
+              "label": "115ZY - 街拍偷拍"
+            },
+            {
+              "key": "115ZY - 丝袜美腿",
+              "label": "115ZY - 丝袜美腿"
+            },
+            {
+              "key": "115ZY - 欧美风情",
+              "label": "115ZY - 欧美风情"
+            },
+            {
+              "key": "115ZY - 卡通漫画",
+              "label": "115ZY - 卡通漫画"
+            },            {
+              "key": "115ZY - 网友自拍",
+              "label": "115ZY - 网友自拍"
+            },
+            {
+              "key": "115ZY - 露出激情",
+              "label": "115ZY - 露出激情"
+            },
+            {
+              "key": "115ZY - 唯美写真",
+              "label": "115ZY - 唯美写真"
+            },
+            {
+              "key": "115ZY - 女优情报",
+              "label": "115ZY - 女优情报"
+            },
+            {
+              "key": "1024 - 唯美写真",
+              "label": "1024 - 唯美写真"
+            },
+            {
+              "key": "1024 - 网友自拍",
+              "label": "1024 - 网友自拍"
+            },
+            {
+              "key": "1024 - 露出激情",
+              "label": "1024 - 露出激情"
+            },
+            {
+              "key": "1024 - 美乳美臀",
+              "label": "1024 - 美乳美臀"
+            },
+            {
+              "key": "1024 - 丝袜美腿",
+              "label": "1024 - 丝袜美腿"
+            },
+            {
+              "key": "1024 - 卡通漫画",
+              "label": "1024 - 卡通漫画"
+            },
+            {
+              "key": "1024 - AI图展",
+              "label": "1024 - AI图展"
+            }
+          ]
+        }
+      ],
+      "author": "@yuheng",
+      "repo": "https://github.com/Yuheng0101/X",
+      "icons": [
+        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/meitu.png",
+        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/meitu.png"
+      ],
+      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/meitu/meitu.js"
     }
   ]
 }

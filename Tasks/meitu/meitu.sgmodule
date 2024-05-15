@@ -1,0 +1,10 @@
+#!name=美图欣赏
+#!desc=多看美图助于身心健康😊
+
+[Script]
+meitu = type=http-request, pattern=^https?:\/\/mei\.tu, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/meitu/meitu.js, requires-body=true, max-size=-1, timeout=60
+
+美图鉴赏 = type=cron, cronexp="30 20 * * *", script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/meitu/meitu.js, timeout=120, wake-system=1
+
+[MITM]
+hostname = %APPEND% mei.tu
