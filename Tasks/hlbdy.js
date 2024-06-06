@@ -285,7 +285,7 @@ class HL {
         $.error(`[${USER_SELECT}] 近3日没有更新记录~`)
     }
 })()
-    .catch((error) => $.logError(error))
+    .catch((error) => $.logErr(error))
     .finally(() => $.done({ ok: 1 }))
 // ------------
 // 免责声明
