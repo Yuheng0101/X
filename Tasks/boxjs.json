@@ -585,8 +585,16 @@
       "descs_html": [
         "<a target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/60s.js'>跳转脚本</a>"
       ],
-      "keys": [],
-      "settings": [],
+      "keys": ["60s_debug"],
+      "settings": [
+        {
+          "id": "60s_debug",
+          "name": "是否开启调试模式",
+          "val": false,
+          "type": "boolean",
+          "desc": ""
+        }
+      ],
       "author": "@yuheng",
       "repo": "https://github.com/Yuheng0101/X",
       "icons": [
