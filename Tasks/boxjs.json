@@ -1222,6 +1222,41 @@
         "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/bus.png"
       ],
       "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/javbus.js"
+    },
+    {
+      "id": "yuheng.zippo",
+      "name": "𝐙𝐈𝐏𝐏𝐎会员中心签到",
+      "descs_html": [
+        "<p style='color:#16a085;text-align:center;margin-top:20px;'>小程序搜索[ZIPPO会员中心]</p>",
+        "<p style='color:#e67e22;text-align:center;'>注册/登录 - 右上角 ··· - 重新进入小程序</p>",
+        "<p style='color:#e74c3c;text-align:center;'>提示数据获取成功即可食用该脚本</p>",
+        "<p style='color:#fff;text-align:center;'>为防止不必要的麻烦, 获取完必要数据后请关闭重写</p>"
+      ],
+      "keys": ["zippo_mp_debug", "zippo_mp_auth"],
+      "settings": [
+        {
+          "id": "zippo_mp_debug",
+          "name": "是否开启调试模式",
+          "val": false,
+          "type": "boolean",
+          "desc": ""
+        },
+        {
+          "id": "zippo_mp_auth",
+          "name": "账号",
+          "val": null,
+          "type": "textarea",
+          "rows": 5,
+          "desc": ""
+        }
+      ],
+      "author": "@yuheng",
+      "repo": "https://github.com/Yuheng0101/X",
+      "icons": [
+        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/zippo.jpg",
+        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/zippo.jpg"
+      ],
+      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/zippo.js"
     }
   ]
 }
