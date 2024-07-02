@@ -28,7 +28,7 @@ hostname = wx-center.zippo.com.cn
 
 [rewrite_local]
 # 𝐙𝐈𝐏𝐏𝐎会员中心获取Authorization
-^https?:\/\/wx-center\.zippo\.com\.cn\/api\/users\/profile url script-response-body https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/zippo.js
+^https?:\/\/wx-center\.zippo\.com\.cn\/api\/users\/profile url script-request-header https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/zippo.js
 
 [task_local]
 0 6 * * * https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/zippo.js, tag=𝐙𝐈𝐏𝐏𝐎会员中心签到, img-url=https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/zippo.jpg, enabled=true
