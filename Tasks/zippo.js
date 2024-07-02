@@ -38,7 +38,7 @@ Loon配置:
 hostname = wx-center.zippo.com.cn
 
 [Script]
-http-request ^https?:\/\/wx-center\.zippo\.com\.cn\/api\/users\/profile, tag=𝐙𝐈𝐏𝐏𝐎会员中心获取Authorization, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/zippo.js,requires-body=0
+http-request ^https?:\/\/wx-center\.zippo\.com\.cn\/api\/users\/profile tag=𝐙𝐈𝐏𝐏𝐎会员中心获取Authorization, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/zippo.js,requires-body=0
 
 cron "0 6 * * *" script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/zippo.js, timeout=10, tag=𝐙𝐈𝐏𝐏𝐎会员中心签到, img-url=https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/zippo.jpg
 ******************************************
