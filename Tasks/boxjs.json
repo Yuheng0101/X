@@ -505,37 +505,6 @@
       "script": "http://192.168.68.169:5501/NewProject/Task/%E9%BB%91%E6%96%99%E4%B8%8D%E6%89%93%E7%83%8A/hlbdy.js"
     },
     {
-      "id": "yuheng.xsy",
-      "name": "小爽音刷邀请",
-      "descs_html": [
-        "<a target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/xsy.js'>跳转脚本</a>"
-      ],
-      "keys": ["xsy_invitecode", "xsy_looptimes"],
-      "settings": [
-        {
-          "id": "xsy_invitecode",
-          "name": "邀请码",
-          "val": null,
-          "type": "text",
-          "desc": ""
-        },
-        {
-          "id": "xsy_looptimes",
-          "name": "邀请次数",
-          "val": 1,
-          "type": "text",
-          "desc": ""
-        }
-      ],
-      "author": "@yuheng",
-      "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/xsy.png",
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/xsy.png"
-      ],
-      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/xsy.js"
-    },
-    {
       "id": "yuheng.qinglong",
       "name": "青龙面板",
       "descs_html": [
