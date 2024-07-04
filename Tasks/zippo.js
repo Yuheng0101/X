@@ -47,9 +47,9 @@ Surge配置:
 hostname = %APPEND% wx-center.zippo.com.cn
 
 [Script]
-𝐙𝐈𝐏𝐏𝐎会员中心获取Authorization = type=http-request ^https?:\/\/wx-center\.zippo\.com\.cn\/api\/users\/profile,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/zippo.js
+𝐙𝐈𝐏𝐏𝐎会员中心获取Authorization = type=http-request, pattern=^https?:\/\/wx-center\.zippo\.com\.cn\/api\/users\/profile, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/zippo.js, timeout=60
 
-𝐙𝐈𝐏𝐏𝐎会员中心签到 = type=cron,cronexp=0 6 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/zippo.js,timeout=60
+𝐙𝐈𝐏𝐏𝐎会员中心签到 = type=cron, cronexp="0 6 * * *", script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/zippo.js, timeout=120, wake-system=1
 ******************************************
 青龙配置:
 # 是否开启调试模式
