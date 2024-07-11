@@ -13,7 +13,7 @@
 6. 请勿将本脚本用于商业用途，由此引起的问题与作者无关
 7. 本脚本及其更新版权归作者所有
 ******************************************
-hostname = h5.7j8x.fun, api.cxznl.com, api.bjkmy.net, h5.yv4w.site, h5.glv2.ltd, h5.2bfy.life, h5.d6j4.ltd, h5.6jy8.life, appapi.mnghx.info, appapi.17gwl.com, appapi.zdxclr.com, h5.m6pi.live
+hostname = h5.7j8x.fun, api.cxznl.com, api.bjkmy.net, h5.yv4w.site, h5.glv2.ltd, h5.2bfy.life, h5.d6j4.ltd, h5.6jy8.life, appapi.mnghx.info, appapi.17gwl.com, appapi.zdxclr.com, h5.m6pi.live, h5.vphz.life
 
 # 看见广告就烦
 ^https?:\/\/((h5|(app)?api).\w+.(fun|site|ltd|life|com|net|info|live)(\/apis)?)\/m_game\/((game|ad)_(history_)?list|leaderboard|alert_configs) url reject-200
