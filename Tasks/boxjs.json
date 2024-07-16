@@ -554,10 +554,10 @@
       "descs_html": [
         "<a target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/60s.js'>跳转脚本</a>"
       ],
-      "keys": ["60s_debug"],
+      "keys": ["zaobao_debug"],
       "settings": [
         {
-          "id": "60s_debug",
+          "id": "zaobao_debug",
           "name": "是否开启调试模式",
           "val": false,
           "type": "boolean",
