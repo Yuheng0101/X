@@ -8,7 +8,7 @@
 ^https?:\/\/interface\d?\.music\.163\.com\/e?api\/vip\/cashier\/tspopup\/get data-type=text data=" " status-code=200
 
 [Script]
-网易云重写 = type=http-response, pattern=^https?:\/\/interface\d?\.music\.163\.com\/e?api\/(v\d\/user\/detail\/\d+|vipnewcenter\/app\/resource\/newaccountpage|music-vip-membership\/client\/vip\/info|batch|playlist\/privilege|search\/complex\/page|v\d\/(discovery\/recommend\/songs|playlist\/detail)), script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/NeteaseCloudMusic/netease.js, requires-body=true, binary-body-mode=1, max-size=-1, timeout=60
+网易云重写 = type=http-response, pattern=^https?:\/\/interface\d?\.music\.163\.com\/e?api\/(mine\/collect\/header\/info|v\d\/user\/detail\/\d+|vipnewcenter\/app\/resource\/newaccountpage|music-vip-membership\/client\/vip\/info|batch|playlist\/privilege|search\/complex\/page|v\d\/(discovery\/recommend\/songs|playlist\/detail)), script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/NeteaseCloudMusic/netease.js, requires-body=true, binary-body-mode=1, max-size=-1, timeout=60
 
 网易云转发 = type=http-request, pattern=^https?:\/\/interface\d?\.music\.163\.com\/e?api\/(song\/enhance\/player\/url\/v\d|vipauth\/app\/auth\/query), script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/NeteaseCloudMusic/netease.js, requires-body=true, max-size=-1, timeout=60
 
