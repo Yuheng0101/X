@@ -854,6 +854,11 @@
         "tf_session_id",
         "tf_session_digest",
         "tf_request_id",
+        "tf_apple_store_front",
+        "tf_apple_ta_device",
+        "tf_apple_amd_m",
+        "tf_apple_device_model",
+        "tf_user_agent",
         "tf_app_ids",
         "tf_loon_count",
         "tf_interval"
@@ -883,28 +888,63 @@
         },
         {
           "id": "tf_key",
-          "name": "key",
+          "name": "用户标识",
           "val": null,
           "type": "text",
           "desc": ""
         },
         {
           "id": "tf_session_id",
-          "name": "session_id",
+          "name": "SessionId",
           "val": null,
           "type": "text",
           "desc": ""
         },
         {
           "id": "tf_session_digest",
-          "name": "session_digest",
+          "name": "SessionDigest",
           "val": null,
           "type": "text",
           "desc": ""
         },
         {
           "id": "tf_request_id",
-          "name": "request_id",
+          "name": "RequestId",
+          "val": null,
+          "type": "text",
+          "desc": ""
+        },
+        {
+          "id": "tf_apple_store_front",
+          "name": "AppleStoreFront",
+          "val": null,
+          "type": "text",
+          "desc": ""
+        },
+        {
+          "id": "tf_apple_ta_device",
+          "name": "AppleTaDevice",
+          "val": null,
+          "type": "text",
+          "desc": ""
+        },
+        {
+          "id": "tf_apple_amd_m",
+          "name": "AppleAMDM",
+          "val": null,
+          "type": "text",
+          "desc": ""
+        },
+        {
+          "id": "tf_apple_device_model",
+          "name": "AppleDeviceModel",
+          "val": null,
+          "type": "text",
+          "desc": ""
+        },
+        {
+          "id": "tf_user_agent",
+          "name": "UserAgent",
           "val": null,
           "type": "text",
           "desc": ""
