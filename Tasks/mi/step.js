@@ -177,148 +177,161 @@ const logger = createLogger(is_debug)
 // 工具类
 function Xiaomi(user, pwd, step, userType) {
     return new (class {
-        constructor(user, pwd) {
-            this.username = user
-            this.password = pwd
-            this.step = Number(step)
-            this.userType = userType
-        }
-        // 获取淘宝时间 -- success
-        async getTimeByTaobao() {
-            const url = 'http://api.m.taobao.com/rest/api3.do?api=mtop.common.getTimestamp'
-            const {
-                data: { t: time }
-            } = await fetchData(url)
-            return time
-        }
-        // 登录参数 -- success
-        async getCode() {
-            const username = this.userType === 'email' ? encodeURIComponent(this.username) : `+86${this.username}`
-            const options = {
-                url: `https://api-user.huami.com/registrations/${username}/tokens`,
-                headers: {
-                    'User-Agent': 'MiFit/4.6.0 (iPhone; iOS 14.0.1; Scale/2.00)'
-                },
-                type: 'post',
-                body:
-                    this.userType == 'phone'
-                        ? {
-                              client_id: 'HuaMi',
-                              password: this.password,
-                              redirect_uri: 'https://s3-us-west-2.amazonaws.com/hm-registration/successsignin.html',
-                              token: 'access'
-                          }
-                        : {
-                              state: 'REDIRECTION',
-                              client_id: 'HuaMi',
-                              password: this.password,
-                              redirect_uri: 'https://s3-us-west-2.amazonaws.com/hm-registration/successsignin.html',
-                              region: 'us-west-2',
-                              token: 'access',
-                              country_code: 'CN'
-                          },
-                'auto-redirect': false, // Loon 是否自动处理重定向，默认true（build 660+）,Surge (5.21.0(3052))
-                followRedirect: false, // NodeJS禁止重定向
-                opts: {
-                    redirection: false // 圈X禁止重定向
-                },
-                resultType: 'response'
-            }
-            const { statusCode, headers } = await fetchData(options)
-            if (statusCode >= 300 && statusCode < 400) {
-                const loc = $.isNode() ? headers['location'] : headers['Location']
-                logger.debug('获取重定向链接', $.qs.parse(loc))
-                if (!/access/.test(loc)) throw new Error('获取登录信息失败')
-                const { access } = $.qs.parse(loc)
-                return access
-            } else {
-                throw '获取登录信息失败'
-            }
-        }
-        // 登录 -- success
-        async doLogin(code) {
-            const options = {
-                url: 'https://account.huami.com/v2/client/login',
-                type: 'post',
-                headers: {
-                    'User-Agent': 'MiFit/4.6.0 (iPhone; iOS 14.0.1; Scale/2.00)'
-                },
-                body: {
-                    app_name: 'com.xiaomi.hm.health',
-                    app_version: '4.6.0',
-                    code,
-                    country_code: 'CN',
-                    device_id: '2C8B4939-0CCD-4E94-8CBA-CB8EA6E613A1',
-                    device_model: 'phone',
-                    grant_type: 'access_token',
-                    third_name: this.userType === 'phone' ? 'huami_phone' : 'email'
+      constructor(user, pwd) {
+        this.username = user;
+        this.password = pwd;
+        this.step = Number(step);
+        this.userType = userType;
+      }
+      // 获取淘宝时间 -- success
+      async getTimeByTaobao() {
+        const url =
+          "http://api.m.taobao.com/rest/api3.do?api=mtop.common.getTimestamp";
+        const {
+          data: { t: time },
+        } = await fetchData(url);
+        return time;
+      }
+      // 获取淘宝时间 -- success
+      async getTimeBySuning() {
+        const url = "https://f.m.suning.com/api/ct.do";
+        const { currentTime } = await fetchData(url);
+        return currentTime;
+      }
+      // 登录参数 -- success
+      async getCode() {
+        const username =
+          this.userType === "email"
+            ? encodeURIComponent(this.username)
+            : `+86${this.username}`;
+        const options = {
+          url: `https://api-user.huami.com/registrations/${username}/tokens`,
+          headers: {
+            "User-Agent": "MiFit/4.6.0 (iPhone; iOS 14.0.1; Scale/2.00)",
+          },
+          type: "post",
+          body:
+            this.userType == "phone"
+              ? {
+                  client_id: "HuaMi",
+                  password: this.password,
+                  redirect_uri:
+                    "https://s3-us-west-2.amazonaws.com/hm-registration/successsignin.html",
+                  token: "access",
                 }
-            }
-            try {
-                const data = await fetchData(options)
-                logger.debug('获取登录参数', data)
-                const {
-                    token_info: { login_token: loginToken, user_id: userId }
-                } = data
-                return { loginToken, userId }
-            } catch (e) {
-                throw new Error('获取登录参数失败', e)
-            }
-        }
-        // 获取appToken -- success
-        async getAppToken(token) {
-            var options = {
-                url: `https://account-cn.huami.com/v1/client/app_tokens?app_name=com.xiaomi.hm.health&dn=api-user.huami.com%2Capi-mifit.huami.com%2Capp-analytics.huami.com&login_token=${token}&os_version=4.1.0`,
-                headers: {
-                    'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 9; MI 6 MIUI/20.6.18)'
-                }
-            }
-            const data = await fetchData(options)
-            logger.debug('获取appToken参数', data)
-            const { result, token_info } = data
-            if (result === 'ok') {
-                var { app_token: appToken } = token_info
-                return appToken
-            } else {
-                throw new Error('获取appToken失败')
-            }
-        }
-        // 刷步 -- success
-        async doStep(appToken, userId) {
-            const _ts = await this.getTimeByTaobao()
-            const today = $.time('yyyy-MM-dd')
-            let dataJson = $.toObj($.qs.unescape(__json()))[0]
-            dataJson.date = today
-            // prettier-ignore
-            dataJson.summary = dataJson.summary.replace(/ttl\":(.*?),\"dis/, `ttl\":${this.step},\"dis`)
-            const dataStr = $.qs.escape($.toStr([dataJson]))
-            const options = {
-                url: `https://api-mifit-cn.huami.com/v1/data/band_data.json?&t=${_ts}`,
-                type: 'post',
-                headers: {
-                    apptoken: appToken
+              : {
+                  state: "REDIRECTION",
+                  client_id: "HuaMi",
+                  password: this.password,
+                  redirect_uri:
+                    "https://s3-us-west-2.amazonaws.com/hm-registration/successsignin.html",
+                  region: "us-west-2",
+                  token: "access",
+                  country_code: "CN",
                 },
-                body: {
-                    userid: userId,
-                    last_sync_data_time: 1597306380,
-                    device_type: 0,
-                    last_deviceid: 'DA932FFFFE8816E7',
-                    data_json: dataStr
-                }
-            }
-            try {
-                const { code, message } = await fetchData(options)
-                logger.debug('刷步结果', { code, message })
-                if (code == 1) {
-                    return true
-                } else {
-                    throw new Error(message)
-                }
-            } catch (e) {
-                throw new Error('刷步失败', e)
-            }
+          "auto-redirect": false, // Loon 是否自动处理重定向，默认true（build 660+）,Surge (5.21.0(3052))
+          followRedirect: false, // NodeJS禁止重定向
+          opts: {
+            redirection: false, // 圈X禁止重定向
+          },
+          resultType: "response",
+        };
+        const { statusCode, headers } = await fetchData(options);
+        if (statusCode >= 300 && statusCode < 400) {
+          const loc = $.isNode() ? headers["location"] : headers["Location"];
+          logger.debug("获取重定向链接", $.qs.parse(loc));
+          if (!/access/.test(loc)) throw new Error("获取登录信息失败");
+          const { access } = $.qs.parse(loc);
+          return access;
+        } else {
+          throw "获取登录信息失败";
         }
-    })(user, pwd)
+      }
+      // 登录 -- success
+      async doLogin(code) {
+        const options = {
+          url: "https://account.huami.com/v2/client/login",
+          type: "post",
+          headers: {
+            "User-Agent": "MiFit/4.6.0 (iPhone; iOS 14.0.1; Scale/2.00)",
+          },
+          body: {
+            app_name: "com.xiaomi.hm.health",
+            app_version: "4.6.0",
+            code,
+            country_code: "CN",
+            device_id: "2C8B4939-0CCD-4E94-8CBA-CB8EA6E613A1",
+            device_model: "phone",
+            grant_type: "access_token",
+            third_name: this.userType === "phone" ? "huami_phone" : "email",
+          },
+        };
+        try {
+          const data = await fetchData(options);
+          logger.debug("获取登录参数", data);
+          const {
+            token_info: { login_token: loginToken, user_id: userId },
+          } = data;
+          return { loginToken, userId };
+        } catch (e) {
+          throw new Error("获取登录参数失败", e);
+        }
+      }
+      // 获取appToken -- success
+      async getAppToken(token) {
+        var options = {
+          url: `https://account-cn.huami.com/v1/client/app_tokens?app_name=com.xiaomi.hm.health&dn=api-user.huami.com%2Capi-mifit.huami.com%2Capp-analytics.huami.com&login_token=${token}&os_version=4.1.0`,
+          headers: {
+            "User-Agent":
+              "Dalvik/2.1.0 (Linux; U; Android 9; MI 6 MIUI/20.6.18)",
+          },
+        };
+        const data = await fetchData(options);
+        logger.debug("获取appToken参数", data);
+        const { result, token_info } = data;
+        if (result === "ok") {
+          var { app_token: appToken } = token_info;
+          return appToken;
+        } else {
+          throw new Error("获取appToken失败");
+        }
+      }
+      // 刷步 -- success
+      async doStep(appToken, userId) {
+        const _ts = await this.getTimeBySuning();
+        const today = $.time("yyyy-MM-dd");
+        let dataJson = $.toObj($.qs.unescape(__json()))[0];
+        dataJson.date = today;
+        // prettier-ignore
+        dataJson.summary = dataJson.summary.replace(/ttl\":(.*?),\"dis/, `ttl\":${this.step},\"dis`)
+        const dataStr = $.qs.escape($.toStr([dataJson]));
+        const options = {
+          url: `https://api-mifit-cn.huami.com/v1/data/band_data.json?&t=${_ts}`,
+          type: "post",
+          headers: {
+            apptoken: appToken,
+          },
+          body: {
+            userid: userId,
+            last_sync_data_time: 1597306380,
+            device_type: 0,
+            last_deviceid: "DA932FFFFE8816E7",
+            data_json: dataStr,
+          },
+        };
+        try {
+          const { code, message } = await fetchData(options);
+          logger.debug("刷步结果", { code, message });
+          if (code == 1) {
+            return true;
+          } else {
+            throw new Error(message);
+          }
+        } catch (e) {
+          throw new Error("刷步失败", e);
+        }
+      }
+    })(user, pwd);
 }
 
 /**
