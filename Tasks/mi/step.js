@@ -3,8 +3,8 @@
  * @channel https://t.me/yqc_123/
  * @feedback https://t.me/yqc_777/
  * @author 𝒀𝒖𝒉𝒆𝒏𝒈
- * @update 20240322
- * @version 1.1.4
+ * @update 20240919
+ * @version 1.1.5
 ******************************************
 ## 更新日志
 
@@ -192,7 +192,7 @@ function Xiaomi(user, pwd, step, userType) {
         } = await fetchData(url);
         return time;
       }
-      // 获取淘宝时间 -- success
+      // 获取苏宁时间 -- success
       async getTimeBySuning() {
         const url = "https://f.m.suning.com/api/ct.do";
         const { currentTime } = await fetchData(url);
