@@ -274,18 +274,8 @@
     {
       "id": "yuheng.95598.web",
       "name": "网上国网",
-      "descs_html": [
-        "<a target='_blank' href='https://github.com/Yuheng0101/X/tree/main/Tasks/95598'>README.md</a>"
-      ],
-      "keys": [
-        "95598_log_debug",
-        "95598_recent_elc_fee",
-        "95598_notify_type",
-        "95598_username",
-        "95598_password",
-        "95598_bizrt",
-        "95598_bindInfo"
-      ],
+      "descs_html": ["<a target='_blank' href='https://github.com/Yuheng0101/X/tree/main/Tasks/95598'>README.md</a>"],
+      "keys": ["95598_log_debug", "95598_recent_elc_fee", "95598_notify_type", "95598_username", "95598_password", "95598_bizrt", "95598_bindInfo"],
       "settings": [
         {
           "id": "95598_log_debug",
@@ -389,9 +379,7 @@
     {
       "id": "yuheng.1024",
       "name": "某榴最新技術推送",
-      "descs_html": [
-        "<a target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/1024.js'>跳转脚本</a>"
-      ],
+      "descs_html": ["<a target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/1024.js'>跳转脚本</a>"],
       "keys": ["1024_israndom"],
       "settings": [
         {
@@ -404,24 +392,14 @@
       ],
       "author": "@yuheng",
       "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/1024.png",
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/1024.png"
-      ],
+      "icons": ["https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/1024.png", "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/1024.png"],
       "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/1024.js"
     },
     {
       "id": "yuheng.hlbdy",
       "name": "最新黑料",
-      "descs_html": [
-        "<a target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/hlbdy.js'>跳转脚本</a>"
-      ],
-      "keys": [
-        "hlbdy_notify_with_media",
-        "hlbdy_debug",
-        "hlbdy_type",
-        "hlbdy_notify_type"
-      ],
+      "descs_html": ["<a target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/hlbdy.js'>跳转脚本</a>"],
+      "keys": ["hlbdy_notify_with_media", "hlbdy_debug", "hlbdy_type", "hlbdy_notify_type"],
       "settings": [
         {
           "id": "hlbdy_notify_type",
@@ -507,12 +485,7 @@
         "<p style='line-height: 24px;padding-top:20px;'>1.配置面板前务必检查抛出的api是否有读写环境变量权限.</p>",
         "<p style='line-height: 24px;'>2.配置完成点击右上角运行按钮测试连接是否成功.</p>"
       ],
-      "keys": [
-        "yuheng_ql_host",
-        "yuheng_ql_clientid",
-        "yuheng_ql_clientsecret",
-        "yuheng_ql_token"
-      ],
+      "keys": ["yuheng_ql_host", "yuheng_ql_clientid", "yuheng_ql_clientsecret", "yuheng_ql_token"],
       "settings": [
         {
           "id": "yuheng_ql_host",
@@ -538,18 +511,13 @@
       ],
       "author": "@yuheng",
       "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/ql.png",
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/ql.png"
-      ],
+      "icons": ["https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/ql.png", "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/ql.png"],
       "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/ql.js"
     },
     {
       "id": "yuheng.60s",
       "name": "每天60秒读懂世界",
-      "descs_html": [
-        "<a target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/60s.js'>跳转脚本</a>"
-      ],
+      "descs_html": ["<a target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/60s.js'>跳转脚本</a>"],
       "keys": ["zaobao_debug"],
       "settings": [
         {
@@ -562,10 +530,7 @@
       ],
       "author": "@yuheng",
       "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/60s.png",
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/60s.png"
-      ],
+      "icons": ["https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/60s.png", "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/60s.png"],
       "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/60s.js"
     },
     {
@@ -607,9 +572,7 @@
     {
       "id": "yuheng.eshop",
       "name": "Eshop打折监控",
-      "descs_html": [
-        "<a target='_blank' href='https://github.com/Yuheng0101/X/tree/main/Tasks/eshop'>【README.md】</a>"
-      ],
+      "descs_html": ["<a target='_blank' href='https://github.com/Yuheng0101/X/tree/main/Tasks/eshop'>【README.md】</a>"],
       "keys": ["eshop_followedList", "eshop_isClear"],
       "settings": [
         {
@@ -638,9 +601,7 @@
     {
       "id": "yuheng.bdyy",
       "name": "波点音乐自动签到",
-      "descs_html": [
-        "<a target='_blank' href='https://github.com/Yuheng0101/X/tree/main/Tasks/Bdyy'>【README.md】</a>"
-      ],
+      "descs_html": ["<a target='_blank' href='https://github.com/Yuheng0101/X/tree/main/Tasks/Bdyy'>【README.md】</a>"],
       "keys": ["bdyy_account"],
       "settings": [
         {
@@ -662,20 +623,8 @@
     {
       "id": "yuheng.huluwa",
       "name": "葫芦娃预约",
-      "descs_html": [
-        "<p style='margin-left:20px;margin-top:20px;'>多账号配置参考:手机号1:ck1&手机号2:ck2...</p>"
-      ],
-      "keys": [
-        "huluwa_split",
-        "xlth_cookies",
-        "glyp_cookies",
-        "kglg_cookies",
-        "hlqg_cookies",
-        "zhcs_cookies",
-        "gyqp_cookies",
-        "llsc_cookies",
-        "ylqx_cookies"
-      ],
+      "descs_html": ["<p style='margin-left:20px;margin-top:20px;'>多账号配置参考:手机号1:ck1&手机号2:ck2...</p>"],
+      "keys": ["huluwa_split", "xlth_cookies", "glyp_cookies", "kglg_cookies", "hlqg_cookies", "zhcs_cookies", "gyqp_cookies", "llsc_cookies", "ylqx_cookies"],
       "settings": [
         {
           "id": "huluwa_split",
@@ -760,18 +709,8 @@
     {
       "id": "yuheng.cache",
       "name": "第三方库缓存查看",
-      "descs_html": [
-        "<p style='margin-left:20px;margin-top:20px;'>查看依赖包, 无需操作</p>"
-      ],
-      "keys": [
-        "CryptoJS.js",
-        "JSEncrypt.js",
-        "cheerio.js",
-        "Buffer.js",
-        "dayjs.js",
-        "crypto.js",
-        "iconv.js"
-      ],
+      "descs_html": ["<p style='margin-left:20px;margin-top:20px;'>查看依赖包, 无需操作</p>"],
+      "keys": ["CryptoJS.js", "JSEncrypt.js", "cheerio.js", "Buffer.js", "dayjs.js", "crypto.js", "iconv.js"],
       "settings": [
         {
           "id": "CryptoJS.js",
@@ -961,13 +900,7 @@
         "<p style='color:#3498db;text-align:center;'>说明请查看脚本注释👇</p>",
         "<a style='color:#686de0;display:block;text-align:center;' target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/4ksj.js'>脚本链接</a>"
       ],
-      "keys": [
-        "4k_wrold_debug",
-        "4k_world_split_char",
-        "4k_world_accounts",
-        "4k_world_passwords",
-        "4k_world_cookies"
-      ],
+      "keys": ["4k_wrold_debug", "4k_world_split_char", "4k_world_accounts", "4k_world_passwords", "4k_world_cookies"],
       "settings": [
         {
           "id": "4k_wrold_debug",
@@ -1007,10 +940,7 @@
       ],
       "author": "@yuheng",
       "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/4ksj.png",
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/4ksj.png"
-      ],
+      "icons": ["https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/4ksj.png", "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/4ksj.png"],
       "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/4ksj.js"
     },
     {
@@ -1091,9 +1021,7 @@
     {
       "id": "yuheng.meitu",
       "name": "美图鉴赏",
-      "descs_html": [
-        "<p style='color:#3498db;text-align:center;'>希望使用脚本让你快乐每一天😊</p>"
-      ],
+      "descs_html": ["<p style='color:#3498db;text-align:center;'>希望使用脚本让你快乐每一天😊</p>"],
       "keys": ["meitu_type"],
       "settings": [
         {
@@ -1180,10 +1108,7 @@
       ],
       "author": "@yuheng",
       "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/meitu.png",
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/meitu.png"
-      ],
+      "icons": ["https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/meitu.png", "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/meitu.png"],
       "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/meitu/meitu.js"
     },
     {
@@ -1222,10 +1147,7 @@
       ],
       "author": "@yuheng",
       "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/bus.png",
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/bus.png"
-      ],
+      "icons": ["https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/bus.png", "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/bus.png"],
       "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/javbus.js"
     },
     {
@@ -1257,11 +1179,40 @@
       ],
       "author": "@yuheng",
       "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/zippo.jpg",
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/zippo.jpg"
-      ],
+      "icons": ["https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/zippo.jpg", "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/zippo.jpg"],
       "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/zippo.js"
+    },
+    {
+      "id": "yuheng.wuai",
+      "name": "吾爱破解",
+      "descs_html": [
+        "<a style='color:#686de0;display:block;text-align:center;' target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/52pojie.js'>脚本链接</a>"
+      ],
+      "keys": ["wuai_debug", "wuai_cookie"],
+      "settings": [
+        {
+          "id": "wuai_debug",
+          "name": "是否开启调试模式",
+          "val": false,
+          "type": "boolean",
+          "desc": ""
+        },
+        {
+          "id": "wuai_cookie",
+          "name": "Cookie",
+          "val": null,
+          "type": "textarea",
+          "rows": 5,
+          "desc": ""
+        }
+      ],
+      "author": "@yuheng",
+      "repo": "https://github.com/Yuheng0101/X",
+      "icons": [
+        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/52pojie.png",
+        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/52pojie.png"
+      ],
+      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/52pojie.js"
     }
   ]
 }
