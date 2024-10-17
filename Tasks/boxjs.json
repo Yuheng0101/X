@@ -537,28 +537,62 @@
       "id": "yuheng.top",
       "name": "热搜聚合",
       "descs_html": [
-        "<p></p>",
-        "<p>weibo ==> 微博</p>",
-        "<p>zhihu ==> 知乎</p>",
-        "<p>toutiao ==> 头条</p>",
-        "<p>douyin ==> 抖音</p>",
-        "<p>baidu ==> 百度</p>",
-        "<p>tieba ==> 贴吧</p>",
-        "<p>bilibili ==> 哔哩哔哩</p>",
-        "<h2 style='color: #00ff00;'>填写前方标识</h2>",
-        "<h2 style='color: #ff0000;margin-top:20px;'>不是中文 ❗</h2>",
-        "<h2 style='color: #ff0000;margin-top:20px;'>不是中文 ❗</h2>",
-        "<h2 style='color: #ff0000;margin:20px 0;'>不是中文 ❗</h2>",
+        "<p>1.自行选择</p>",
+        "<p>2.系统自动选择</p>",
         "<a target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/top.js'>跳转脚本</a>"
       ],
-      "keys": ["top_user_select"],
+      "keys": ["top_debug", "top_user_select", "top_limit"],
       "settings": [
         {
-          "id": "top_user_select",
-          "name": "手动选择通知类型",
-          "val": null,
-          "type": "text",
+          "id": "top_debug",
+          "name": "是否开启调试模式",
+          "val": false,
+          "type": "boolean",
           "desc": ""
+        },
+        {
+          "id": "top_user_select",
+          "name": "自行选择通知类型",
+          "val": null,
+          "type": "radios",
+          "desc": "",
+          "items": [
+            {
+              "key": null,
+              "label": "系统帮选"
+            },
+            {
+              "key": "微博",
+              "label": "微博"
+            },
+            {
+              "key": "知乎",
+              "label": "知乎"
+            },
+            {
+              "key": "今日头条",
+              "label": "今日头条"
+            },
+            {
+              "key": "抖音",
+              "label": "抖音"
+            },
+            {
+              "key": "百度",
+              "label": "百度"
+            },
+            {
+              "key": "哔哩哔哩",
+              "label": "哔哩哔哩"
+            }
+          ]
+        },
+        {
+          "id": "top_limit",
+          "name": "通知条数",
+          "val": 10,
+          "type": "number",
+          "desc": "不建议超过20条[通知会截断]"
         }
       ],
       "author": "@yuheng",
