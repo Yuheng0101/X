@@ -1,8 +1,8 @@
 /******************************************
  * @name 吾爱破解签到
  * @author 𝐎𝐍𝐙𝟑𝐕
- * @update 20241016
- * @version 1.0.3
+ * @update 20241017
+ * @version 1.0.4
  ******************************************
 脚本声明:
 1. 本脚本仅用于学习研究，禁止用于商业用途
@@ -51,7 +51,7 @@ Loon配置:
 hostname = www.52pojie.cn
 
 [Script]
-http-request ^https:\/\/www\.52pojie\.cn\/home\.php\? tag=吾爱破解获取Cookie, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/52pojie.js,requires-body=0
+http-request ^https:\/\/www\.52pojie\.cn\/home\.php\? tag=吾爱破解获取Cookie, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/52pojie.js
 
 cron "0 9 * * *" script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/52pojie.js, timeout=10, tag=吾爱破解签到, img-url=https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/52pojie.png
 ******************************************
