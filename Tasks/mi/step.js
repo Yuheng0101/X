@@ -47,7 +47,7 @@ $.qs = {parse(ele,con_1,con_2){con_1=con_1||"&",con_2=con_2||"=";for(var temp=el
 const random = (min, max) => Math.floor(Math.random() * (max - min + 1) + min)
 const ObjectKeys2LowerCase = (obj) => Object.fromEntries(Object.entries(obj).map(([k, v]) => [k.toLowerCase(), v]))
 // ----------------------------------------
-const is_debug = $.isTrue($.isNode() ? process.env.XIAOMI_STEP_DEBUG : $.getdata('xiaomi_step_debug')) || true // 是否调试状态
+const is_debug = $.isTrue($.isNode() ? process.env.XIAOMI_STEP_DEBUG : $.getdata('xiaomi_step_debug')) // 是否调试状态
 // 配置参数
 const enable_increment_mode = $.isTrue($.isNode() ? process.env.XIAOMI_STEP_INCREMENT_MODE : $.getdata('xiaomi_step_increment_mode')) // 是否开启增量模式
 const run_count = $.isNode() ? process.env.XIAOMI_STEP_RUN_COUNT : $.getdata('xiaomi_step_run_count') || 1 // 运行次数 => 这里需要配合cron进行使用|cron运行几次，填几次
