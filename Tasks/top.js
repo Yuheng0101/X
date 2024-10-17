@@ -75,12 +75,7 @@ const CATEGORY = [
   },
   {
     name: "百度贴吧",
-    req: {
-      url: "https://tieba.baidu.com/hottopic/browse/topicList",
-      headers: {
-        "user-agent": "1",
-      },
-    },
+    req: "https://tieba.baidu.com/hottopic/browse/topicList",
     res: "data.bang_topic.topic_list[0].topic_name",
   },
   {
