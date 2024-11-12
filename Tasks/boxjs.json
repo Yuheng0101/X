@@ -1247,6 +1247,51 @@
         "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/52pojie.png"
       ],
       "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/52pojie.js"
+    },
+    {
+      "id": "yuheng.10086",
+      "name": "移动余量查询",
+      "descs_html": [],
+      "keys": ["china_mobile_debug", "china_mobile_phonenumber", "china_mobile_params", "china_mobile_cookie"],
+      "settings": [
+        {
+          "id": "china_mobile_debug",
+          "name": "是否开启调试模式",
+          "val": false,
+          "type": "boolean",
+          "desc": ""
+        },
+        {
+          "id": "china_mobile_phonenumber",
+          "name": "手机号码",
+          "val": null,
+          "type": "text",
+          "desc": ""
+        },
+        {
+          "id": "china_mobile_params",
+          "name": "加密参数",
+          "val": null,
+          "type": "textarea",
+          "rows": 5,
+          "desc": ""
+        },
+        {
+          "id": "china_mobile_cookie",
+          "name": "Cookie",
+          "val": null,
+          "type": "textarea",
+          "rows": 5,
+          "desc": ""
+        }
+      ],
+      "author": "@yuheng",
+      "repo": "https://github.com/Yuheng0101/X",
+      "icons": [
+        "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/92/8b/03/928b0371-20fc-288b-e4e4-05f48b7082c2/AppIcon-0-0-1x_U007emarketing-0-7-0-0-85-220.png/144x144.png",
+        "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/92/8b/03/928b0371-20fc-288b-e4e4-05f48b7082c2/AppIcon-0-0-1x_U007emarketing-0-7-0-0-85-220.png/144x144.png"
+      ],
+      "script": ""
     }
   ]
 }
