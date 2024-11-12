@@ -1252,7 +1252,7 @@
       "id": "yuheng.10086",
       "name": "移动余量查询",
       "descs_html": [],
-      "keys": ["china_mobile_debug", "china_mobile_phonenumber", "china_mobile_params", "china_mobile_cookie"],
+      "keys": ["china_mobile_debug", "china_mobile_phonenumber", "china_mobile_params", "china_mobile_cookie", "china_mobile_bark_key"],
       "settings": [
         {
           "id": "china_mobile_debug",
@@ -1283,6 +1283,13 @@
           "type": "textarea",
           "rows": 5,
           "desc": ""
+        },
+        {
+          "id": "china_mobile_bark_key",
+          "name": "Bark_Key",
+          "val": null,
+          "type": "text",
+          "desc": "填写后优先使用Bark推送"
         }
       ],
       "author": "@yuheng",
