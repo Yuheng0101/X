@@ -1,0 +1,8 @@
+#!name= 移动余量查询服务
+#!desc= 供小组件使用 需配合设置参数使用
+
+[Script]
+移动查询接口 = type=http-request, pattern=^https?:\/\/api\.example\.com\/10086\/query, script-path=https://github.com/ChinaTelecomOperators/ChinaMobile/releases/download/Prerelease-Alpha/10086.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% api.example.com

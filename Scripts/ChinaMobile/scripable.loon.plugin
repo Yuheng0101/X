@@ -1,0 +1,11 @@
+#!name= 移动余量查询服务
+#!desc= 供小组件使用 需配合设置参数使用
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/92/8b/03/928b0371-20fc-288b-e4e4-05f48b7082c2/AppIcon-0-0-1x_U007emarketing-0-7-0-0-85-220.png/120x120.png
+#!homepage=https://github.com/ChinaTelecomOperators/ChinaMobile
+#!date = 2024-11-14 16:00:00
+
+[Script]
+http-request ^https?:\/\/api\.example\.com\/10086\/query script-path=https://github.com/ChinaTelecomOperators/ChinaMobile/releases/download/Prerelease-Alpha/10086.js, requires-body=true, timeout=60, tag=移动查询接口
+
+[MITM]
+hostname = api.example.com
