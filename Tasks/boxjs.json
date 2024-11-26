@@ -332,7 +332,8 @@
         "<p style='margin-left:20px;color:#ff7979;'>1.微信小程序搜索 网上国网 ,打开并登录(请提前绑定户号)</p>",
         "<p style='margin-left:20px;color:#60a3bc;'>2.代理工具添加重写和Cron脚本</p>",
         "<p style='margin-left:20px;color:#f0932b;'>3.回到小程序重新进入, 提示获取数据成功即可使用该脚本</p>",
-        "<p style='margin-left:20px;color:#38ada9;'>4.回到代理工具执行Cron脚本, 即可查看相关结果</p>"
+        "<p style='margin-left:20px;color:#38ada9;'>4.回到代理工具执行Cron脚本, 即可查看相关结果</p>",
+        "<p style='margin-left:20px;color:#38ada9;'>❗❗❗ 本脚本已作废</p>"
       ],
       "keys": ["wsgw_debug", "wsgw_openid", "wsgw_token", "wsgw_auth"],
       "settings": [
