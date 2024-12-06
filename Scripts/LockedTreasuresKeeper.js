@@ -17,13 +17,13 @@
 hostname = jk.*.com, jk.*.cn, qzflu-jk.*.com
 
 # 开屏/弹窗广告通杀
-^https?://jk\.(.+)\.c(n|om)\/api\/operation\/ads url reject
-^https?://jk\.(.+)\.c(n|om)\/api\/mailbox\/local_msg url reject
-^https?://jk\.(.+)\.c(n|om)\/api\/version url reject
-^https?://jk\.(.+)\.c(n|om)\/api\/operation\/applist url reject
-^https?://jk\.(.+)\.c(n|om)\/api\/rich_new\/index url reject
-^https?://jk\.(.+)\.c(n|om)\/api\/app\? url reject
-^https?://jk\.(.+)\.c(n|om)\/api\/ad\/click url reject
+^https?:\/\/(qzflu-)?jk\.(.+)\.c(n|om)\/api\/operation\/ads url reject
+^https?:\/\/(qzflu-)?jk\.(.+)\.c(n|om)\/api\/mailbox\/local_msg url reject
+^https?:\/\/(qzflu-)?jk\.(.+)\.c(n|om)\/api\/version url reject
+^https?:\/\/(qzflu-)?jk\.(.+)\.c(n|om)\/api\/operation\/applist url reject
+^https?:\/\/(qzflu-)?jk\.(.+)\.c(n|om)\/api\/rich_new\/index url reject
+^https?:\/\/(qzflu-)?jk\.(.+)\.c(n|om)\/api\/app\? url reject
+^https?:\/\/(qzflu-)?jk\.(.+)\.c(n|om)\/api\/ad\/click url reject
 # 初始化/解锁/去广告/优化
 ^https?:\/\/(qzflu-)?jk\.(.+)\.c(n|om)\/api\/(account\/init|bootstrap|tags\/navicate|user\/read|monographic\/list|v1\/homeIndex|content\/(getNav|index)|video\/(recommend\/flow|details|playNew\/\d+)) url script-response-body https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/LockedTreasuresKeeper.js
 ******************************************/
