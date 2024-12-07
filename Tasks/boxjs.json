@@ -1155,14 +1155,14 @@
         "<p style='color:#e67e22;text-align:center;'>点击右上角头像</p>",
         "<p style='color:#e74c3c;text-align:center;'>提示获取Cookie成功即可食用该脚本</p>"
       ],
-      "keys": ["javbus_notify_with_media", "javbus_debug", "javbus_users"],
+      "keys": ["javbus_bark_push", "javbus_debug", "javbus_users"],
       "settings": [
         {
-          "id": "javbus_notify_with_media",
-          "name": "是否通知带图片",
+          "id": "javbus_bark_push",
+          "name": "Bark密钥",
           "val": true,
           "type": "boolean",
-          "desc": ""
+          "desc": "仅使用Bark进行通知"
         },
         {
           "id": "javbus_debug",
