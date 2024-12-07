@@ -1160,8 +1160,8 @@
         {
           "id": "javbus_bark_push",
           "name": "Bark密钥",
-          "val": true,
-          "type": "boolean",
+          "val": null,
+          "type": "text",
           "desc": "仅使用Bark进行通知"
         },
         {
