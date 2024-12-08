@@ -1155,7 +1155,7 @@
         "<p style='color:#e67e22;text-align:center;'>点击右上角头像</p>",
         "<p style='color:#e74c3c;text-align:center;'>提示获取Cookie成功即可食用该脚本</p>"
       ],
-      "keys": ["javbus_bark_push", "javbus_debug", "javbus_users"],
+      "keys": ["javbus_bark_push", "javbus_debug", "javbus_users", "javbus_notification_image"],
       "settings": [
         {
           "id": "javbus_bark_push",
@@ -1177,6 +1177,13 @@
           "val": null,
           "type": "textarea",
           "rows": 5,
+          "desc": ""
+        },
+        {
+          "id": "javbus_notification_image",
+          "name": "是否开启媒体通知🔞",
+          "val": false,
+          "type": "boolean",
           "desc": ""
         }
       ],
