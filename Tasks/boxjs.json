@@ -519,7 +519,7 @@
       "id": "yuheng.60s",
       "name": "每天60秒读懂世界",
       "descs_html": ["<a target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/60s.js'>跳转脚本</a>"],
-      "keys": ["zaobao_debug"],
+      "keys": ["zaobao_debug", "zhihu_cookie", "zaobao_original_url"],
       "settings": [
         {
           "id": "zaobao_debug",
@@ -527,6 +527,20 @@
           "val": false,
           "type": "boolean",
           "desc": ""
+        },
+        {
+          "id": "zaobao_original_url",
+          "name": "点击横幅是否跳转原文",
+          "val": false,
+          "type": "boolean",
+          "desc": "使用知乎栏目[二喵带你看世界], 开启后点击横幅跳转对应文章, 不开启则点击跳转全图模式。"
+        },
+        {
+          "id": "zhihu_cookie",
+          "name": "知乎Cookie",
+          "val": null,
+          "type": "text",
+          "desc": "获取微语需使用Cookie,不填默认使用随机语句且展示条数不超过10条,iOS端可忽视。"
         }
       ],
       "author": "@yuheng",
