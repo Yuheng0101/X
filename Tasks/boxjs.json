@@ -1244,7 +1244,7 @@
       "descs_html": [
         "<a style='color:#686de0;display:block;text-align:center;' target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/52pojie.js'>脚本链接</a>"
       ],
-      "keys": ["wuai_debug", "wuai_cookie"],
+      "keys": ["wuai_debug", "wuai_cookie", "wuai_bark_key"],
       "settings": [
         {
           "id": "wuai_debug",
@@ -1260,6 +1260,13 @@
           "type": "textarea",
           "rows": 5,
           "desc": ""
+        },
+        {
+          "id": "wuai_bark_key",
+          "name": "Bark密钥",
+          "val": null,
+          "type": "text",
+          "desc": "填写后只使用Bark推送"
         }
       ],
       "author": "@yuheng",
