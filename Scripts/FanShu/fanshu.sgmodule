@@ -24,7 +24,7 @@ Fanshu_Remove_Ads = type=http-response, pattern=^https?:\/\/g(.*)\.dushu365\.com
 Fanshu_Remove_Ads = type=http-response, pattern=^https?:\/\/g(.*)\.dushu365\.com\/sns-orchestration-system\/homePage\/api\/v100\/myPage, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/FanShu/No_Ads.js, requires-body=1, max-size=-1, timeout=60
 Fanshu_Remove_Ads = type=http-response, pattern=^https?:\/\/g(.*)\.dushu365\.com\/task-orchestration\/taskCenter\/api\/v101\/taskList, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/FanShu/No_Ads.js, requires-body=1, max-size=-1, timeout=60
 Fanshu_Remove_Ads = type=http-response, pattern=^https?:\/\/g(.*)\.dushu365\.com\/resource-orchestration-system\/book\/v101\/content, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/FanShu/No_Ads.js, requires-body=1, max-size=-1, timeout=60
-Fanshu_Remove_Ads = type=http-response, pattern=^https?:\/\/g.*\.dushu365\.com\/user-orchestration\/user\/api\/v101\/ceiltip, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/FanShu/No_Ads.js, requires-body=1, max-size=-1, timeout=60
+Fanshu_Remove_Ads = type=http-response, pattern=^https?:\/\/g(.*)\.dushu365\.com\/user-orchestration\/user\/api\/v101\/ceiltip, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/FanShu/No_Ads.js, requires-body=1, max-size=-1, timeout=60
 
 
 [MITM]
