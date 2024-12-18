@@ -1,0 +1,32 @@
+#!name= 帆书
+#!desc= 全局净化
+#!category= 广告必须噶
+
+[Map Local]
+# 帆书移除广告
+^https?:\/\/popup\.dushu365\.com\/api\/v2\/sfo\/(user_)?popup_(config|display)s - reject
+^https?:\/\/g.*\.dushu365\.com\/chief-orch\/config\/config\/v\d+\/(shortCut|appUpdateUnite|loadingAd) - reject
+^https?:\/\/g.*\.dushu365\.com\/fs-retain\/trialVip\/v\d+\/requestTrialVipPopDoNotSendReward - reject
+^https?:\/\/g.*\.dushu365\.com\/resource-orchestration-system\/vipLandingPage\/v\d+\/getVipLandingPageApp - reject
+^https?:\/\/g.*\.dushu365\.com\/fandeng-orch\/dual2211\/config - reject
+^https?:\/\/g.*\.dushu365\.com\/fdtalk-orch\/newcomerzone\/v\d+\/guide - reject
+^https?:\/\/g.*\.dushu365\.com\/fandeng-orch\/bookboy\/v\d+\/vipPagePop - reject
+^https?:\/\/g.*\.dushu365\.com\/chief-orch\/config\/config\/v\d+\/appConfig - reject
+#^https?:\/\/g.*\.dushu365\.com\/user-orchestration\/user\/api\/v101\/ceiltip - reject
+^https?:\/\/g.*\.dushu365\.com\/order-orchestration\/orderWeb\/exchange\/v100\/showExchangeButton - reject
+
+[Script]
+Fanshu_Remove_Ads = type=http-response, pattern=^https?:\/\/g(.*)\.dushu365\.com\/chief-orch\/home\/bookPortal\/v105\/category, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/FanShu/No_Ads.js, requires-body=1, max-size=-1, timeout=60
+Fanshu_Remove_Ads = type=http-response, pattern=^https?:\/\/g(.*)\.dushu365\.com\/abtest-front\/banner-modular\/get, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/FanShu/No_Ads.js, requires-body=1, max-size=-1, timeout=60
+Fanshu_Remove_Ads = type=http-response, pattern=^https?:\/\/g(.*)\.dushu365\.com\/resource-orchestration-system\/book\/channel\/v100\/info, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/FanShu/No_Ads.js, requires-body=1, max-size=-1, timeout=60
+Fanshu_Remove_Ads = type=http-response, pattern=^https?:\/\/g(.*)\.dushu365\.com\/fs-member\/user\/profile\/v100\/detail, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/FanShu/No_Ads.js, requires-body=1, max-size=-1, timeout=60
+Fanshu_Remove_Ads = type=http-response, pattern=^https?:\/\/g(.*)\.dushu365\.com\/chief-orch\/home\/bookPortal\/v111\/forApp, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/FanShu/No_Ads.js, requires-body=1, max-size=-1, timeout=60
+Fanshu_Remove_Ads = type=http-response, pattern=^https?:\/\/g(.*)\.dushu365\.com\/sns-orchestration-system\/homePage\/api\/v100\/myPage, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/FanShu/No_Ads.js, requires-body=1, max-size=-1, timeout=60
+Fanshu_Remove_Ads = type=http-response, pattern=^https?:\/\/g(.*)\.dushu365\.com\/task-orchestration\/taskCenter\/api\/v101\/taskList, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/FanShu/No_Ads.js, requires-body=1, max-size=-1, timeout=60
+Fanshu_Remove_Ads = type=http-response, pattern=^https?:\/\/g(.*)\.dushu365\.com\/resource-orchestration-system\/book\/v101\/content, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/FanShu/No_Ads.js, requires-body=1, max-size=-1, timeout=60
+Fanshu_Remove_Ads = type=http-response, pattern=^https?:\/\/g.*\.dushu365\.com\/user-orchestration\/user\/api\/v101\/ceiltip, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/FanShu/No_Ads.js, requires-body=1, max-size=-1, timeout=60
+
+
+[MITM]
+hostname = g*.dushu365.com
+
