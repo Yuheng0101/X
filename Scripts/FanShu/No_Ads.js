@@ -3,6 +3,7 @@
  * @author 𝐎𝐍𝐙𝟑𝐕
  * @description 全局净化
  * @channel https://t.me/yqc_123
+ * @feedback https://t.me/lanjieguanggao
  * @date 2024-12-19
  * @version 1.1.0
 ******************************************
