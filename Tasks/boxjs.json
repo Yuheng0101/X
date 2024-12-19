@@ -188,6 +188,7 @@
         "<p style='margin-left:20px;margin-top:20px;color:#9b59b6;'>多说一句,经纬度你知道就填,不知道只填详细地址就好,经纬度优先级高于地址,如果填写经纬度,详细地址的作用将失效</p>"
       ],
       "keys": [
+        "imaotai_debug",
         "imaotai_mobile",
         "imaotai_code",
         "imaotai_params",
@@ -200,6 +201,13 @@
         "imaotai__config__location"
       ],
       "settings": [
+        {
+          "id": "imaotai_debug",
+          "name": "是否开启调试模式",
+          "val": false,
+          "type": "boolean",
+          "desc": ""
+        },
         {
           "id": "imaotai_mobile",
           "name": "手机号(用于获取验证码)",
