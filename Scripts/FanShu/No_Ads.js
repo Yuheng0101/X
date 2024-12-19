@@ -5,7 +5,7 @@
  * @channel https://t.me/yqc_123
  * @feedback https://t.me/lanjieguanggao
  * @date 2024-12-19
- * @version 1.1.1
+ * @version 1.1.2
 ******************************************
 脚本声明:
 1. 本脚本仅用于学习研究，禁止用于商业用途
@@ -23,12 +23,6 @@ const base64=(()=>{var r=function(r){this.message=r};(r.prototype=new Error).nam
 // prettier-ignore
 const utf8=(()=>{var r,n,t,o=String.fromCharCode;function e(r){for(var n,t,o=[],e=0,i=r.length;e<i;)(n=r.charCodeAt(e++))>=55296&&n<=56319&&e<i?56320==(64512&(t=r.charCodeAt(e++)))?o.push(((1023&n)<<10)+(1023&t)+65536):(o.push(n),e--):o.push(n);return o}function i(r){if(r>=55296&&r<=57343)throw Error("Lone surrogate U+"+r.toString(16).toUpperCase()+" is not a scalar value")}function u(r,n){return o(r>>n&63|128)}function f(r){if(!(4294967168&r))return o(r);var n="";return 4294965248&r?4294901760&r?4292870144&r||(n=o(r>>18&7|240),n+=u(r,12),n+=u(r,6)):(i(r),n=o(r>>12&15|224),n+=u(r,6)):n=o(r>>6&31|192),n+=o(63&r|128)}function a(){if(t>=n)throw Error("Invalid byte index");var o=255&r[t];if(t++,128==(192&o))return 63&o;throw Error("Invalid continuation byte")}function c(){var o,e;if(t>n)throw Error("Invalid byte index");if(t==n)return!1;if(o=255&r[t],t++,!(128&o))return o;if(192==(224&o)){if((e=(31&o)<<6|a())>=128)return e;throw Error("Invalid continuation byte")}if(224==(240&o)){if((e=(15&o)<<12|a()<<6|a())>=2048)return i(e),e;throw Error("Invalid continuation byte")}if(240==(248&o)&&(e=(7&o)<<18|a()<<12|a()<<6|a())>=65536&&e<=1114111)return e;throw Error("Invalid UTF-8 detected")}return{version:"3.0.0",encode:function(r){for(var n=e(r),t=n.length,o=-1,i="";++o<t;)i+=f(n[o]);return i},decode:function(i){r=e(i),n=r.length,t=0;for(var u,f=[];!1!==(u=c());)f.push(u);return function(r){for(var n,t=r.length,e=-1,i="";++e<t;)(n=r[e])>65535&&(i+=o((n-=65536)>>>10&1023|55296),n=56320|1023&n),i+=o(n);return i}(f)}}})();
 // ------------------------------------------------------------
-const Arguments =
-    typeof $argument !== "undefined"
-        ? "object" == typeof $argument
-            ? $argument
-            : Object.fromEntries($argument.split("&").map((t) => t.split("=")))
-        : {};
 const Pathname = /^(?:https?:\/\/)?[^\/]+(\/[^?#]*)?/.exec($request.url)?.[1];
 const Status = $response.status ?? $request.statusCode;
 if (Status !== 200) {
@@ -128,7 +122,7 @@ if (Pathname.includes("/task-orchestration/taskCenter/api/v101/taskList")) {
     Decode_Body.data.taskInfoList = [];
 }
 // 听书页优化
-if (Pathname.includes("/resource-orchestration-system/book/v101/content/")) {
+if (Pathname.includes("/resource-orchestration-system/book/v101/content")) {
     if (Decode_Body.data?.bookComponent) {
         for (const item of Decode_Body.data.bookComponent) {
             if (item.hasOwnProperty("compBanner")) {
