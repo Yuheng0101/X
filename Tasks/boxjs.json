@@ -198,7 +198,9 @@
         "imaotai__config__city",
         "imaotai__config__itemcode",
         "imaotai__config__address",
-        "imaotai__config__location"
+        "imaotai__config__location",
+        "imaotai_debug",
+        "imaotai_bark_key"
       ],
       "settings": [
         {
@@ -275,7 +277,24 @@
           "type": "text",
           "rows": 1,
           "desc": "注意经度在前, 纬度在后, 例如: 117.119999,36.651216,不填根据当前位置获取"
+        },
+        {
+          "id": "imaotai_bark_key",
+          "name": "Bark通知",
+          "val": null,
+          "type": "text",
+          "rows": 1,
+          "desc": "填写Bark的app提供的key, 填写后不再使用默认通知方式"
+        },
+        {
+          "id": "amap_api",
+          "name": "(选填)高德开发者Key",
+          "val": null,
+          "type": "text",
+          "rows": 1,
+          "desc": "后续key失效后需要填写"
         }
+        
       ],
       "author": "@yuheng",
       "repo": "https://github.com/Yuheng0101/X",
