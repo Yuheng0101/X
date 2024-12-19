@@ -3,9 +3,8 @@
  * @author 𝐎𝐍𝐙𝟑𝐕
  * @description 全局净化
  * @channel https://t.me/yqc_123
- * @feedback https://t.me/lanjieguanggao
- * @date 2024-12-18
- * @version 1.0.0
+ * @date 2024-12-19
+ * @version 1.1.0
 ******************************************
 脚本声明:
 1. 本脚本仅用于学习研究，禁止用于商业用途
@@ -16,11 +15,6 @@
 6. 请勿将本脚本用于商业用途，由此引起的问题与作者无关
 7. 本脚本及其更新版权归作者所有
 ******************************************/
-// https://www.npmjs.com/package/@nsnanocat/util
-// prettier-ignore
-const $app=(()=>{const e=Object.keys(globalThis);switch(!0){case e.includes("$task"):return"Quantumult X";case e.includes("$loon"):return"Loon";case e.includes("$rocket"):return"Shadowrocket";case e.includes("Egern"):return"Egern";case e.includes("$environment"):return $environment["surge-version"]?"Surge":$environment["stash-version"]?"Stash":void 0;default:return}})();
-// prettier-ignore
-class Storage{static data=null;static dataFile="box.dat";static nameRegex=/^@(?<key>[^.]+)(?:\.(?<path>.*))?$/;static getItem(e,t=null){let a=t;switch(e.startsWith("@")){case!0:{const{key:t,path:r}=e.match(Storage.nameRegex)?.groups;e=t;let s=Storage.getItem(e,{});"object"!=typeof s&&(s={}),a=Lodash.get(s,r);try{a=JSON.parse(a)}catch(e){}break}default:switch($app){case"Surge":case"Loon":case"Stash":case"Egern":case"Shadowrocket":a=$persistentStore.read(e);break;case"Quantumult X":a=$prefs.valueForKey(e);break;default:a=Storage.data?.[e]||null;break}try{a=JSON.parse(a)}catch(e){}break}return a??t}static setItem(e=new String,t=new String){let a=!1;switch(typeof t){case"object":t=JSON.stringify(t);break;default:t=String(t);break}switch(e.startsWith("@")){case!0:{const{key:r,path:s}=e.match(Storage.nameRegex)?.groups;e=r;let c=Storage.getItem(e,{});"object"!=typeof c&&(c={}),Lodash.set(c,s,t),a=Storage.setItem(e,c);break}default:switch($app){case"Surge":case"Loon":case"Stash":case"Egern":case"Shadowrocket":a=$persistentStore.write(t,e);break;case"Quantumult X":a=$prefs.setValueForKey(t,e);break;default:a=Storage.data?.[e]||null;break}break}return a}static removeItem(e){let t=!1;switch(e.startsWith("@")){case!0:{const{key:a,path:r}=e.match(Storage.nameRegex)?.groups;e=a;let s=Storage.getItem(e);"object"!=typeof s&&(s={}),keyValue=Lodash.unset(s,r),t=Storage.setItem(e,s);break}default:switch($app){case"Surge":case"Loon":case"Stash":case"Egern":case"Shadowrocket":t=!1;break;case"Quantumult X":t=$prefs.removeValueForKey(e);break;default:t=!1;break}break}return t}static clear(){let e=!1;switch($app){case"Surge":case"Loon":case"Stash":case"Egern":case"Shadowrocket":e=!1;break;case"Quantumult X":e=$prefs.removeAllValues();break;default:e=!1;break}return e}}
 // https://www.npmjs.com/package/base-64
 // prettier-ignore
 !function(r){var t=function(r){this.message=r};(t.prototype=new Error).name="InvalidCharacterError";var e=function(r){throw new t(r)},a="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",n=/[\t\n\f\r ]/g,c={encode:function(r){r=String(r),/[^\0-\xFF]/.test(r)&&e("The string to be encoded contains characters outside of the Latin1 range.");for(var t,n,c,o,h=r.length%3,d="",i=-1,A=r.length-h;++i<A;)t=r.charCodeAt(i)<<16,n=r.charCodeAt(++i)<<8,c=r.charCodeAt(++i),d+=a.charAt((o=t+n+c)>>18&63)+a.charAt(o>>12&63)+a.charAt(o>>6&63)+a.charAt(63&o);return 2==h?(t=r.charCodeAt(i)<<8,n=r.charCodeAt(++i),d+=a.charAt((o=t+n)>>10)+a.charAt(o>>4&63)+a.charAt(o<<2&63)+"="):1==h&&(o=r.charCodeAt(i),d+=a.charAt(o>>2)+a.charAt(o<<4&63)+"=="),d},decode:function(r){var t=(r=String(r).replace(n,"")).length;t%4==0&&(t=(r=r.replace(/==?$/,"")).length),(t%4==1||/[^+a-zA-Z0-9/]/.test(r))&&e("Invalid character: the string to be decoded is not correctly encoded.");for(var c,o,h=0,d="",i=-1;++i<t;)o=a.indexOf(r.charAt(i)),c=h%4?64*c+o:o,h++%4&&(d+=String.fromCharCode(255&c>>(-2*h&6)));return d},version:"1.0.0"};r.base64=c}(globalThis);
@@ -43,39 +37,32 @@ const EncryptionOrNot =
     `${$response.headers["reqentryption"] ?? $response.headers["reqEntryption"]}`.toLowerCase() ===
     "base64";
 // ------------------------------------------------------------
-// TODO: 用户选择
-const Home_Category_Selection = Arguments["Home_Category_Selection"] ||
-    Storage.getItem("home_category_selection") || [
-        // "mainBusiness", // 金刚位 - 菜单
-        "rankAlgorithm", // 榜单
-        "newReport", // 近期新书
-        "editorRecommend", // 编辑推荐
-        "book", // 讲书
-        "singleBookList", // 书单
-        "course" // 课程
-    ];
+const Home_Category_Selection = [
+    // "mainBusiness", // 金刚位 - 菜单
+    "rankAlgorithm", // 榜单
+    "newReport", // 近期新书
+    "editorRecommend", // 编辑推荐
+    "book", // 讲书
+    "singleBookList", // 书单
+    "course" // 课程
+];
 
-const Book_Category_Selection = Arguments["Book_Category_Selection"] ||
-    Storage.getItem("book_category_selection") || [
-        "newBooks", // 本周新书
-        "studyHistory", // 最近在学
-        "recommendBookList", // 书单推荐
-        "speakers", // 主讲人
-        "recommendBook", // 专属推荐
-        "algorithmRecom" // 算法推荐
-    ];
-
-const User_Setting_Selection =
-    Arguments["User_Setting_Selection"] ||
-    Storage.getItem("user_setting_selection") ||
-    [
-        // "227", // 帆书企业版 - 展示[企业版]
-        // "141", // 邀请好友页（邀请有礼） - 展示[邀请有礼]
-        // "148", // 组队读书 - 展示[组队读书]
-        // "153", // web页面 - 展示[职业福利]
-        // "216", // 我的-更多服务页面 - 展示[更多服务]
-        // "228" // 签到任务中心页 - 展示[大学生福利]
-    ];
+const Book_Category_Selection = [
+    "newBooks", // 本周新书
+    "studyHistory", // 最近在学
+    "recommendBookList", // 书单推荐
+    "speakers", // 主讲人
+    "recommendBook", // 专属推荐
+    "algorithmRecom" // 算法推荐
+];
+const User_Setting_Selection = [
+    // "227", // 帆书企业版 - 展示[企业版]
+    // "141", // 邀请好友页（邀请有礼） - 展示[邀请有礼]
+    // "148", // 组队读书 - 展示[组队读书]
+    // "153", // web页面 - 展示[职业福利]
+    // "216", // 我的-更多服务页面 - 展示[更多服务]
+    // "228" // 签到任务中心页 - 展示[大学生福利]
+];
 // ------------------------------------------------------------
 let Decode_Body = jsonParse(
     EncryptionOrNot ? utf8.decode(base64.decode($response.body)) : $response.body,
