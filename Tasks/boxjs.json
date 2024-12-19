@@ -177,20 +177,19 @@
       "id": "yuheng.imaotai",
       "name": "i茅台预约",
       "descs_html": [
-        "<p style='margin-left:20px;margin-top:20px;color:#f1c40f;'>已适配多账号, 多参数使用&进行隔开, 或自定义</p>",
-        "<p style='margin-left:20px;margin-top:20px;color:#ff0000;'>请注意如果不配置,默认选择填写的作为预约参数,如你抓取2个或多个账号,实则下方参数只配置了一个,所有账号都按此配置进行预约</p>",
-        "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(是否选择投放量最大门店): true&false</p>",
-        "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(是否开启茅运[茅运不足100请填false]): true&false</p>",
-        "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(省份配置): 贵州省&浙江省&...</p>",
-        "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(城市配置): 贵阳市&温州市&...</p>",
-        "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(预约项配置): 10941,10942&10941&...</p>",
-        "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(详细地址): 贵阳市南明区花果园&xxxxx&...</p>",
-        "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(经纬度): 106.713478,26.573743&xxxxx&...</p>",
-        "<p style='margin-left:20px;margin-top:20px;color:#ff0000;'>账号配置请与ck长度保持一致, 亦或只填写一个</p>",
+        "<p style='margin-left:20px;margin-top:20px;color:#ff0000;'>请注意如果不配置,默认选择填写的作为预约参数</p>",
+        "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(是否选择投放量最大门店): true</p>",
+        "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(是否开启茅运[茅运不足100请关闭]): true</p>",
+        "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(省份配置): 贵州省</p>",
+        "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(城市配置): 贵阳市</p>",
+        "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(预约项配置): 10941,10942</p>",
+        "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(详细地址): 贵阳市南明区花果园</p>",
+        "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(经纬度): 106.713478,26.573743</p>",
         "<p style='margin-left:20px;margin-top:20px;color:#9b59b6;'>多说一句,经纬度你知道就填,不知道只填详细地址就好,经纬度优先级高于地址,如果填写经纬度,详细地址的作用将失效</p>"
       ],
       "keys": [
-        "imaotai_split",
+        "imaotai_mobile",
+        "imaotai_code",
         "imaotai_params",
         "imaotai__config__islarge",
         "imaotai__config__istravel",
@@ -202,24 +201,31 @@
       ],
       "settings": [
         {
-          "id": "imaotai_split",
-          "name": "多账号分隔符, 默认即可",
-          "val": "&",
+          "id": "imaotai_mobile",
+          "name": "手机号(用于获取验证码)",
+          "val": null,
           "type": "text",
           "desc": ""
         },
         {
-          "id": "imaotai__config__islarge",
-          "name": "预约方式, 最大投放量[true], 最近[false], 默认false",
-          "val": "false",
+          "id": "imaotai_code",
+          "name": "验证码",
+          "val": null,
           "type": "text",
+          "desc": "务必先执行获取验证码接口再填写该字段"
+        },
+        {
+          "id": "imaotai__config__islarge",
+          "name": "预约方式[是否开启最大投放量]",
+          "val": false,
+          "type": "boolean",
           "desc": ""
         },
         {
           "id": "imaotai__config__istravel",
-          "name": "是否开启茅运旅行, 开启[true], 关闭[false], 默认false",
-          "val": "false",
-          "type": "text",
+          "name": "是否开启茅运旅行[⚠️临时停用]",
+          "val": false,
+          "type": "boolean",
           "desc": ""
         },
         {
@@ -269,7 +275,16 @@
         "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/ae/f4/18/aef41811-955e-e6b0-5d23-6763c2eef1ab/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/144x144.png",
         "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/ae/f4/18/aef41811-955e-e6b0-5d23-6763c2eef1ab/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/144x144.png"
       ],
-      "script": ""
+      "scripts": [
+        {
+          "name": "发送验证码（填 手机号, 保存, 执行）",
+          "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Maotai/msg.js"
+        },
+        {
+          "name": "用验证码登录（填 手机号, 验证码, 保存, 执行 ⚠️ 执行后 记得刷新）",
+          "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Maotai/login.js"
+        }
+      ]
     },
     {
       "id": "yuheng.95598.web",
