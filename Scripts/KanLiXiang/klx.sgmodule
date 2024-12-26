@@ -1,0 +1,21 @@
+#!name= 看理想
+#!desc= 全局净化、畅听卡假解锁
+#!category= 广告必须噶
+
+[Map Local]
+# 看理想去开屏
+^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/home\/advertisement data-type=text data=" " status-code=200
+^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/other\/pop-up data-type=text data=" " status-code=200
+
+[Script]
+KanLiXiang_No_Ads = type=http-response, pattern=^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/other\/config, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/KanLiXiang/No_Ads.js, requires-body=1, max-size=-1, timeout=5
+KanLiXiang_No_Ads = type=http-response, pattern=^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/home\/header-new, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/KanLiXiang/No_Ads.js, requires-body=1, max-size=-1, timeout=5
+KanLiXiang_No_Ads = type=http-response, pattern=^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/user\/profile, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/KanLiXiang/No_Ads.js, requires-body=1, max-size=-1, timeout=5
+KanLiXiang_No_Ads = type=http-response, pattern=^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/vip\/buy-list, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/KanLiXiang/No_Ads.js, requires-body=1, max-size=-1, timeout=5
+KanLiXiang_No_Ads = type=http-response, pattern=^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/class\/content, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/KanLiXiang/No_Ads.js, requires-body=1, max-size=-1, timeout=5
+
+
+[MITM]
+hostname = %APPEND% api.vistopia.com.cn
+
+
