@@ -1,5 +1,5 @@
 const Pathname = /^(?:https?:\/\/)?[^\/]+(\/[^?#]*)?/.exec($request.url)?.[1];
-const Status = $response.status ?? $request.statusCode;
+const Status = $response.status ?? $response.statusCode;
 if (Status !== 200) {
     console.log("非 200 状态码‼️ ‼️" + Status);
     $done({});
