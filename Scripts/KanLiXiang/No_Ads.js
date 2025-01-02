@@ -1,5 +1,6 @@
 const Pathname = /^(?:https?:\/\/)?[^\/]+(\/[^?#]*)?/.exec($request.url)?.[1];
-const Status = $response.status ?? $response.statusCode;
+console.log(Pathname);
+const Status = $response.status ?? $request.statusCode;
 if (Status !== 200) {
     console.log("非 200 状态码‼️ ‼️" + Status);
     $done({});
@@ -59,6 +60,13 @@ if (/v2\/home\/header-new/i.test(Pathname)) {
             item.tips_url = "";
         });
     }
+    if (!Black_Type_List.includes("card_single_content")) {
+        const index = body.data.findIndex((item) => item.type === "card_single_content");
+        body.data[index].data.forEach((item) => {
+            // item.sale_price = "";
+            item.label = "vip_free_y";
+        });
+    }
 }
 
 // 会员页假解锁
@@ -91,8 +99,8 @@ if (/vip\/buy-list/i.test(Pathname)) {
     };
 }
 // 列表假解锁
-if (/class\/content/i.test(Pathname)) {
-    body.data.data.forEach((item) => {
+if (/(class\/content|content\/sales-list)/i.test(Pathname)) {
+    body.data?.data?.forEach((item) => {
         item.vip_type = "lixiangjia_trial";
     });
 }
@@ -109,6 +117,20 @@ if (/v2\/user\/profile/i.test(Pathname)) {
     if (body.data.user_file?.old_vip_type) {
         body.data.user_file.old_vip_type = "";
     }
+}
+
+// 文学的记忆
+if (/broadcast\/show/i.test(Pathname)) {
+    body.data?.articles?.forEach((item) => {
+        item.is_listen = "1";
+    });
+}
+
+// 主讲人
+if (/author\/author-show/i.test(Pathname)) {
+    body.data?.contents?.forEach((item) => {
+        item.vip_type = "lixiangjia_trial";
+    });
 }
 
 $done({ body: jsonStr(body) });

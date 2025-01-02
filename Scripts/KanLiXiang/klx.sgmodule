@@ -1,6 +1,11 @@
 #!name= 看理想
 #!desc= 全局净化、畅听卡假解锁
+#!author= 𝐎𝐍𝐙𝟑𝐕
 #!category= 广告必须噶
+#!keyword=广告必须噶
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/78/87/c5/7887c5d8-ae49-a187-e7ae-ca9361a5d7f9/AppIcon-0-0-1x_U007epad-0-9-0-85-220.png/144x144.png
+#!openUrl=https://apps.apple.com/app/id1342118033
+#!homepage=https://github.com/Yuheng0101/X
 
 [Map Local]
 # 看理想去开屏
@@ -10,10 +15,12 @@
 [Script]
 KanLiXiang_No_Ads = type=http-response, pattern=^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/other\/config, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/KanLiXiang/No_Ads.js, requires-body=1, max-size=-1, timeout=5
 KanLiXiang_No_Ads = type=http-response, pattern=^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/home\/header-new, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/KanLiXiang/No_Ads.js, requires-body=1, max-size=-1, timeout=5
-KanLiXiang_No_Ads = type=http-response, pattern=^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/user\/profile, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/KanLiXiang/No_Ads.js, requires-body=1, max-size=-1, timeout=5
-KanLiXiang_No_Ads = type=http-response, pattern=^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/vip\/buy-list, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/KanLiXiang/No_Ads.js, requires-body=1, max-size=-1, timeout=5
-KanLiXiang_No_Ads = type=http-response, pattern=^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/class\/content, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/KanLiXiang/No_Ads.js, requires-body=1, max-size=-1, timeout=5
-
+KanLiXiang_Faker_Unlock = type=http-response, pattern=^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/user\/profile, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/KanLiXiang/No_Ads.js, requires-body=1, max-size=-1, timeout=5
+KanLiXiang_Faker_Unlock = type=http-response, pattern=^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/vip\/buy-list, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/KanLiXiang/No_Ads.js, requires-body=1, max-size=-1, timeout=5
+KanLiXiang_Faker_Unlock = type=http-response, pattern=^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/class\/content, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/KanLiXiang/No_Ads.js, requires-body=1, max-size=-1, timeout=5
+KanLiXiang_Faker_Unlock = type=http-response, pattern=^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/content\/sales-list, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/KanLiXiang/No_Ads.js, requires-body=1, max-size=-1, timeout=5
+KanLiXiang_Faker_Unlock = type=http-response, pattern=^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/broadcast\/show, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/KanLiXiang/No_Ads.js, requires-body=1, max-size=-1, timeout=5
+KanLiXiang_Faker_Unlock = type=http-response, pattern=^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/author\/author-show, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/KanLiXiang/No_Ads.js, requires-body=1, max-size=-1, timeout=5
 
 [MITM]
 hostname = %APPEND% api.vistopia.com.cn
