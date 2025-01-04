@@ -21,6 +21,8 @@ KanLiXiang_Faker_Unlock = type=http-response, pattern=^https?:\/\/api\.vistopia\
 KanLiXiang_Faker_Unlock = type=http-response, pattern=^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/content\/sales-list, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/KanLiXiang/No_Ads.js, requires-body=1, max-size=-1, timeout=5
 KanLiXiang_Faker_Unlock = type=http-response, pattern=^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/broadcast\/show, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/KanLiXiang/No_Ads.js, requires-body=1, max-size=-1, timeout=5
 KanLiXiang_Faker_Unlock = type=http-response, pattern=^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/author\/author-show, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/KanLiXiang/No_Ads.js, requires-body=1, max-size=-1, timeout=5
+KanLiXiang_Faker_Unlock = type=http-response, pattern=^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/content\/article_list, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/KanLiXiang/No_Ads.js, requires-body=1, max-size=-1, timeout=5
+KanLiXiang_Faker_Unlock = type=http-response, pattern=^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/content\/content-show\/\d+, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/KanLiXiang/No_Ads.js, requires-body=1, max-size=-1, timeout=5
 
 [MITM]
 hostname = %APPEND% api.vistopia.com.cn

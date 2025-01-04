@@ -133,6 +133,18 @@ if (/author\/author-show/i.test(Pathname)) {
     });
 }
 
+// 文章列表
+if (/content\/article_list/i.test(Pathname)) {
+    body.data?.article_list?.forEach((item) => {
+        item.vip_type = "lixiangjia_trial";
+    });
+}
+
+// 文章详情
+if (/content\/content-show\/\d+/i.test(Pathname)) {
+    body.data.is_purchased = "1";
+}
+
 $done({ body: jsonStr(body) });
 
 function jsonParse(json, defaultValue) {
