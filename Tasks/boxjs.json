@@ -174,7 +174,7 @@
       "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/mi/step.js"
     },
     {
-      "id": "yuheng.imaotai",
+      "id": "yuheng.imaotai.v1.5",
       "name": "i茅台预约",
       "descs_html": [
         "<p style='margin-left:20px;margin-top:20px;color:#ff0000;'>请注意如果不配置,默认选择填写的作为预约参数</p>",
@@ -257,10 +257,30 @@
         {
           "id": "imaotai__config__itemcode",
           "name": "*预约项",
-          "val": "10941,10942",
-          "type": "text",
-          "rows": 1,
-          "desc": "多品逗号隔开,需要预约的项目{'10941': '500ml贵州茅台酒（甲辰龙年）', '2478': '贵州茅台酒（珍品）','10942': '375ml×2贵州茅台酒（甲辰龙年）','10056': '53%vol 500ml 茅台1935'}"
+          "val": "11318,11317,11319,2478,11240",
+          "type": "checkboxes",
+          "items": [
+            {
+              "key": "11318",
+              "label": "53%vol 500ml贵州茅台酒（乙巳蛇年）"
+            },
+            {
+              "key": "11317",
+              "label": "53%vol 500ml贵州茅台酒（笙乐飞天）"
+            },
+            {
+              "key": "11319",
+              "label": "53%vol 375ml×2贵州茅台酒（乙巳蛇年）"
+            },
+            {
+              "key": "2478",
+              "label": "贵州茅台酒（珍品）"
+            },
+            {
+              "key": "11240",
+              "label": "53%vol 500ml 茅台1935·中国国家地理文创酒（喜逢大运河）"
+            }
+          ]
         },
         {
           "id": "imaotai__config__address",
