@@ -2,7 +2,7 @@
  * @name 每天60秒读懂世界
  * @channel https://t.me/yqc_123
  * @feedback https://t.me/yqc_777
- * @version 1.6.0
+ * @version 1.6.1
 ******************************************
 ## 更新日志
 
