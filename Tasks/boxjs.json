@@ -1416,6 +1416,45 @@
         "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/52pojie.png"
       ],
       "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/52pojie.js"
+    },
+    {
+      "id": "yuheng.douban",
+      "name": "豆瓣电影日历",
+      "descs_html": [
+        "<a style='color:#686de0;display:block;text-align:center;' target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/douban.js'>脚本链接</a>"
+      ],
+      "keys": ["douban_debug", "douban_api_key", "douban_bark_push"],
+      "settings": [
+        {
+          "id": "douban_debug",
+          "name": "是否开启调试模式",
+          "val": false,
+          "type": "boolean",
+          "desc": ""
+        },
+        {
+          "id": "douban_api_key",
+          "name": "豆瓣接口密钥",
+          "val": null,
+          "type": "textarea",
+          "rows": 5,
+          "desc": "不知道可不填, 已默认"
+        },
+        {
+          "id": "douban_bark_push",
+          "name": "Bark密钥",
+          "val": null,
+          "type": "text",
+          "desc": "填写后只使用Bark推送"
+        }
+      ],
+      "author": "@yuheng",
+      "repo": "https://github.com/Yuheng0101/X",
+      "icons": [
+        "https://is3-ssl.mzstatic.com/image/thumb/Purple126/v4/90/5d/f8/905df82a-0e2e-5a2c-2be6-cc690fb0bec0/AppIcon-0-0-1x_U007emarketing-0-0-0-6-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/144x144bb.png",
+        "https://is3-ssl.mzstatic.com/image/thumb/Purple126/v4/90/5d/f8/905df82a-0e2e-5a2c-2be6-cc690fb0bec0/AppIcon-0-0-1x_U007emarketing-0-0-0-6-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/144x144bb.png"
+      ],
+      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/douban.js"
     }
   ]
 }
