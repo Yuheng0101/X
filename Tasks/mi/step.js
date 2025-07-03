@@ -238,7 +238,7 @@ function Xiaomi(user, pwd, step, userType) {
         };
         const { statusCode, headers } = await fetchData(options);
         if (statusCode >= 300 && statusCode < 400) {
-          const loc = $.isNode() ? headers["location"] : headers["Location"];
+          const loc = headers["location"] || headers["Location"];
           logger.debug("获取重定向链接", $.qs.parse(loc));
           if (!/access/.test(loc)) throw new Error("获取登录信息失败");
           const { access } = $.qs.parse(loc);
