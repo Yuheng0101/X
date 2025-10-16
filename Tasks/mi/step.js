@@ -207,7 +207,7 @@ function Xiaomi(user, pwd, step, userType) {
         }
         // 登录参数 -- success
         async getCode() {
-            const username = this.userType === 'email' ? encodeURIComponent(this.username) : `+86${this.username}`
+            const username = this.userType === 'email' ? this.username : `+86${this.username}`
             const query = Object.entries({
                 client_id: 'HuaMi',
                 country_code: 'CN',
