@@ -1,0 +1,26 @@
+#!name= 酷我音乐
+#!desc= 解锁会员权限
+#!author= 𝐎𝐍𝐙𝟑𝐕
+#!category= 𝐎𝐍𝐙𝟑𝐕
+#!tag= 𝐎𝐍𝐙𝟑𝐕
+#!homepage= https://github.com/Yuheng0101/X
+#!openUrl= https://github.com/Yuheng0101/X
+#!version= 1.1.0
+#!date= 2025-12-22
+
+[Script]
+# ========== 酷我 ==========
+酷我修改会员信息 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/vip\/enc\/user\/vip, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js, requires-body=true, max-size=-1, timeout=60
+酷我修改音乐信息 = type=http-request, pattern=^https?:\/\/music(pay)?\.kuwo\.cn\/music.pay\?newver=3, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js, requires-body=true, max-size=-1, timeout=60
+酷我修改播放接口 = type=http-response, pattern=^https?:\/\/.+\.kuwo\.cn\/mobi\.s\?f=kwxs&q=, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js, requires-body=true, max-size=-1, timeout=60
+酷我听书伪装会员 = type=http-response, pattern=^https?:\/\/tingshu\.kuwo\.cn\/api\/v2\/pay\/app\/getConfigInfo, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js, requires-body=true, max-size=-1, timeout=60
+酷我听书列表横幅 = type=http-response, pattern=^https?:\/\/tingshu\.kuwo\.cn\/v2\/api\/pay\/payInfo\/kwplayer\/payMiniBar, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js, requires-body=true, max-size=-1, timeout=60
+酷我修改听书信息 = type=http-request, pattern=^https?:\/\/audiobookpay\.kuwo\.cn\/a\.p\?simpleToken=1, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js, requires-body=true, max-size=-1, timeout=60
+酷我修改漫剧信息 = type=http-response, pattern=^https?:\/\/audiobookpay\.kuwo\.cn\/a\.p\?newver=3, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js, requires-body=true, max-size=-1, timeout=60
+酷我解锁会员皮肤 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/(commercia\/)?vip\/(v2\/theme\?op\=gd|(player\/getStyleListByModel|hanger\/wear)), script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js, requires-body=true, max-size=-1, timeout=60
+酷我解锁会员信息 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/vip\/v2\/user\/vip, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js, requires-body=true, max-size=-1, timeout=60
+酷我去除装扮横幅 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/commercia\/vip\/dressCenter\/getTabList, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js, requires-body=true, max-size=-1, timeout=60
+酷我个人信息修改 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/commercia\/vipTab\/myTab\/base, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js, requires-body=true, max-size=-1, timeout=60
+
+[MITM]
+hostname = %APPEND% *.kuwo.cn
