@@ -1,12 +1,17 @@
 #!name= 酷我音乐
-#!desc= 解锁会员权限
+#!desc= 解锁会员权限、支持切换音质
 #!author= 𝐎𝐍𝐙𝟑𝐕
 #!category= 𝐎𝐍𝐙𝟑𝐕
 #!tag= 𝐎𝐍𝐙𝟑𝐕
+#!feedback= https://t.me/Yqc_PrivateChatBot
 #!homepage= https://github.com/Yuheng0101/X
 #!openUrl= https://github.com/Yuheng0101/X
 #!version= 1.1.0
-#!date= 2025-12-22
+#!date= 2026-01-20
+# ==============================
+# 酷我测试版本 -> 12.0.6
+# ==============================
+
 
 [Script]
 # ========== 酷我 ==========
