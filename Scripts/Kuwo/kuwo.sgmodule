@@ -6,15 +6,22 @@
 #!feedback= https://t.me/Yqc_PrivateChatBot
 #!homepage= https://github.com/Yuheng0101/X
 #!openUrl= https://github.com/Yuheng0101/X
-#!version= 1.1.0
-#!date= 2026-01-20
+#!version= 1.1.2
+#!date= 2026-01-21
 # ==============================
 # 酷我测试版本 -> 12.0.6
 # ==============================
 
+[Map Local]
+^https?:\/\/mobilead\.kuwo\.cn\/EcomResourceServer\/(getIOSIsHideAd|getMotor)\.do data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/rich\.kuwo\.cn\/(AdService|ecom)\/kaiping\/ad[iI]nfo data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/wapi\.kuwo\.cn\/openapi\/v1\/user\/adVip\/info data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/wapi\.kuwo\.cn\/openapi\/v1\/operate(\/(adVip|freeMode\/h5))?\/text data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/ad\.tencentmusic\.com\/config\/uni data-type=text data=" " status-code=200 header="Content-Type:application/json"
+^https?:\/\abt-kuwo\.tencentmusic\.com\/kuwo\/ui\/info data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
 
 [Script]
-# ========== 酷我 ==========
 酷我修改会员信息 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/vip\/enc\/user\/vip, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js, requires-body=true, max-size=-1, timeout=60
 酷我修改音乐信息 = type=http-request, pattern=^https?:\/\/music(pay)?\.kuwo\.cn\/music.pay\?newver=3, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js, requires-body=true, max-size=-1, timeout=60
 酷我修改播放接口 = type=http-response, pattern=^https?:\/\/.+\.kuwo\.cn\/mobi\.s\?f=kwxs&q=, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js, requires-body=true, max-size=-1, timeout=60
@@ -26,6 +33,8 @@
 酷我解锁会员信息 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/vip\/v2\/user\/vip, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js, requires-body=true, max-size=-1, timeout=60
 酷我去除装扮横幅 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/commercia\/vip\/dressCenter\/getTabList, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js, requires-body=true, max-size=-1, timeout=60
 酷我个人信息修改 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/commercia\/vipTab\/myTab\/base, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js, requires-body=true, max-size=-1, timeout=60
+酷我下载信息修改 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/commercia\/userAssets\/downloadCoupon\/reduce, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js, requires-body=true, max-size=-1, timeout=60
+酷我首页去除推广 = type=http-response, pattern=^https?:\/\/homepages\.kuwo\.cn(\.eo\.dnse1\.com)?\/mgxh\.s, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
 hostname = %APPEND% *.kuwo.cn
