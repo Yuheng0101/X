@@ -37,4 +37,4 @@
 酷我首页去除推广 = type=http-response, pattern=^https?:\/\/homepages\.kuwo\.cn(\.eo\.dnse1\.com)?\/mgxh\.s, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
-hostname = %APPEND% *.kuwo.cn
+hostname = %APPEND% *.kuwo.cn, ad.tencentmusic.com, abt-kuwo.tencentmusic.com

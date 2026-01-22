@@ -6,6 +6,8 @@
  # > 更新时间: 2026-01-22 14:33:29
  # > 作者首页: https://github.com/Yuheng0101/X/
 
+hostname = *.kuwo.cn, ad.tencentmusic.com, abt-kuwo.tencentmusic.com
+
 ^https?:\/\/mobilead\.kuwo\.cn\/EcomResourceServer\/((getIOSIsHideAd|getMotor)\.do|adEarnGuajian\/adinfo) url reject-200
 ^https?:\/\/rich\.kuwo\.cn\/(AdService|ecom)\/kaiping\/ad[iI]nfo url reject-200
 ^https?:\/\/wapi\.kuwo\.cn\/openapi\/v1\/user\/adVip\/info url reject-200
