@@ -1,0 +1,15 @@
+#!name=中国移动云盘
+#!desc=中国移动云盘自动签到脚本
+#!category=中国移动云盘任务
+#!channel=https://t.me/yqc_000/
+#!feedback=https://t.me/NobyDa_Chat/
+#!author=𝐎𝐍𝐙𝟑𝐕
+#!homepage=https://github.com/Yuheng0101/X/tree/main/Tasks/cloud139
+#!updateAt=2026-03-11 14:26:08
+#!version=1.0.0
+
+[Script]
+http-request ^https?:\/\/user-njs\.yun\.139\.com\/user\/getUser script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/cloud139/dist/capture.js, timeout=60, tag=中国移动云盘抓取
+
+[MITM]
+hostname = user-njs.yun.139.com

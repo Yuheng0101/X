@@ -1,0 +1,24 @@
+{
+  "updateAt": "2026-03-11 14:26:08",
+  "mode": "prod",
+  "capture": {
+    "localUrl": "http://192.168.110.38:9999/scripts-rollup/cloud139/dist/capture.js",
+    "localQrUrl": "https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=http%3A%2F%2F192.168.110.38%3A9999%2Fscripts-rollup%2Fcloud139%2Fdist%2Fcapture.js",
+    "remoteUrl": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/cloud139/dist/capture.js"
+  },
+  "execute": {
+    "localUrl": "http://192.168.110.38:9999/scripts-rollup/cloud139/dist/cloud139.js",
+    "localQrUrl": "https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=http%3A%2F%2F192.168.110.38%3A9999%2Fscripts-rollup%2Fcloud139%2Fdist%2Fcloud139.js",
+    "remoteUrl": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/cloud139/dist/cloud139.js"
+  },
+  "captureDev": {
+    "localUrl": "http://192.168.110.38:9999/scripts-rollup/cloud139/dist/capture.dev.js",
+    "localQrUrl": "https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=http%3A%2F%2F192.168.110.38%3A9999%2Fscripts-rollup%2Fcloud139%2Fdist%2Fcapture.dev.js",
+    "remoteUrl": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/cloud139/dist/capture.dev.js"
+  },
+  "executeDev": {
+    "localUrl": "http://192.168.110.38:9999/scripts-rollup/cloud139/dist/cloud139.dev.js",
+    "localQrUrl": "https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=http%3A%2F%2F192.168.110.38%3A9999%2Fscripts-rollup%2Fcloud139%2Fdist%2Fcloud139.dev.js",
+    "remoteUrl": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/cloud139/dist/cloud139.dev.js"
+  }
+}
