@@ -143,4 +143,9 @@ vite.config.ts.timestamp-*
 
 # 开发相关
 *.dev.*
-!rollup.config.dev.js
+!**/rollup.dev.config.js
+.vscode
+
+# cloud139 - 自动生成
+Tasks/cloud139/profiles/
+Tasks/cloud139/README.md

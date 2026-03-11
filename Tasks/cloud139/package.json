@@ -1,0 +1,71 @@
+{
+  "name": "@yuheng0101/cloud139",
+  "version": "1.0.0",
+  "description": "中国移动云盘自动签到脚本",
+  "type": "module",
+  "author": "𝐎𝐍𝐙𝟑𝐕",
+  "license": "MIT",
+  "homepage": "https://github.com/Yuheng0101/X/tree/main/Tasks/cloud139",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yuheng0101/X.git"
+  },
+  "scriptMeta": {
+    "displayName": "中国移动云盘",
+    "notifyTitle": "中国移动云盘",
+    "category": "中国移动云盘任务",
+    "channel": "https://t.me/yqc_000/",
+    "feedback": "https://t.me/NobyDa_Chat/",
+    "thanks": [
+      "【@nsnanocat/util:https://github.com/NSNanoCat/util】",
+      "【@Template(Rollup):https://github.com/NSNanoCat/Template】"
+    ],
+    "publishPath": "Tasks/cloud139",
+    "distDir": "dist",
+    "generatedDir": "profiles",
+    "captureFile": "capture.js",
+    "captureDevFile": "capture.dev.js",
+    "executeFile": "cloud139.js",
+    "executeDevFile": "cloud139.dev.js",
+    "surgeModuleFile": "cloud139.sgmodule",
+    "surgeDevModuleFile": "cloud139.dev.sgmodule",
+    "qxSnippetFile": "cloud139.snippet",
+    "qxDevSnippetFile": "cloud139.dev.snippet",
+    "loonPluginFile": "cloud139.plugin",
+    "loonDevPluginFile": "cloud139.dev.plugin",
+    "localProtocol": "http",
+    "localHost": "192.168.110.38",
+    "localPort": 9999,
+    "localPath": "scripts-rollup/cloud139/dist",
+    "generatedTimezone": "Asia/Shanghai"
+  },
+  "scripts": {
+    "clean": "node -e \"const fs=require('fs');['dist/request.js','dist/request.dev.js','dist/response.js','dist/response.dev.js','dist/capture.js','dist/capture.dev.js','dist/cloud139.js','dist/cloud139.dev.js'].forEach(file=>{if(fs.existsSync(file))fs.unlinkSync(file);});\"",
+    "build": "npm run clean && rollup -c && node ./scripts/generate-assets.mjs",
+    "build:dev": "npm run clean && rollup --config --configDev && node ./scripts/generate-assets.mjs --dev",
+    "generate": "node ./scripts/generate-assets.mjs",
+    "build:watch": "rollup -c -w"
+  },
+  "keywords": [
+    "cloud139",
+    "script",
+    "rollup",
+    "surge",
+    "quantumult-x",
+    "loon"
+  ],
+  "dependencies": {
+    "@biomejs/biome": "^2.3.15",
+    "@nsnanocat/grpc": "^1.0.0",
+    "@nsnanocat/url": "^1.0.0",
+    "@nsnanocat/util": "^2.2.3",
+    "crypto-js": "^4.2.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-terser": "^0.4.0",
+    "rollup": "^4.0.0"
+  }
+}
