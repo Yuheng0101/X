@@ -1,0 +1,9 @@
+[mitm]
+hostname = api.wsgw-rewrite.com
+
+[rewrite_local]
+# 网上国网接口重写
+^https?:\/\/api\.wsgw-rewrite\.com\/electricity\/bill\/all url script-analyze-echo-response https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/95598/95598.js
+
+[task_local]
+0 9 * * * https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/95598/95598.js, tag=网上国网查询, img-url=https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/83/d8/8a/83d88a92-5a4d-7a2f-118c-80d795e7a9f6/AppIcon-0-0-1x_U007emarketing-0-5-0-0-sRGB-85-220.png/144x144.png, enabled=true
