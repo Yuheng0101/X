@@ -1,0 +1,17 @@
+/******************************************
+ * @name 中国移动云盘
+ * @description 中国移动云盘自动签到脚本
+ * @author 𝐎𝐍𝐙𝟑𝐕
+ * @homepage https://github.com/Yuheng0101/X/tree/main/Tasks/cloud139
+ * @updateAt 2026-03-11 14:26:08
+ * @channel https://t.me/yqc_000/
+ * @feedback https://t.me/NobyDa_Chat/
+ * @version 1.0.0
+ * @category 中国移动云盘任务
+ ******************************************/
+
+[rewrite_local]
+^https?:\/\/user-njs\.yun\.139\.com\/user\/getUser url script-request-header https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/cloud139/dist/capture.js
+
+[mitm]
+hostname = user-njs.yun.139.com
