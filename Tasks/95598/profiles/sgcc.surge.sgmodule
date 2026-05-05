@@ -3,13 +3,13 @@
 #!author= 𝐎𝐍𝐙𝟑𝐕
 #!category= 通用重写
 #!channel= https://t.me/onz3v_channel
-#!arguments= CRONEXP:"0 9 * * *",USERNAME:"",PASSWORD:"",SGCC:"网上国网",调试模式:false,近期用量:false,通知全部户号:false
-#!arguments-desc= CRONEXP: Crontab表达式, 推荐地址: "https://www.bejson.com/othertools/cron/"\n\nUSERNAME: "https://95598.cn" 或 "网上国网App"的登录账号\nPASSWORD: "https://95598.cn" 或 "网上国网App"的登录密码\nSGCC: 填写#代表禁用接口重写\n调试模式: 设置true/1代表开启调试模式\n近期用量: 设置true/1代表开启近期用量\n通知全部户号: 设置true/1代表开启通知全部户号
+#!arguments= CRONEXP:"0 9 * * *",USERNAME:"",PASSWORD:"",SGCC:"网上国网",调试模式:false,近期用量:false,通知全部户号:false,TIMEOUT:60
+#!arguments-desc= CRONEXP: 默认每天9点执行, 只想用接口可以设置成"0 0 30 2 *"\n\nUSERNAME: "https://95598.cn" 或 "网上国网App"的登录账号\n\nPASSWORD: "https://95598.cn" 或 "网上国网App"的登录密码\n\nSGCC: 填写#代表禁用接口重写\n\n调试模式: 设置true/1代表开启调试模式\n\n近期用量: 设置true/1代表开启近期用量\n\n通知全部户号: 设置true/1代表开启通知全部户号\n\nTIMEOUT: 脚本运行最大时间
 
 [Script]
-{{{SGCC}}}接口重写 = type=http-request, pattern=^https?:\/\/api\.wsgw-rewrite\.com\/electricity\/bill\/all, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/95598/95598.js, requires-body=true, max-size=-1, timeout=60
+{{{SGCC}}}接口重写 = type=http-request, pattern=^https?:\/\/api\.wsgw-rewrite\.com\/electricity\/bill\/all, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/95598/95598.js, requires-body=true, max-size=-1, timeout={{{TIMEOUT}}}
 
-网上国网 = type=cron,cronexp="{{{CRONEXP}}}",script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/95598/95598.js,timeout=60,argument=username="{{{USERNAME}}}"&password="{{{PASSWORD}}}"&debug="{{{调试模式}}}"&show_recent_usage="{{{近期用量}}}"&notify_all_accounts="{{{通知全部户号}}}"
+网上国网 = type=cron, cronexp="{{{CRONEXP}}}", script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/95598/95598.js, timeout={{{TIMEOUT}}},argument=username="{{{USERNAME}}}"&password="{{{PASSWORD}}}"&debug="{{{调试模式}}}"&show_recent_usage="{{{近期用量}}}"&notify_all_accounts="{{{通知全部户号}}}"
 
 [MITM]
 hostname = %APPEND% api.wsgw-rewrite.com

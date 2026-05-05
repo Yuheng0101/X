@@ -13,11 +13,12 @@ password=input,"",tag=登录密码, desc=同账号
 debug=switch,"false","true",tag=是否开启调试模式, desc=是否开启调试模式
 show_recent_usage=switch,"false","true",tag=是否展示近期用量, desc=是否展示近期用量
 notify_all_accounts=switch,"false","true",tag=是否通知全部户号, desc=是否通知全部户号
+timeout=input,"60",tag=脚本运行最大时间, desc=脚本运行最大时间
 
 [Script]
-http-request ^https?:\/\/api\.wsgw-rewrite\.com\/electricity\/bill\/all script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/95598/95598.js, requires-body=true, timeout=60, tag=网上国网接口重写, enable={sgcc_enable}
+http-request ^https?:\/\/api\.wsgw-rewrite\.com\/electricity\/bill\/all script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/95598/95598.js, requires-body=true, timeout={timeout}, tag=网上国网接口重写, enable={sgcc_enable}
 
-cron {CRONEXP} script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/95598/95598.js, timeout=60, tag=网上国网, argument=[{username}, {password}, {debug}, {show_recent_usage}, {notify_all_accounts}]
+cron {CRONEXP} script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/95598/95598.js, timeout={timeout}, tag=网上国网, argument=[{username}, {password}, {debug}, {show_recent_usage}, {notify_all_accounts}]
 
 [MITM]
 hostname = api.wsgw-rewrite.com
