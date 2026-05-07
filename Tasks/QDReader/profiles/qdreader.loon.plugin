@@ -1,0 +1,19 @@
+#!name=起点读书签到
+#!desc=支持多账号对于"起点读书App"的签到功能。
+#!icon=https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/97/40/5e/97405e49-87bb-3f0a-bf3a-91cf8fdf99a0/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-GLES2_U002c0-85-220.png/144x144.png
+#!arguments-desc=- 是否开启抓取重写: ["起点读书","#"] \n\n- CRONEXP: 默认每天2点11分执行, 建议自行配置。\n\n- 是否开启调试模式: ["true","false"]\n\n - TIMEOUT: 脚本执行超时时间, 默认60秒。
+
+[Argument]
+是否开启抓取重写=input,"起点读书",tag=是否开启抓取重写, desc=是否开启抓取重写
+CRONEXP=input,"11 2 * * *",tag=CRONEXP, desc=默认每天2点11分执行, 建议自行配置。
+QDREADER_DEBUG=switch,"false","true",tag=是否开启调试模式, desc=是否开启调试模式
+TIMEOUT=input,60,tag=脚本执行超时时间, 默认60秒, desc=TIMEOUT
+
+[Script]
+http-request ^https?:\/\/h5\.if\.qidian\.com\/argus\/api\/v1\/user\/getlogininfo script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/QDReader/qdreader.js, tag={是否开启抓取重写}获取Cookie, argument=[{QDREADER_DEBUG}]
+
+cron {CRONEXP} script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/QDReader/qdreader.js, timeout={TIMEOUT}, tag=起点读书自动签到, argument=[{QDREADER_DEBUG}]
+
+[MITM]
+hostname = h5.if.qidian.com
+
