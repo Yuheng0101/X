@@ -1468,6 +1468,38 @@
         "https://is3-ssl.mzstatic.com/image/thumb/Purple126/v4/90/5d/f8/905df82a-0e2e-5a2c-2be6-cc690fb0bec0/AppIcon-0-0-1x_U007emarketing-0-0-0-6-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/144x144bb.png"
       ],
       "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/douban.js"
+    },
+    {
+      "id": "yuheng.qdreader",
+      "name": "起点读书自动签到",
+      "descs_html": [
+        "<a style='color:#686de0;display:block;text-align:center;' target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/QDReader/README.md'>使用说明</a>"
+      ],
+      "keys": ["QDREADER_DEBUG","QDREADER_COOKIE"],
+      "settings": [
+        {
+          "id": "QDREADER_DEBUG",
+          "name": "是否开启调试模式",
+          "val": false,
+          "type": "boolean",
+          "desc": ""
+        },
+        {
+          "id": "QDREADER_COOKIE",
+          "name": "起点读书Cookie",
+          "val": "",
+          "type": "textarea",
+          "rows": 10,
+          "desc": ""
+        }
+      ],
+      "author": "@yuheng",
+      "repo": "https://github.com/Yuheng0101/X",
+      "icons": [
+        "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/83/d8/8a/83d88a92-5a4d-7a2f-118c-80d795e7a9f6/AppIcon-0-0-1x_U007emarketing-0-5-0-0-sRGB-85-220.png/144x144.png",
+        "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/83/d8/8a/83d88a92-5a4d-7a2f-118c-80d795e7a9f6/AppIcon-0-0-1x_U007emarketing-0-5-0-0-sRGB-85-220.png/144x144.png"
+      ],
+      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/QDReader/qdreader.js"
     }
   ]
 }
