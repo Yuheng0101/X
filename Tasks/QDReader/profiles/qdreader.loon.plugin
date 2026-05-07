@@ -4,13 +4,13 @@
 #!arguments-desc=- 是否开启抓取重写: ["起点读书","#"] \n\n- CRONEXP: 默认每天2点11分执行, 建议自行配置。\n\n- 是否开启调试模式: ["true","false"]\n\n - TIMEOUT: 脚本执行超时时间, 默认60秒。
 
 [Argument]
-是否开启抓取重写=input,"起点读书",tag=是否开启抓取重写, desc=是否开启抓取重写
+CAPTURE_ENABLE=switch,"true","false",tag=是否开启抓取重写, desc=是否开启抓取重写
 CRONEXP=input,"11 2 * * *",tag=CRONEXP, desc=默认每天2点11分执行, 建议自行配置。
 QDREADER_DEBUG=switch,"false","true",tag=是否开启调试模式, desc=是否开启调试模式
 TIMEOUT=input,60,tag=脚本执行超时时间, 默认60秒, desc=TIMEOUT
 
 [Script]
-http-response ^https?:\/\/h5\.if\.qidian\.com\/argus\/api\/v1\/user\/getlogininfo script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/QDReader/qdreader.js, requires-body=1, tag={是否开启抓取重写}获取Cookie, argument=[{QDREADER_DEBUG}]
+http-response ^https?:\/\/h5\.if\.qidian\.com\/argus\/api\/v1\/user\/getlogininfo script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/QDReader/qdreader.js, requires-body=1, tag=起点读书获取Cookie, enable={CAPTURE_ENABLE}, argument=[{QDREADER_DEBUG}]
 
 cron {CRONEXP} script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/QDReader/qdreader.js, timeout={TIMEOUT}, tag=起点读书自动签到, argument=[{QDREADER_DEBUG}]
 
