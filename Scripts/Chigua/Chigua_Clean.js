@@ -1,6 +1,6 @@
 /*
 [mitm]
-hostname= = www.mrds66.com
+hostname = www.mrds66.com
 
 [rewrite_local]
 # > Rx去广告
