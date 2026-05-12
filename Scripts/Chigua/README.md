@@ -8,7 +8,7 @@
 
 ### QuantumultX
 
-在 **资源解析器** 中粘贴以下链接，一键导入，无需手动配置：
+在 **远程重写** 中粘贴以下链接，并打开 **资源解析器**：
 
 ```
 https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Chigua/Chigua_Clean.js
