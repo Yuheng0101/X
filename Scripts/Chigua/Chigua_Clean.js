@@ -6,9 +6,9 @@ hostname = www.mrds66.com, hl365.com, 51cg1.com
 # > Rx去广告
 ^https?:\/\/www\.mrds66\.com(?!.*\.(css|js|png|jpe?g|gif|webp|svg|ico|woff2?|ttf|eot|mp[34]|webm|m3u8|ts|json|xml|txt)) url script-response-body https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Chigua/Chigua_Clean.js
 # > 黑料不打烊
-^https?:\/\/hl365\.com(?!.*\.(css|js|png|jpe?g|gif|webp|svg|ico|woff2?|ttf|eot|mp[34]|webm|m3u8|ts|json|xml|txt)) url script-response-body http://192.168.110.62:5502/Scripts/Chigua/Chigua_Clean.js
+^https?:\/\/hl365\.com(?!.*\.(css|js|png|jpe?g|gif|webp|svg|ico|woff2?|ttf|eot|mp[34]|webm|m3u8|ts|json|xml|txt)) url script-response-body https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Chigua/Chigua_Clean.js
 # > 51吃瓜网
-^https?:\/\/51cg1\.com(?!.*\.(css|js|png|jpe?g|gif|webp|svg|ico|woff2?|ttf|eot|mp[34]|webm|m3u8|ts|json|xml|txt)) url script-response-body http://192.168.110.62:5502/Scripts/Chigua/Chigua_Clean.js
+^https?:\/\/51cg1\.com(?!.*\.(css|js|png|jpe?g|gif|webp|svg|ico|woff2?|ttf|eot|mp[34]|webm|m3u8|ts|json|xml|txt)) url script-response-body https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Chigua/Chigua_Clean.js
 
 */
 
