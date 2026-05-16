@@ -11,7 +11,7 @@ hostname = www.mrds66.com, hl365.com, 51cg1.com
 ^https?:\/\/51cg1\.com(?!.*\.(css|js|png|jpe?g|gif|webp|svg|ico|woff2?|ttf|eot|mp[34]|webm|m3u8|ts|json|xml|txt)) url script-response-body https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Chigua/Chigua_Clean.js
 
 */
-
+let body
 const startTime = Date.now()
 !(async () => {
     if (typeof $response === 'undefined') throw `$response不存在, 请确认执行环境`
@@ -19,6 +19,7 @@ const startTime = Date.now()
         // console.log($response.body)
         throw `${$request.url} >> 响应体非 HTML 结构, 跳过重写`
     }
+    body = $response.body
     if (/mrds66\.com/.test($request.url)) {
         handleMrds()
     } else if (/hl365\.com/.test($request.url)) {
@@ -33,7 +34,7 @@ const startTime = Date.now()
     .finally(() => {
         const duration = Date.now() - startTime
         console.log(`处理结束，耗时: ${duration}ms`)
-        $done($response)
+        $done({ body })
     })
 
 function handleMrds() {
@@ -55,7 +56,7 @@ function handleMrds() {
             ['[href="/ai"]', 'li'] // AI推广
         ]
     }
-    $response.body = removeAds($response.body, rules)
+    body = removeAds(body, rules)
     console.log(`处理完成`)
 }
 
@@ -82,7 +83,7 @@ function handleHl365() {
             ['.article-bottom-apps', '.post-content'] // 文章下方"热门应用"
         ]
     }
-    $response.body = removeAds($response.body, rules)
+    body = removeAds(body, rules)
     console.log(`处理完成`)
 }
 
@@ -110,7 +111,7 @@ function handle51cg1() {
             ['.btn-download', 'div'] // 文章页下载按钮
         ]
     }
-    $response.body = removeAds($response.body, rules)
+    body = removeAds(body, rules)
     console.log(`处理完成`)
 }
 
