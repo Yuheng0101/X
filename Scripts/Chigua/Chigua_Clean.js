@@ -1,10 +1,14 @@
 /*
 [mitm]
-hostname = www.mrds66.com
+hostname = www.mrds66.com, hl365.com, 51cg1.com
 
 [rewrite_local]
 # > Rx去广告
 ^https?:\/\/www\.mrds66\.com(?!.*\.(css|js|png|jpe?g|gif|webp|svg|ico|woff2?|ttf|eot|mp[34]|webm|m3u8|ts|json|xml|txt)) url script-response-body https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Chigua/Chigua_Clean.js
+# > 黑料不打烊
+^https?:\/\/hl365\.com(?!.*\.(css|js|png|jpe?g|gif|webp|svg|ico|woff2?|ttf|eot|mp[34]|webm|m3u8|ts|json|xml|txt)) url script-response-body http://192.168.110.62:5502/Scripts/Chigua/Chigua_Clean.js
+# > 51吃瓜网
+^https?:\/\/51cg1\.com(?!.*\.(css|js|png|jpe?g|gif|webp|svg|ico|woff2?|ttf|eot|mp[34]|webm|m3u8|ts|json|xml|txt)) url script-response-body http://192.168.110.62:5502/Scripts/Chigua/Chigua_Clean.js
 
 */
 
@@ -17,6 +21,10 @@ const startTime = Date.now()
     }
     if (/mrds66\.com/.test($request.url)) {
         handleMrds()
+    } else if (/hl365\.com/.test($request.url)) {
+        handleHl365()
+    } else if (/51cg1\.com/.test($request.url)) {
+        handle51cg1()
     }
 })()
     .catch((err) => {
@@ -45,6 +53,61 @@ function handleMrds() {
         removeWithParent: [
             ['[data-ad_id!=""]', 'article'], // post栏插入广告
             ['[href="/ai"]', 'li'] // AI推广
+        ]
+    }
+    $response.body = removeAds($response.body, rules)
+    console.log(`处理完成`)
+}
+
+function handleHl365() {
+    console.log(`─────────────────────`)
+    console.log(`开始处理 hl365.com`)
+    console.log(`─────────────────────`)
+    const rules = {
+        removeSelectors: [
+            '.adspop', // 全屏弹窗广告
+            '.application-popup', // 全屏弹窗广告
+            '.horizontal-banner', // 底部横幅广告
+            '.article-ads-btn', // 文章页底部广告按钮
+            '.btn-download', // 文章页下载按钮
+            '#aiFloat', // AI浮动
+            '#button5', // 分享推广
+            '.launchapp-btn-container', // "App打开" 横幅
+            '.content-tabs' // 文章下无用广告
+        ],
+        removeWithParent: [
+            ['[data-ad_id!=""]', 'article'], // post栏插入广告
+            ['.ai_btn', 'li'], // AI推广
+            ['入口', 'blockquote'], // 无用推广
+            ['.article-bottom-apps', '.post-content'] // 文章下方"热门应用"
+        ]
+    }
+    $response.body = removeAds($response.body, rules)
+    console.log(`处理完成`)
+}
+
+function handle51cg1() {
+    console.log(`─────────────────────`)
+    console.log(`开始处理 51cg1.com`)
+    console.log(`─────────────────────`)
+    const rules = {
+        removeSelectors: [
+            '.adspop', // 全屏弹窗广告
+            '.application-popup', // 全屏弹窗广告
+            '.horizontal-block', // 底部横幅广告
+            '.txt-apps',
+            '.article-ads-btn', // 文章页底部广告按钮
+            '#adFloat', // AI浮动
+            '#button5', // 分享推广
+            '.addbox', // "App打开" 横幅
+            '.content-tabs' // 文章下无用广告
+        ],
+        removeWithParent: [
+            ['[data-ad_id!=""]', 'article', '.post'], // 去除列表页banner(排查.post)
+            ['.ai_btn', 'li'], // AI推广
+            ['最新地址', 'blockquote'], // 无用推广
+            ['.article-bottom-apps', '.post-content'], // 文章下方"热门应用"
+            ['.btn-download', 'div'] // 文章页下载按钮
         ]
     }
     $response.body = removeAds($response.body, rules)
@@ -84,12 +147,14 @@ function removeAds(html, rules) {
         if (sel.startsWith('#')) return node.attrs?.id === sel.slice(1)
         return false
     }
-    for (const [adSel, ancestorSel] of rules.removeWithParent || []) {
+    for (const [adSel, ancestorSel, excludeSel] of rules.removeWithParent || []) {
         doc.find(adSel).each((_, adNode) => {
             let cur = adNode.parent
             while (cur && cur.nodeType !== 9) {
                 if (matchNode(cur, ancestorSel)) {
-                    cur.parent?._removeChild(cur)
+                    if (!excludeSel || !matchNode(cur, excludeSel)) {
+                        cur.parent?._removeChild(cur)
+                    }
                     break
                 }
                 cur = cur.parent
