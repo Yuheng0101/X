@@ -1475,7 +1475,7 @@
       "descs_html": [
         "<a style='color:#686de0;display:block;text-align:center;' target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/QDReader/README.md'>使用说明</a>"
       ],
-      "keys": ["QDREADER_DEBUG","QDREADER_COOKIE"],
+      "keys": ["QDREADER_DEBUG","QDREADER_COOKIE","QDREADER_ADV_JOB_ENABLE","QDREADER_EXTRA_ADV_JOB_ENABLE","QDREADER_LOTTERY_ENABLE","QDREADER_WEEKLY_EXCHANGE_ENABLE","QDREADER_CHAPTER_CARD_ENABLE","QDREADER_MESSAGE_BOX_ENABLE"],
       "settings": [
         {
           "id": "QDREADER_DEBUG",
@@ -1491,6 +1491,48 @@
           "type": "textarea",
           "rows": 10,
           "desc": ""
+        },
+        {
+          "id": "QDREADER_ADV_JOB_ENABLE",
+          "name": "激励任务",
+          "val": false,
+          "type": "boolean",
+          "desc": "开启后执行激励碎片任务"
+        },
+        {
+          "id": "QDREADER_EXTRA_ADV_JOB_ENABLE",
+          "name": "每日任务",
+          "val": false,
+          "type": "boolean",
+          "desc": "开启后执行每日广告任务"
+        },
+        {
+          "id": "QDREADER_LOTTERY_ENABLE",
+          "name": "每日抽奖",
+          "val": false,
+          "type": "boolean",
+          "desc": "开启后执行每日抽奖"
+        },
+        {
+          "id": "QDREADER_WEEKLY_EXCHANGE_ENABLE",
+          "name": "每周兑换",
+          "val": false,
+          "type": "boolean",
+          "desc": "开启后周日自动兑换章节卡"
+        },
+        {
+          "id": "QDREADER_CHAPTER_CARD_ENABLE",
+          "name": "章节卡片",
+          "val": false,
+          "type": "boolean",
+          "desc": "开启后查询章节卡信息"
+        },
+        {
+          "id": "QDREADER_MESSAGE_BOX_ENABLE",
+          "name": "大咖荐书",
+          "val": false,
+          "type": "boolean",
+          "desc": "开启后处理大咖荐书消息(加书架抽奖/看视频抽奖)"
         }
       ],
       "author": "@yuheng",
