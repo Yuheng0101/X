@@ -1,0 +1,13 @@
+#!name= GitHub Raw Auto CDN
+#!desc= 将 GitHub Raw 请求自动重定向到 CDN
+#!author= 𝐎𝐍𝐙𝟑𝐕
+#!category= 𝐎𝐍𝐙𝟑𝐕
+#!homepage= https://t.me/onz3v_channel
+#!version= 1.0.0
+#!date= 2026-05-21
+
+[Script]
+GitHub源文件自动CDN = type=http-request, pattern=^https?://raw\.githubusercontent\.com/.+, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/GitRawAutoCDN/index.js, timeout=5
+
+[MITM]
+hostname = %APPEND% raw.githubusercontent.com
