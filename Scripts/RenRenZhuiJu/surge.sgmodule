@@ -1,0 +1,12 @@
+#!name= 人人追剧
+#!desc= 解锁会员权限
+#!system=ios
+#!icon =https://raw.githubusercontent.com/Yuheng0101/X/refs/heads/main/Assets/rrsp.png
+#!version= 1.0.0
+#!date=2026-05-22 15:41:23
+
+[Script]
+人人追剧解锁会员权限 = type=http-response, pattern=^https?:\/\/burst\.hnaiz\.com\/represent\/(walk\/class|itself\/set|them\/media), script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/RenRenZhuiJu/index.js, requires-body=true, max-size=-1, timeout=10
+
+[MITM]
+hostname = %APPEND% burst.hnaiz.com
