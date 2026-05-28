@@ -1,1547 +1,1544 @@
 {
-  "id": "yuheng.app.sub",
-  "name": "yuheng 脚本订阅",
-  "author": "@yuheng",
-  "icon": "https://avatars.githubusercontent.com/u/50571734?s=460&u=808616a26243d457cae2e41ffa728895e1e5ed4b&v=4",
-  "repo": "https://github.com/Yuheng0101/X",
-  "apps": [
-    {
-      "id": "yuheng.moyu",
-      "name": "摸鱼",
-      "descs_html": [
-        "<p style='margin-left:20px;'>添加自定义节日参考配置: </p>",
-        "<p style='margin-left:20px;'><节日1>&<节日2>&节日名称:(YYYY年)?MM月DD日($农历)($阳历)?&...</p>",
-        "<p style='margin-left:20px;'>例子: </p>",
-        "<p style='margin-left:20px;'><元宵节>&<清明节>&<劳动节>&<端午节>&<中秋节>&<国庆节>&<元旦>&<春节>&老婆农历阳历生日:3月14日$农历$阳历&老婆阳历农历生日:3月14日$阳历$农历&老婆农历生日:3月14日$农历&老婆带阳历生日:3月14日$阳历&老婆阳历生日:3月14日#祝亲爱的媳妇生日快乐",
-        "<p style='margin-left:20px;'>目前支持直接填写出生年月</p>",
-        "<p style='margin-left:20px;'>例子: </p>",
-        "<p style='margin-left:20px;'>e1: <元宵节>&...&媳妇生日:1995年2月3日(默认日期后面不跟$农历或$阳历, 默认为阳历), 这代表媳妇的出生年月阳历是2月2日，会先定位到95年的阴历日期，为正月初三，然后查询到本年度(举例2025)是阳历的1月31日，作为真正的纪念日。</p>",
-        "<p style='margin-left:20px;'>e2: <元宵节>&...&媳妇生日:2月3日，如果你们当地习俗是过阳历生日，则不需要携带年份，这样会把本年度的2月3日设置为纪念日。</p>",
-        "<p style='margin-left:20px;'>友情提示: 以上都是以我个人习惯为参考, 不代表所有地区习俗, 请根据实际情况填写</p>",
-        "<p style='margin-left:20px;color:#ff0000;font-weight:900;font-size:30px;'>不懂请不要乱动! </p>"
-      ],
-      "keys": [
-        "moyu_notify_with_media",
-        "moyu_debug",
-        "moyu_show_another_date",
-        "moyu_show_almanac",
-        "moyu_custom_notify_img",
-        "moyu_remind_days",
-        "moyu_festival_conf",
-        "moyu_bark_key"
-      ],
-      "settings": [
+    "id": "yuheng.app.sub",
+    "name": "yuheng 脚本订阅",
+    "author": "@yuheng",
+    "icon": "https://avatars.githubusercontent.com/u/50571734?s=460&u=808616a26243d457cae2e41ffa728895e1e5ed4b&v=4",
+    "repo": "https://github.com/Yuheng0101/X",
+    "apps": [
         {
-          "id": "moyu_notify_with_media",
-          "name": "是否通知带图片",
-          "val": true,
-          "type": "boolean",
-          "desc": ""
+            "id": "yuheng.moyu",
+            "name": "摸鱼",
+            "descs_html": [
+                "<p style='margin-left:20px;'>添加自定义节日参考配置: </p>",
+                "<p style='margin-left:20px;'><节日1>&<节日2>&节日名称:(YYYY年)?MM月DD日($农历)($阳历)?&...</p>",
+                "<p style='margin-left:20px;'>例子: </p>",
+                "<p style='margin-left:20px;'><元宵节>&<清明节>&<劳动节>&<端午节>&<中秋节>&<国庆节>&<元旦>&<春节>&老婆农历阳历生日:3月14日$农历$阳历&老婆阳历农历生日:3月14日$阳历$农历&老婆农历生日:3月14日$农历&老婆带阳历生日:3月14日$阳历&老婆阳历生日:3月14日#祝亲爱的媳妇生日快乐",
+                "<p style='margin-left:20px;'>目前支持直接填写出生年月</p>",
+                "<p style='margin-left:20px;'>例子: </p>",
+                "<p style='margin-left:20px;'>e1: <元宵节>&...&媳妇生日:1995年2月3日(默认日期后面不跟$农历或$阳历, 默认为阳历), 这代表媳妇的出生年月阳历是2月2日，会先定位到95年的阴历日期，为正月初三，然后查询到本年度(举例2025)是阳历的1月31日，作为真正的纪念日。</p>",
+                "<p style='margin-left:20px;'>e2: <元宵节>&...&媳妇生日:2月3日，如果你们当地习俗是过阳历生日，则不需要携带年份，这样会把本年度的2月3日设置为纪念日。</p>",
+                "<p style='margin-left:20px;'>友情提示: 以上都是以我个人习惯为参考, 不代表所有地区习俗, 请根据实际情况填写</p>",
+                "<p style='margin-left:20px;color:#ff0000;font-weight:900;font-size:30px;'>不懂请不要乱动! </p>"
+            ],
+            "keys": [
+                "moyu_notify_with_media",
+                "moyu_debug",
+                "moyu_show_another_date",
+                "moyu_show_almanac",
+                "moyu_custom_notify_img",
+                "moyu_remind_days",
+                "moyu_festival_conf",
+                "moyu_bark_key"
+            ],
+            "settings": [
+                {
+                    "id": "moyu_notify_with_media",
+                    "name": "是否通知带图片",
+                    "val": true,
+                    "type": "boolean",
+                    "desc": ""
+                },
+                {
+                    "id": "moyu_debug",
+                    "name": "是否开启调试模式",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": ""
+                },
+                {
+                    "id": "moyu_show_another_date",
+                    "name": "当传入日期为阳历时, 是否展示农历, 当传入阴历时, 是否展示阳历",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": "比如老婆生日:3月15日, 如果勾选, 通知时会带上距离农历还有xx天"
+                },
+                {
+                    "id": "moyu_show_almanac",
+                    "name": "是否展示黄历",
+                    "val": true,
+                    "type": "boolean",
+                    "desc": "顾名思义"
+                },
+                {
+                    "id": "moyu_custom_notify_img",
+                    "name": "🔗通知图片(链接)",
+                    "val": null,
+                    "type": "textarea",
+                    "rows": 5,
+                    "desc": "不填随机选择"
+                },
+                {
+                    "id": "moyu_remind_days",
+                    "name": "距离多少天提醒",
+                    "val": 50,
+                    "type": "text",
+                    "rows": 1,
+                    "desc": "比如默认50天, 超过100天的节日不通知"
+                },
+                {
+                    "id": "moyu_festival_conf",
+                    "name": "节日配置",
+                    "val": "<元宵节>&<清明节>&<劳动节>&<端午节>&<中秋节>&<国庆节>&<元旦>&<春节>&<母亲节>&<儿童节>&<父亲节>&<七夕节>&<情人节>",
+                    "type": "textarea",
+                    "rows": 10,
+                    "desc": "自定义规范: <节日1>&<节日2>&节日名称:(YYYY年)?MM月DD日($农历)($阳历)?&..."
+                },
+                {
+                    "id": "moyu_bark_key",
+                    "name": "Bark通知",
+                    "val": null,
+                    "type": "text",
+                    "desc": "填写Bark的app提供的key, 填写后不再使用默认通知方式"
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/67/04/ff/6704ff4c-b49b-de91-70ac-201c62d5296f/AppIcon-0-0-1x_U007emarketing-0-0-0-5-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/144x144bb.png",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/67/04/ff/6704ff4c-b49b-de91-70ac-201c62d5296f/AppIcon-0-0-1x_U007emarketing-0-0-0-5-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/144x144bb.png"
+            ],
+            "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/moyu.js"
         },
         {
-          "id": "moyu_debug",
-          "name": "是否开启调试模式",
-          "val": false,
-          "type": "boolean",
-          "desc": ""
+            "id": "yuheng.mi.step",
+            "name": "小米刷步",
+            "descs_html": [
+                "<p style='margin-top:20px;font-size:16px;color:#a29bfe;text-align:center;'>刷步格言: 每天刷一刷, 健康第一, 步数第二</p>",
+                "<p style='margin-left:10px;margin-top:30px;font-size:20px;font-weight:900;'>如需配置多账号务必看完以下说明<p>",
+                "<p style='margin-left:10px;margin-top:20px;font-size:12px;'>账密使用&&分割, 如果密码存在&&请先修改密码后再使用该脚本, 账密长度务必保持一致</p>",
+                "<p style='margin-left:10px;margin-top:20px;font-size:12px;'>区间和步数使用&进行分割, 如果不分割使用第一个作为统一配置, 如10000-19999, 即表示不管多少账号都使用这一区间, 如果使用多账号区间, 务必长度与账密保持一致</p>",
+                "<p style='margin-left:10px;margin-top:20px;font-size:12px;'>步数与区间规则一致, 使用多账号区间, 务必长度与账密保持一致</p>",
+                "<p style='margin-left:10px;margin-top:20px;color:#3498db;'>账号举例: 手机号1&&手机号2&&... (密码亦是如此)</p>",
+                "<p style='margin-left:10px;margin-top:20px;color:#3498db;'>区间举例: 1000-2000&1500-2000&...(注意长度与账密保持一致, 步数亦是如此)</p>",
+                "<p style='margin-left:10px;margin-top:20px;font-size:16px;color:#ff0000;'>步数优先级高于区间, 填写步数后区间作用将失效, 建议填写区间</p>",
+                "<p style='margin-left:10px;margin-top:20px;font-size:16px;color:#ff0000;'>步数不要超过50000</p>"
+            ],
+            "keys": [
+                "xiaomi_step_debug",
+                "xiaomi_step_increment_mode",
+                "xiaomi_step_run_count",
+                "xiaomi_step_username",
+                "xiaomi_step_password",
+                "xiaomi_step_space",
+                "xiaomi_step_step",
+                "xiaomi_step_increment_cache_list"
+            ],
+            "settings": [
+                {
+                    "id": "xiaomi_step_debug",
+                    "name": "是否开启调试模式",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": ""
+                },
+                {
+                    "id": "xiaomi_step_increment_mode",
+                    "name": "是否开启递增模式",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": "开启后建议把步数(区间)设置较之前小一些"
+                },
+                {
+                    "id": "xiaomi_step_run_count",
+                    "name": "递增次数(请根据contab次数配置)",
+                    "val": "1",
+                    "type": "text",
+                    "desc": "如:cron设置0 10,8 * * *(每天运行两次),这里请填2"
+                },
+                {
+                    "id": "xiaomi_step_username",
+                    "name": "小米刷步账号",
+                    "val": null,
+                    "type": "text",
+                    "rows": 1,
+                    "desc": "小米刷步账号"
+                },
+                {
+                    "id": "xiaomi_step_password",
+                    "name": "小米刷步密码",
+                    "val": null,
+                    "type": "text",
+                    "rows": 1,
+                    "desc": ""
+                },
+                {
+                    "id": "xiaomi_step_space",
+                    "name": "设置步数区间, 如15000-20000, 使用 - 分割",
+                    "val": null,
+                    "type": "text",
+                    "rows": 1,
+                    "desc": "置空默认10000-19999之间"
+                },
+                {
+                    "id": "xiaomi_step_step",
+                    "name": "需要刷的步数",
+                    "val": null,
+                    "type": "text",
+                    "rows": 1,
+                    "desc": "填写后区间将无效"
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/mi/mini.png",
+                "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/mi/color.png"
+            ],
+            "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/mi/step.js"
         },
         {
-          "id": "moyu_show_another_date",
-          "name": "当传入日期为阳历时, 是否展示农历, 当传入阴历时, 是否展示阳历",
-          "val": false,
-          "type": "boolean",
-          "desc": "比如老婆生日:3月15日, 如果勾选, 通知时会带上距离农历还有xx天"
+            "id": "yuheng.imaotai.v1.5",
+            "name": "i茅台预约",
+            "descs_html": [
+                "<p style='margin-left:20px;margin-top:20px;color:#ff0000;'>请注意如果不配置,默认选择填写的作为预约参数</p>",
+                "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(是否选择投放量最大门店): true</p>",
+                "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(是否开启茅运[茅运不足100请关闭]): true</p>",
+                "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(省份配置): 贵州省</p>",
+                "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(城市配置): 贵阳市</p>",
+                "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(预约项配置): 10941,10942</p>",
+                "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(详细地址): 贵阳市南明区花果园</p>",
+                "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(经纬度): 106.713478,26.573743</p>",
+                "<p style='margin-left:20px;margin-top:20px;color:#9b59b6;'>多说一句,经纬度你知道就填,不知道只填详细地址就好,经纬度优先级高于地址,如果填写经纬度,详细地址的作用将失效</p>"
+            ],
+            "keys": [
+                "imaotai_debug",
+                "imaotai_mobile",
+                "imaotai_code",
+                "imaotai_params",
+                "imaotai__config__islarge",
+                "imaotai__config__istravel",
+                "imaotai__config__province",
+                "imaotai__config__city",
+                "imaotai__config__itemcode",
+                "imaotai__config__address",
+                "imaotai__config__location",
+                "imaotai_debug",
+                "imaotai_bark_key"
+            ],
+            "settings": [
+                {
+                    "id": "imaotai_debug",
+                    "name": "是否开启调试模式",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": ""
+                },
+                {
+                    "id": "imaotai_mobile",
+                    "name": "手机号(用于获取验证码)",
+                    "val": null,
+                    "type": "text",
+                    "desc": ""
+                },
+                {
+                    "id": "imaotai_code",
+                    "name": "验证码",
+                    "val": null,
+                    "type": "text",
+                    "desc": "务必先执行获取验证码接口再填写该字段"
+                },
+                {
+                    "id": "imaotai__config__islarge",
+                    "name": "预约方式[是否开启最大投放量]",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": ""
+                },
+                {
+                    "id": "imaotai__config__istravel",
+                    "name": "是否开启茅运旅行[⚠️临时停用]",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": ""
+                },
+                {
+                    "id": "imaotai__config__province",
+                    "name": "*省份名称, 如: 贵州省",
+                    "val": null,
+                    "type": "text",
+                    "rows": 1,
+                    "desc": "必填"
+                },
+                {
+                    "id": "imaotai__config__city",
+                    "name": "*城市名称, 如: 贵阳市",
+                    "val": null,
+                    "type": "text",
+                    "rows": 1,
+                    "desc": "必填"
+                },
+                {
+                    "id": "imaotai__config__itemcode",
+                    "name": "*预约项",
+                    "val": "11318,11317,11319,2478,11240",
+                    "type": "checkboxes",
+                    "items": [
+                        {
+                            "key": "11318",
+                            "label": "53%vol 500ml贵州茅台酒（乙巳蛇年）"
+                        },
+                        {
+                            "key": "11317",
+                            "label": "53%vol 500ml贵州茅台酒（笙乐飞天）"
+                        },
+                        {
+                            "key": "11319",
+                            "label": "53%vol 375ml×2贵州茅台酒（乙巳蛇年）"
+                        },
+                        {
+                            "key": "2478",
+                            "label": "贵州茅台酒（珍品）"
+                        },
+                        {
+                            "key": "11240",
+                            "label": "53%vol 500ml 茅台1935·中国国家地理文创酒（喜逢大运河）"
+                        }
+                    ]
+                },
+                {
+                    "id": "imaotai__config__address",
+                    "name": "当前位置(与经纬度二选一, 建议填写地址)",
+                    "val": null,
+                    "type": "text",
+                    "rows": 1,
+                    "desc": "尽量具体, 比如: 山东省济南市齐鲁软件园, 精确到标志性建筑物"
+                },
+                {
+                    "id": "imaotai__config__location",
+                    "name": "(选填)当前经纬度",
+                    "val": null,
+                    "type": "text",
+                    "rows": 1,
+                    "desc": "注意经度在前, 纬度在后, 例如: 117.119999,36.651216,不填根据当前位置获取"
+                },
+                {
+                    "id": "imaotai_bark_key",
+                    "name": "Bark通知",
+                    "val": null,
+                    "type": "text",
+                    "rows": 1,
+                    "desc": "填写Bark的app提供的key, 填写后不再使用默认通知方式"
+                },
+                {
+                    "id": "amap_api",
+                    "name": "(选填)高德开发者Key",
+                    "val": null,
+                    "type": "text",
+                    "rows": 1,
+                    "desc": "后续key失效后需要填写"
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/ae/f4/18/aef41811-955e-e6b0-5d23-6763c2eef1ab/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/144x144.png",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/ae/f4/18/aef41811-955e-e6b0-5d23-6763c2eef1ab/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/144x144.png"
+            ],
+            "scripts": [
+                {
+                    "name": "发送验证码（填 手机号, 保存, 执行）",
+                    "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Maotai/msg.js"
+                },
+                {
+                    "name": "用验证码登录（填 手机号, 验证码, 保存, 执行 ⚠️ 执行后 记得刷新）",
+                    "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Maotai/login.js"
+                }
+            ]
         },
         {
-          "id": "moyu_show_almanac",
-          "name": "是否展示黄历",
-          "val": true,
-          "type": "boolean",
-          "desc": "顾名思义"
+            "id": "yuheng.95598.web",
+            "name": "网上国网",
+            "descs_html": ["<a target='_blank' href='https://github.com/Yuheng0101/X/tree/main/Tasks/95598'>README.md</a>"],
+            "keys": [
+                "95598_log_debug",
+                "95598_recent_elc_fee",
+                "95598_notify_type",
+                "95598_username",
+                "95598_password",
+                "95598_bizrt",
+                "95598_bindInfo"
+            ],
+            "settings": [
+                {
+                    "id": "95598_log_debug",
+                    "name": "是否输出日志",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": ""
+                },
+                {
+                    "id": "95598_recent_elc_fee",
+                    "name": "是否查看近期用电量",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": ""
+                },
+                {
+                    "id": "95598_notify_type",
+                    "name": "是否通知全部绑定户号",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": ""
+                },
+                {
+                    "id": "95598_username",
+                    "name": "账号",
+                    "val": null,
+                    "type": "text",
+                    "rows": 1,
+                    "desc": "手机号"
+                },
+                {
+                    "id": "95598_password",
+                    "name": "密码",
+                    "val": null,
+                    "type": "text",
+                    "rows": 1,
+                    "desc": ""
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/83/d8/8a/83d88a92-5a4d-7a2f-118c-80d795e7a9f6/AppIcon-0-0-1x_U007emarketing-0-5-0-0-sRGB-85-220.png/144x144.png",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/83/d8/8a/83d88a92-5a4d-7a2f-118c-80d795e7a9f6/AppIcon-0-0-1x_U007emarketing-0-5-0-0-sRGB-85-220.png/144x144.png"
+            ],
+            "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/95598/95598.js"
         },
         {
-          "id": "moyu_custom_notify_img",
-          "name": "🔗通知图片(链接)",
-          "val": null,
-          "type": "textarea",
-          "rows": 5,
-          "desc": "不填随机选择"
+            "id": "yuheng.wsgw",
+            "name": "网上国网小程序",
+            "descs_html": [
+                "<a style='margin-left:20px;color:#686de0;' target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/95598/95598.weapp.js'>README.md👈相关配置请点击</a>",
+                "<p style='margin-top:20px;margin-left:20px;color:#eb4d4b;'>本脚本仅提供查询服务, 不牵扯签到相关</p>",
+                "<p style='margin-left:20px;color:#ff7979;'>1.微信小程序搜索 网上国网 ,打开并登录(请提前绑定户号)</p>",
+                "<p style='margin-left:20px;color:#60a3bc;'>2.代理工具添加重写和Cron脚本</p>",
+                "<p style='margin-left:20px;color:#f0932b;'>3.回到小程序重新进入, 提示获取数据成功即可使用该脚本</p>",
+                "<p style='margin-left:20px;color:#38ada9;'>4.回到代理工具执行Cron脚本, 即可查看相关结果</p>",
+                "<p style='margin-left:20px;color:#38ada9;'>❗❗❗ 本脚本已作废</p>"
+            ],
+            "keys": ["wsgw_debug", "wsgw_openid", "wsgw_token", "wsgw_auth"],
+            "settings": [
+                {
+                    "id": "wsgw_debug",
+                    "name": "是否查看数据日志",
+                    "val": "false",
+                    "type": "boolean",
+                    "desc": ""
+                },
+                {
+                    "id": "wsgw_openid",
+                    "name": "用户标识",
+                    "val": null,
+                    "type": "text",
+                    "rows": 1,
+                    "desc": ""
+                },
+                {
+                    "id": "wsgw_token",
+                    "name": "用户凭证",
+                    "val": null,
+                    "type": "text",
+                    "rows": 1,
+                    "desc": ""
+                },
+                {
+                    "id": "wsgw_auth",
+                    "name": "登录凭证",
+                    "val": null,
+                    "type": "textarea",
+                    "rows": 5,
+                    "desc": ""
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/83/d8/8a/83d88a92-5a4d-7a2f-118c-80d795e7a9f6/AppIcon-0-0-1x_U007emarketing-0-5-0-0-sRGB-85-220.png/144x144.png",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/83/d8/8a/83d88a92-5a4d-7a2f-118c-80d795e7a9f6/AppIcon-0-0-1x_U007emarketing-0-5-0-0-sRGB-85-220.png/144x144.png"
+            ],
+            "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/95598/95598.weapp.js"
         },
         {
-          "id": "moyu_remind_days",
-          "name": "距离多少天提醒",
-          "val": 50,
-          "type": "text",
-          "rows": 1,
-          "desc": "比如默认50天, 超过100天的节日不通知"
+            "id": "yuheng.1024",
+            "name": "某榴最新技術推送",
+            "descs_html": ["<a target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/1024.js'>跳转脚本</a>"],
+            "keys": ["1024_israndom"],
+            "settings": [
+                {
+                    "id": "1024_israndom",
+                    "name": "是否随机推贴",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": ""
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/1024.png",
+                "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/1024.png"
+            ],
+            "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/1024.js"
         },
         {
-          "id": "moyu_festival_conf",
-          "name": "节日配置",
-          "val": "<元宵节>&<清明节>&<劳动节>&<端午节>&<中秋节>&<国庆节>&<元旦>&<春节>&<母亲节>&<儿童节>&<父亲节>&<七夕节>&<情人节>",
-          "type": "textarea",
-          "rows": 10,
-          "desc": "自定义规范: <节日1>&<节日2>&节日名称:(YYYY年)?MM月DD日($农历)($阳历)?&..."
+            "id": "yuheng.hlbdy",
+            "name": "最新黑料",
+            "descs_html": ["<a target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/hlbdy.js'>跳转脚本</a>"],
+            "keys": ["hlbdy_notify_with_media", "hlbdy_debug", "hlbdy_type", "hlbdy_notify_type"],
+            "settings": [
+                {
+                    "id": "hlbdy_notify_type",
+                    "name": "通知类型",
+                    "val": "0",
+                    "type": "radios",
+                    "desc": "默认组合通知(没有媒体通知), Surge用户建议使用单独通知",
+                    "items": [
+                        {
+                            "key": "0",
+                            "label": "组合通知"
+                        },
+                        {
+                            "key": "1",
+                            "label": "单独通知"
+                        }
+                    ]
+                },
+                {
+                    "id": "hlbdy_notify_with_media",
+                    "name": "是否开启媒体通知",
+                    "val": true,
+                    "type": "boolean",
+                    "desc": "iOS16.5.x~iOS16.7.x用户请关闭该选项, 默认开启"
+                },
+                {
+                    "id": "hlbdy_debug",
+                    "name": "是否开启调试模式",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": "默认关闭"
+                },
+                {
+                    "id": "hlbdy_type",
+                    "name": "是否开启媒体通知",
+                    "val": "最新黑料",
+                    "type": "radios",
+                    "desc": "默认最新黑料",
+                    "items": [
+                        {
+                            "key": "最新黑料",
+                            "label": "最新黑料"
+                        },
+                        {
+                            "key": "今日黑料",
+                            "label": "今日黑料"
+                        },
+                        {
+                            "key": "今日热搜",
+                            "label": "今日热搜"
+                        },
+                        {
+                            "key": "热门大瓜",
+                            "label": "热门大瓜"
+                        },
+                        {
+                            "key": "网红乱象",
+                            "label": "网红乱象"
+                        },
+                        {
+                            "key": "原创社区",
+                            "label": "原创社区"
+                        },
+                        {
+                            "key": "独家爆料",
+                            "label": "独家爆料"
+                        }
+                    ]
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://raw.githubusercontent.com/Toperlock/Quantumult/main/icon/heiliao.png",
+                "https://raw.githubusercontent.com/Toperlock/Quantumult/main/icon/heiliao.png"
+            ],
+            "script": "http://192.168.68.169:5501/NewProject/Task/%E9%BB%91%E6%96%99%E4%B8%8D%E6%89%93%E7%83%8A/hlbdy.js"
         },
         {
-          "id": "moyu_bark_key",
-          "name": "Bark通知",
-          "val": null,
-          "type": "text",
-          "desc": "填写Bark的app提供的key, 填写后不再使用默认通知方式"
+            "id": "yuheng.qinglong",
+            "name": "青龙面板",
+            "descs_html": [
+                "<p style='line-height: 24px;padding-top:20px;'>1.配置面板前务必检查抛出的api是否有读写环境变量权限.</p>",
+                "<p style='line-height: 24px;'>2.配置完成点击右上角运行按钮测试连接是否成功.</p>"
+            ],
+            "keys": ["yuheng_ql_host", "yuheng_ql_clientid", "yuheng_ql_clientsecret", "yuheng_ql_token"],
+            "settings": [
+                {
+                    "id": "yuheng_ql_host",
+                    "name": "青龙地址(http://127.0.0.1:5700/)",
+                    "val": null,
+                    "type": "text",
+                    "desc": ""
+                },
+                {
+                    "id": "yuheng_ql_clientid",
+                    "name": "CLIENT_ID",
+                    "val": null,
+                    "type": "text",
+                    "desc": ""
+                },
+                {
+                    "id": "yuheng_ql_clientsecret",
+                    "name": "CLIENT_SECRET",
+                    "val": null,
+                    "type": "text",
+                    "desc": ""
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/ql.png",
+                "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/ql.png"
+            ],
+            "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/ql.js"
+        },
+        {
+            "id": "yuheng.60s",
+            "name": "每天60秒读懂世界",
+            "descs_html": ["<a target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/60s.js'>跳转脚本</a>"],
+            "keys": ["zaobao_debug", "zaobao_original_url"],
+            "settings": [
+                {
+                    "id": "zaobao_debug",
+                    "name": "是否开启调试模式",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": ""
+                },
+                {
+                    "id": "zaobao_original_url",
+                    "name": "点击横幅是否跳转原文",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": "开启跳转微信公众号文章, 关闭点击横幅跳转图片链接"
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/60s.png",
+                "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/60s.png"
+            ],
+            "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/60s.js"
+        },
+        {
+            "id": "yuheng.top",
+            "name": "热搜聚合",
+            "descs_html": [
+                "<p>1.自行选择</p>",
+                "<p>2.系统自动选择</p>",
+                "<a target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/top.js'>跳转脚本</a>"
+            ],
+            "keys": ["top_debug", "top_user_select", "top_limit"],
+            "settings": [
+                {
+                    "id": "top_debug",
+                    "name": "是否开启调试模式",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": ""
+                },
+                {
+                    "id": "top_user_select",
+                    "name": "自行选择通知类型",
+                    "val": null,
+                    "type": "radios",
+                    "desc": "",
+                    "items": [
+                        {
+                            "key": null,
+                            "label": "系统帮选"
+                        },
+                        {
+                            "key": "微博",
+                            "label": "微博"
+                        },
+                        {
+                            "key": "知乎",
+                            "label": "知乎"
+                        },
+                        {
+                            "key": "今日头条",
+                            "label": "今日头条"
+                        },
+                        {
+                            "key": "抖音",
+                            "label": "抖音"
+                        },
+                        {
+                            "key": "百度",
+                            "label": "百度"
+                        },
+                        {
+                            "key": "哔哩哔哩",
+                            "label": "哔哩哔哩"
+                        }
+                    ]
+                },
+                {
+                    "id": "top_limit",
+                    "name": "通知条数",
+                    "val": 10,
+                    "type": "number",
+                    "desc": "不建议超过20条[通知会截断]"
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://is3-ssl.mzstatic.com/image/thumb/Purple126/v4/9a/d8/77/9ad877c6-e3d7-61a1-3911-5036239a41a6/AppIcon-1x_U007emarketing-0-7-0-0-sRGB-85-220.png/144x144bb.png",
+                "https://is3-ssl.mzstatic.com/image/thumb/Purple126/v4/9a/d8/77/9ad877c6-e3d7-61a1-3911-5036239a41a6/AppIcon-1x_U007emarketing-0-7-0-0-sRGB-85-220.png/144x144bb.png"
+            ],
+            "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/top.js"
+        },
+        {
+            "id": "yuheng.eshop",
+            "name": "Eshop打折监控",
+            "descs_html": ["<a target='_blank' href='https://github.com/Yuheng0101/X/tree/main/Tasks/eshop'>【README.md】</a>"],
+            "keys": ["eshop_followedList", "eshop_isClear"],
+            "settings": [
+                {
+                    "id": "eshop_followedList",
+                    "name": "关注游戏列表",
+                    "val": null,
+                    "type": "text",
+                    "desc": ""
+                },
+                {
+                    "id": "eshop_isClear",
+                    "name": "是否清理缓存",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": ""
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/71/e3/98/71e39886-3a94-fb5d-e15b-45beadd64ac0/AppIcon-1x_U007emarketing-0-5-0-85-220.jpeg/144x144.png",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/71/e3/98/71e39886-3a94-fb5d-e15b-45beadd64ac0/AppIcon-1x_U007emarketing-0-5-0-85-220.jpeg/144x144.png"
+            ],
+            "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/eshop/eshop.js"
+        },
+        {
+            "id": "yuheng.bdyy",
+            "name": "波点音乐自动签到",
+            "descs_html": ["<a target='_blank' href='https://github.com/Yuheng0101/X/tree/main/Tasks/Bdyy'>【README.md】</a>"],
+            "keys": ["bdyy_account"],
+            "settings": [
+                {
+                    "id": "bdyy_account",
+                    "name": "账号",
+                    "val": null,
+                    "type": "text",
+                    "desc": ""
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/05/b9/57/05b9577c-3773-cd2b-5a99-49c0dc3f331d/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/144x144.png",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/05/b9/57/05b9577c-3773-cd2b-5a99-49c0dc3f331d/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/144x144.png"
+            ],
+            "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/Bdyy/bdyy.js"
+        },
+        {
+            "id": "yuheng.huluwa",
+            "name": "葫芦娃预约",
+            "descs_html": ["<p style='margin-left:20px;margin-top:20px;'>多账号配置参考:手机号1:ck1&手机号2:ck2...</p>"],
+            "keys": [
+                "huluwa_split",
+                "xlth_cookies",
+                "glyp_cookies",
+                "kglg_cookies",
+                "hlqg_cookies",
+                "zhcs_cookies",
+                "gyqp_cookies",
+                "llsc_cookies",
+                "ylqx_cookies"
+            ],
+            "settings": [
+                {
+                    "id": "huluwa_split",
+                    "name": "多账号分隔符",
+                    "val": "&",
+                    "type": "text",
+                    "desc": ""
+                },
+                {
+                    "id": "xlth_cookies",
+                    "name": "新联惠购",
+                    "val": null,
+                    "type": "textarea",
+                    "rows": 5,
+                    "desc": ""
+                },
+                {
+                    "id": "glyp_cookies",
+                    "name": "贵旅优品",
+                    "val": null,
+                    "type": "textarea",
+                    "rows": 5,
+                    "desc": ""
+                },
+                {
+                    "id": "kglg_cookies",
+                    "name": "空港乐购",
+                    "val": null,
+                    "type": "textarea",
+                    "rows": 5,
+                    "desc": ""
+                },
+                {
+                    "id": "hlqg_cookies",
+                    "name": "航旅黔购",
+                    "val": null,
+                    "type": "textarea",
+                    "rows": 5,
+                    "desc": ""
+                },
+                {
+                    "id": "zhcs_cookies",
+                    "name": "遵航出山",
+                    "val": null,
+                    "type": "textarea",
+                    "rows": 5,
+                    "desc": ""
+                },
+                {
+                    "id": "gyqp_cookies",
+                    "name": "贵盐黔品",
+                    "val": null,
+                    "type": "textarea",
+                    "rows": 5,
+                    "desc": ""
+                },
+                {
+                    "id": "llsc_cookies",
+                    "name": "乐旅商城",
+                    "val": null,
+                    "type": "textarea",
+                    "rows": 5,
+                    "desc": ""
+                },
+                {
+                    "id": "ylqx_cookies",
+                    "name": "驿路黔寻",
+                    "val": null,
+                    "type": "textarea",
+                    "rows": 5,
+                    "desc": ""
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/70/a4/56/70a456c9-4df9-3bdb-03b6-ecf99f13e7c1/AppIcon-1x_U007epad-0-10-0-85-220.png/144x144bb.png",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/70/a4/56/70a456c9-4df9-3bdb-03b6-ecf99f13e7c1/AppIcon-1x_U007epad-0-10-0-85-220.png/144x144bb.png"
+            ],
+            "script": ""
+        },
+        {
+            "id": "yuheng.cache",
+            "name": "第三方库缓存查看",
+            "descs_html": ["<p style='margin-left:20px;margin-top:20px;'>查看依赖包, 无需操作</p>"],
+            "keys": ["CryptoJS.js", "JSEncrypt.js", "cheerio.js", "Buffer.js", "dayjs.js", "crypto.js", "iconv.js"],
+            "settings": [
+                {
+                    "id": "CryptoJS.js",
+                    "name": "CryptoJS",
+                    "val": null,
+                    "type": "textarea",
+                    "rows": 5,
+                    "desc": ""
+                },
+                {
+                    "id": "JSEncrypt.js",
+                    "name": "JSEncrypt",
+                    "val": null,
+                    "type": "textarea",
+                    "rows": 5,
+                    "desc": ""
+                },
+                {
+                    "id": "cheerio.js",
+                    "name": "cheerio",
+                    "val": null,
+                    "type": "textarea",
+                    "rows": 5,
+                    "desc": ""
+                },
+                {
+                    "id": "Buffer.js",
+                    "name": "Buffer",
+                    "val": null,
+                    "type": "textarea",
+                    "rows": 5,
+                    "desc": ""
+                },
+                {
+                    "id": "dayjs.js",
+                    "name": "dayjs",
+                    "val": null,
+                    "type": "textarea",
+                    "rows": 5,
+                    "desc": ""
+                },
+                {
+                    "id": "crypto.js",
+                    "name": "crypto",
+                    "val": null,
+                    "type": "textarea",
+                    "rows": 5,
+                    "desc": ""
+                },
+                {
+                    "id": "iconv.js",
+                    "name": "iconv-lite",
+                    "val": null,
+                    "type": "textarea",
+                    "rows": 5,
+                    "desc": ""
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0d/31/0b/0d310b25-aa91-99c5-b23b-af1e8753c4d0/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/144x144.png",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0d/31/0b/0d310b25-aa91-99c5-b23b-af1e8753c4d0/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/144x144.png"
+            ],
+            "script": ""
+        },
+        {
+            "id": "yuheng.testflight.autoJoin",
+            "name": "TestFlight公测自动加入",
+            "descs_html": [
+                "<p style='margin-left:20px;color:#3498db;'>@mutu佬授权后修改脚本适配其他代理工具</p>",
+                "<a style='margin-left:20px;color:#ff0000;' target='_blank' href='https://raw.githubusercontent.com/githubdulong/Script/master/Auto_join_TF.js'>原脚本</a>"
+            ],
+            "keys": [
+                "tf_key",
+                "tf_session_id",
+                "tf_session_digest",
+                "tf_request_id",
+                "tf_apple_store_front",
+                "tf_apple_ta_device",
+                "tf_apple_amd_m",
+                "tf_apple_device_model",
+                "tf_user_agent",
+                "tf_app_ids",
+                "tf_loon_count",
+                "tf_interval"
+            ],
+            "settings": [
+                {
+                    "id": "tf_app_ids",
+                    "name": "监控的应用ID",
+                    "val": null,
+                    "type": "textarea",
+                    "rows": 5,
+                    "desc": "#后代表加入的状态, 0为未加入, 1为已加入"
+                },
+                {
+                    "id": "tf_loon_count",
+                    "name": "并发数",
+                    "val": 1,
+                    "type": "text",
+                    "desc": ""
+                },
+                {
+                    "id": "tf_interval",
+                    "name": "间隔时间(单位: 秒)",
+                    "val": 0,
+                    "type": "text",
+                    "desc": ""
+                },
+                {
+                    "id": "tf_key",
+                    "name": "用户标识",
+                    "val": null,
+                    "type": "text",
+                    "desc": ""
+                },
+                {
+                    "id": "tf_session_id",
+                    "name": "SessionId",
+                    "val": null,
+                    "type": "text",
+                    "desc": ""
+                },
+                {
+                    "id": "tf_session_digest",
+                    "name": "SessionDigest",
+                    "val": null,
+                    "type": "text",
+                    "desc": ""
+                },
+                {
+                    "id": "tf_request_id",
+                    "name": "RequestId",
+                    "val": null,
+                    "type": "text",
+                    "desc": ""
+                },
+                {
+                    "id": "tf_apple_store_front",
+                    "name": "AppleStoreFront",
+                    "val": null,
+                    "type": "text",
+                    "desc": ""
+                },
+                {
+                    "id": "tf_apple_ta_device",
+                    "name": "AppleTaDevice",
+                    "val": null,
+                    "type": "text",
+                    "desc": ""
+                },
+                {
+                    "id": "tf_apple_amd_m",
+                    "name": "AppleAMDM",
+                    "val": null,
+                    "type": "text",
+                    "desc": ""
+                },
+                {
+                    "id": "tf_apple_device_model",
+                    "name": "AppleDeviceModel",
+                    "val": null,
+                    "type": "text",
+                    "desc": ""
+                },
+                {
+                    "id": "tf_user_agent",
+                    "name": "UserAgent",
+                    "val": null,
+                    "type": "text",
+                    "desc": ""
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://raw.githubusercontent.com/githubdulong/Script/master/Images/testflight.png",
+                "https://raw.githubusercontent.com/githubdulong/Script/master/Images/testflight.png"
+            ],
+            "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js"
+        },
+        {
+            "id": "yuheng.4ksj",
+            "name": "4K世界自动签到",
+            "descs_html": [
+                "<p style='color:#3498db;text-align:center;'>说明请查看脚本注释👇</p>",
+                "<a style='color:#686de0;display:block;text-align:center;' target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/4ksj.js'>脚本链接</a>"
+            ],
+            "keys": ["4k_wrold_debug", "4k_world_split_char", "4k_world_accounts", "4k_world_passwords", "4k_world_cookies"],
+            "settings": [
+                {
+                    "id": "4k_wrold_debug",
+                    "name": "是否开启调试模式",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": ""
+                },
+                {
+                    "id": "4k_world_split_char",
+                    "name": "多账号分隔符, 默认即可",
+                    "val": "&",
+                    "type": "text",
+                    "desc": ""
+                },
+                {
+                    "id": "4k_world_accounts",
+                    "name": "登录账号",
+                    "val": null,
+                    "type": "text",
+                    "desc": ""
+                },
+                {
+                    "id": "4k_world_passwords",
+                    "name": "登录密码",
+                    "val": null,
+                    "type": "text",
+                    "desc": ""
+                },
+                {
+                    "id": "4k_world_cookies",
+                    "name": "用户 COOKIE",
+                    "val": null,
+                    "type": "text",
+                    "desc": ""
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/4ksj.png",
+                "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/4ksj.png"
+            ],
+            "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/4ksj.js"
+        },
+        {
+            "id": "yuheng.javday",
+            "name": "𝐉𝐀𝐕𝐃𝐚𝐲每日推荐",
+            "descs_html": [
+                "<p style='color:#3498db;text-align:center;'>说明请查看脚本注释👇</p>",
+                "<a style='color:#686de0;display:block;text-align:center;' target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/javday.js'>脚本链接</a>"
+            ],
+            "keys": ["javday_wrold_debug", "javday_type", "javday_item_type"],
+            "settings": [
+                {
+                    "id": "javday_wrold_debug",
+                    "name": "是否开启调试模式",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": ""
+                },
+                {
+                    "id": "javday_type",
+                    "name": "推荐类型",
+                    "val": "人氣系列",
+                    "type": "radios",
+                    "desc": "选择需要通知的类型, 默认'人氣系列'",
+                    "items": [
+                        {
+                            "key": "最新更新",
+                            "label": "最新更新"
+                        },
+                        {
+                            "key": "人氣系列",
+                            "label": "人氣系列"
+                        },
+                        {
+                            "key": "新作上市",
+                            "label": "新作上市"
+                        },
+                        {
+                            "key": "國產AV",
+                            "label": "國產AV"
+                        },
+                        {
+                            "key": "糖心VLOG",
+                            "label": "糖心VLOG"
+                        },
+                        {
+                            "key": "蘿莉社",
+                            "label": "蘿莉社"
+                        }
+                    ]
+                },
+                {
+                    "id": "javday_item_type",
+                    "name": "选择类型",
+                    "val": "随机",
+                    "type": "radios",
+                    "desc": "选择推送类型, 默认'随机'",
+                    "items": [
+                        {
+                            "key": "最新",
+                            "label": "最新"
+                        },
+                        {
+                            "key": "随机",
+                            "label": "随机"
+                        }
+                    ]
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/javday.png",
+                "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/javday.png"
+            ],
+            "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/javday.js"
+        },
+        {
+            "id": "yuheng.meitu",
+            "name": "美图鉴赏",
+            "descs_html": ["<p style='color:#3498db;text-align:center;'>希望使用脚本让你快乐每一天😊</p>"],
+            "keys": ["meitu_type"],
+            "settings": [
+                {
+                    "id": "meitu_type",
+                    "name": "推荐类型",
+                    "val": "1024",
+                    "type": "radios",
+                    "desc": "选择图源, 默认'1024'",
+                    "items": [
+                        {
+                            "key": "4KHD - popular",
+                            "label": "4KHD - popular"
+                        },
+                        {
+                            "key": "4KHD - cosplay",
+                            "label": "4KHD - cosplay"
+                        },
+                        {
+                            "key": "4KHD - album",
+                            "label": "4KHD - album"
+                        },
+                        {
+                            "key": "115ZY - 街拍偷拍",
+                            "label": "115ZY - 街拍偷拍"
+                        },
+                        {
+                            "key": "115ZY - 丝袜美腿",
+                            "label": "115ZY - 丝袜美腿"
+                        },
+                        {
+                            "key": "115ZY - 欧美风情",
+                            "label": "115ZY - 欧美风情"
+                        },
+                        {
+                            "key": "115ZY - 卡通漫画",
+                            "label": "115ZY - 卡通漫画"
+                        },
+                        {
+                            "key": "115ZY - 网友自拍",
+                            "label": "115ZY - 网友自拍"
+                        },
+                        {
+                            "key": "115ZY - 露出激情",
+                            "label": "115ZY - 露出激情"
+                        },
+                        {
+                            "key": "115ZY - 唯美写真",
+                            "label": "115ZY - 唯美写真"
+                        },
+                        {
+                            "key": "115ZY - 女优情报",
+                            "label": "115ZY - 女优情报"
+                        },
+                        {
+                            "key": "1024 - 唯美写真",
+                            "label": "1024 - 唯美写真"
+                        },
+                        {
+                            "key": "1024 - 网友自拍",
+                            "label": "1024 - 网友自拍"
+                        },
+                        {
+                            "key": "1024 - 露出激情",
+                            "label": "1024 - 露出激情"
+                        },
+                        {
+                            "key": "1024 - 美乳美臀",
+                            "label": "1024 - 美乳美臀"
+                        },
+                        {
+                            "key": "1024 - 丝袜美腿",
+                            "label": "1024 - 丝袜美腿"
+                        },
+                        {
+                            "key": "1024 - 卡通漫画",
+                            "label": "1024 - 卡通漫画"
+                        },
+                        {
+                            "key": "1024 - AI图展",
+                            "label": "1024 - AI图展"
+                        }
+                    ]
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/meitu.png",
+                "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/meitu.png"
+            ],
+            "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/meitu/meitu.js"
+        },
+        {
+            "id": "yuheng.javbus",
+            "name": "巴士论坛签到",
+            "descs_html": [
+                "<p style='color:#16a085;text-align:center;margin-top:20px;'>先添加重写脚本</p>",
+                "<a style='color:#3498db;text-align:center;display:block;margin:20px 0;' href='https://www.javbus.com/forum/' target='_blank'>打开👉 https://www.javbus.com/forum/ 登陆</a>",
+                "<p style='color:#e67e22;text-align:center;'>点击右上角头像</p>",
+                "<p style='color:#e74c3c;text-align:center;'>提示获取Cookie成功即可食用该脚本</p>"
+            ],
+            "keys": ["javbus_bark_push", "javbus_debug", "javbus_users", "javbus_notification_image"],
+            "settings": [
+                {
+                    "id": "javbus_bark_push",
+                    "name": "Bark密钥",
+                    "val": null,
+                    "type": "text",
+                    "desc": "仅使用Bark进行通知"
+                },
+                {
+                    "id": "javbus_debug",
+                    "name": "是否开启调试模式",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": ""
+                },
+                {
+                    "id": "javbus_users",
+                    "name": "账号",
+                    "val": null,
+                    "type": "textarea",
+                    "rows": 5,
+                    "desc": ""
+                },
+                {
+                    "id": "javbus_notification_image",
+                    "name": "是否开启媒体通知🔞",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": ""
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/bus.png",
+                "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/bus.png"
+            ],
+            "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/javbus.js"
+        },
+        {
+            "id": "yuheng.zippo",
+            "name": "𝐙𝐈𝐏𝐏𝐎会员中心签到",
+            "descs_html": [
+                "<p style='color:#16a085;text-align:center;margin-top:20px;'>小程序搜索[ZIPPO会员中心]</p>",
+                "<p style='color:#e67e22;text-align:center;'>注册/登录 - 右上角 ··· - 重新进入小程序</p>",
+                "<p style='color:#e74c3c;text-align:center;'>提示数据获取成功即可食用该脚本</p>",
+                "<p style='color:#fff;text-align:center;'>为防止不必要的麻烦, 获取完必要数据后请关闭重写</p>"
+            ],
+            "keys": ["zippo_mp_debug", "zippo_mp_auth"],
+            "settings": [
+                {
+                    "id": "zippo_mp_debug",
+                    "name": "是否开启调试模式",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": ""
+                },
+                {
+                    "id": "zippo_mp_auth",
+                    "name": "账号",
+                    "val": null,
+                    "type": "textarea",
+                    "rows": 5,
+                    "desc": ""
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/zippo.jpg",
+                "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/zippo.jpg"
+            ],
+            "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/zippo.js"
+        },
+        {
+            "id": "yuheng.wuai",
+            "name": "吾爱破解",
+            "descs_html": [
+                "<a style='color:#686de0;display:block;text-align:center;' target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/52pojie.js'>脚本链接</a>"
+            ],
+            "keys": ["wuai_debug", "wuai_cookie", "wuai_bark_key"],
+            "settings": [
+                {
+                    "id": "wuai_debug",
+                    "name": "是否开启调试模式",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": ""
+                },
+                {
+                    "id": "wuai_cookie",
+                    "name": "Cookie",
+                    "val": null,
+                    "type": "textarea",
+                    "rows": 5,
+                    "desc": ""
+                },
+                {
+                    "id": "wuai_bark_key",
+                    "name": "Bark密钥",
+                    "val": null,
+                    "type": "text",
+                    "desc": "填写后只使用Bark推送"
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/52pojie.png",
+                "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/52pojie.png"
+            ],
+            "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/52pojie.js"
+        },
+        {
+            "id": "yuheng.douban",
+            "name": "豆瓣电影日历",
+            "descs_html": [
+                "<a style='color:#686de0;display:block;text-align:center;' target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/douban.js'>脚本链接</a>"
+            ],
+            "keys": ["douban_debug", "douban_api_key", "douban_bark_push"],
+            "settings": [
+                {
+                    "id": "douban_debug",
+                    "name": "是否开启调试模式",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": ""
+                },
+                {
+                    "id": "douban_api_key",
+                    "name": "豆瓣接口密钥",
+                    "val": null,
+                    "type": "textarea",
+                    "rows": 5,
+                    "desc": "不知道可不填, 已默认"
+                },
+                {
+                    "id": "douban_bark_push",
+                    "name": "Bark密钥",
+                    "val": null,
+                    "type": "text",
+                    "desc": "填写后只使用Bark推送"
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://is3-ssl.mzstatic.com/image/thumb/Purple126/v4/90/5d/f8/905df82a-0e2e-5a2c-2be6-cc690fb0bec0/AppIcon-0-0-1x_U007emarketing-0-0-0-6-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/144x144bb.png",
+                "https://is3-ssl.mzstatic.com/image/thumb/Purple126/v4/90/5d/f8/905df82a-0e2e-5a2c-2be6-cc690fb0bec0/AppIcon-0-0-1x_U007emarketing-0-0-0-6-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/144x144bb.png"
+            ],
+            "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/douban.js"
+        },
+        {
+            "id": "yuheng.qdreader",
+            "name": "起点读书自动签到",
+            "descs_html": [
+                "<a style='color:#686de0;display:block;text-align:center;' target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/QDReader/README.md'>使用说明</a>"
+            ],
+            "keys": [
+                "QDREADER_DEBUG",
+                "QDREADER_COOKIE",
+                "QDREADER_ADV_JOB_ENABLE",
+                "QDREADER_EXTRA_ADV_JOB_ENABLE",
+                "QDREADER_LOTTERY_ENABLE",
+                "QDREADER_WEEKLY_EXCHANGE_ENABLE",
+                "QDREADER_CHAPTER_CARD_ENABLE",
+                "QDREADER_MESSAGE_BOX_ENABLE"
+            ],
+            "settings": [
+                {
+                    "id": "QDREADER_DEBUG",
+                    "name": "是否开启调试模式",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": ""
+                },
+                {
+                    "id": "QDREADER_COOKIE",
+                    "name": "起点读书Cookie",
+                    "val": "",
+                    "type": "textarea",
+                    "rows": 10,
+                    "desc": ""
+                },
+                {
+                    "id": "QDREADER_ADV_JOB_ENABLE",
+                    "name": "激励任务",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": "开启后执行激励碎片任务"
+                },
+                {
+                    "id": "QDREADER_EXTRA_ADV_JOB_ENABLE",
+                    "name": "每日任务",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": "开启后执行每日广告任务"
+                },
+                {
+                    "id": "QDREADER_LOTTERY_ENABLE",
+                    "name": "每日抽奖",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": "开启后执行每日抽奖"
+                },
+                {
+                    "id": "QDREADER_WEEKLY_EXCHANGE_ENABLE",
+                    "name": "每周兑换",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": "开启后周日自动兑换章节卡"
+                },
+                {
+                    "id": "QDREADER_CHAPTER_CARD_ENABLE",
+                    "name": "章节卡片",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": "开启后查询章节卡信息"
+                },
+                {
+                    "id": "QDREADER_MESSAGE_BOX_ENABLE",
+                    "name": "大咖荐书",
+                    "val": false,
+                    "type": "boolean",
+                    "desc": "开启后处理大咖荐书消息(加书架抽奖/看视频抽奖)"
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/97/40/5e/97405e49-87bb-3f0a-bf3a-91cf8fdf99a0/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-GLES2_U002c0-85-220.png/144x144.png",
+                "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/97/40/5e/97405e49-87bb-3f0a-bf3a-91cf8fdf99a0/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-GLES2_U002c0-85-220.png/144x144.png"
+            ],
+            "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/QDReader/qdreader.js"
+        },
+        {
+            "id": "yuheng.ncsp",
+            "name": "奶茶视频 VIP 解锁",
+            "descs_html": [
+                "<h3 style='text-align:center;color:#e74c3c;margin-top:20px;'>免责声明 / Disclaimer</h3>",
+                "<p style='margin:10px 20px;line-height:1.8;'>1. 本脚本仅供学习交流使用，<b style='color:#e74c3c;'>禁止用于任何商业用途</b>。</p>",
+                "<p style='margin:10px 20px;line-height:1.8;'>2. 使用本脚本产生的一切后果由使用者自行承担，与脚本作者无关。</p>",
+                "<p style='margin:10px 20px;line-height:1.8;'>3. 本脚本不提供任何破解、盗版内容，仅修改客户端本地响应数据。</p>",
+                "<p style='margin:10px 20px;line-height:1.8;'>4. 请支持正版，在使用 24 小时内删除。</p>",
+                "<p style='margin:10px 20px;line-height:1.8;'>5. <b style='color:#e74c3c;'>严禁付费分发、转卖或二次分装本脚本。</b></p>",
+                "<p style='margin:10px 20px;line-height:1.8;'>6. 如因违反以上条款导致任何法律问题，使用者需自行承担全部责任。</p>",
+                "<hr style='margin:15px 20px;border-color:#ddd;'>",
+                "<p style='margin:10px 20px;color:#2ecc71;font-weight:bold;'>频道: <a href='https://t.me/onz3v_channel' target='_blank'>https://t.me/onz3v_channel</a></p>",
+                "<p style='margin:10px 20px;color:#3498db;font-weight:bold;'>群组: <a href='https://t.me/onz3v_group' target='_blank'>https://t.me/onz3v_group</a></p>",
+                "<hr style='margin:15px 20px;border-color:#ddd;'>",
+                "<p style='margin:10px 20px;color:#e67e22;font-size:14px;font-weight:900;'>⚠️ 如果在下方输入「我同意」，则代表同意上述协议。</p>"
+            ],
+            "keys": ["NCSP_AGREE"],
+            "settings": [
+                {
+                    "id": "NCSP_AGREE",
+                    "name": "协议确认",
+                    "val": "",
+                    "type": "text",
+                    "desc": "输入「我同意」即代表同意上述协议"
+                }
+            ],
+            "author": "@yuheng",
+            "repo": "https://github.com/Yuheng0101/X",
+            "icons": [
+                "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/ncsp.png",
+                "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/ncsp.png"
+            ],
+            "script": ""
         }
-      ],
-      "author": "@yuheng",
-      "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/67/04/ff/6704ff4c-b49b-de91-70ac-201c62d5296f/AppIcon-0-0-1x_U007emarketing-0-0-0-5-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/144x144bb.png",
-        "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/67/04/ff/6704ff4c-b49b-de91-70ac-201c62d5296f/AppIcon-0-0-1x_U007emarketing-0-0-0-5-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/144x144bb.png"
-      ],
-      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/moyu.js"
-    },
-    {
-      "id": "yuheng.mi.step",
-      "name": "小米刷步",
-      "descs_html": [
-        "<p style='margin-top:20px;font-size:16px;color:#a29bfe;text-align:center;'>刷步格言: 每天刷一刷, 健康第一, 步数第二</p>",
-        "<p style='margin-left:10px;margin-top:30px;font-size:20px;font-weight:900;'>如需配置多账号务必看完以下说明<p>",
-        "<p style='margin-left:10px;margin-top:20px;font-size:12px;'>账密使用&&分割, 如果密码存在&&请先修改密码后再使用该脚本, 账密长度务必保持一致</p>",
-        "<p style='margin-left:10px;margin-top:20px;font-size:12px;'>区间和步数使用&进行分割, 如果不分割使用第一个作为统一配置, 如10000-19999, 即表示不管多少账号都使用这一区间, 如果使用多账号区间, 务必长度与账密保持一致</p>",
-        "<p style='margin-left:10px;margin-top:20px;font-size:12px;'>步数与区间规则一致, 使用多账号区间, 务必长度与账密保持一致</p>",
-        "<p style='margin-left:10px;margin-top:20px;color:#3498db;'>账号举例: 手机号1&&手机号2&&... (密码亦是如此)</p>",
-        "<p style='margin-left:10px;margin-top:20px;color:#3498db;'>区间举例: 1000-2000&1500-2000&...(注意长度与账密保持一致, 步数亦是如此)</p>",
-        "<p style='margin-left:10px;margin-top:20px;font-size:16px;color:#ff0000;'>步数优先级高于区间, 填写步数后区间作用将失效, 建议填写区间</p>",
-        "<p style='margin-left:10px;margin-top:20px;font-size:16px;color:#ff0000;'>步数不要超过50000</p>"
-      ],
-      "keys": [
-        "xiaomi_step_debug",
-        "xiaomi_step_increment_mode",
-        "xiaomi_step_run_count",
-        "xiaomi_step_username",
-        "xiaomi_step_password",
-        "xiaomi_step_space",
-        "xiaomi_step_step",
-        "xiaomi_step_increment_cache_list"
-      ],
-      "settings": [
-        {
-          "id": "xiaomi_step_debug",
-          "name": "是否开启调试模式",
-          "val": false,
-          "type": "boolean",
-          "desc": ""
-        },
-        {
-          "id": "xiaomi_step_increment_mode",
-          "name": "是否开启递增模式",
-          "val": false,
-          "type": "boolean",
-          "desc": "开启后建议把步数(区间)设置较之前小一些"
-        },
-        {
-          "id": "xiaomi_step_run_count",
-          "name": "递增次数(请根据contab次数配置)",
-          "val": "1",
-          "type": "text",
-          "desc": "如:cron设置0 10,8 * * *(每天运行两次),这里请填2"
-        },
-        {
-          "id": "xiaomi_step_username",
-          "name": "小米刷步账号",
-          "val": null,
-          "type": "text",
-          "rows": 1,
-          "desc": "小米刷步账号"
-        },
-        {
-          "id": "xiaomi_step_password",
-          "name": "小米刷步密码",
-          "val": null,
-          "type": "text",
-          "rows": 1,
-          "desc": ""
-        },
-        {
-          "id": "xiaomi_step_space",
-          "name": "设置步数区间, 如15000-20000, 使用 - 分割",
-          "val": null,
-          "type": "text",
-          "rows": 1,
-          "desc": "置空默认10000-19999之间"
-        },
-        {
-          "id": "xiaomi_step_step",
-          "name": "需要刷的步数",
-          "val": null,
-          "type": "text",
-          "rows": 1,
-          "desc": "填写后区间将无效"
-        }
-      ],
-      "author": "@yuheng",
-      "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/mi/mini.png",
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/mi/color.png"
-      ],
-      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/mi/step.js"
-    },
-    {
-      "id": "yuheng.imaotai.v1.5",
-      "name": "i茅台预约",
-      "descs_html": [
-        "<p style='margin-left:20px;margin-top:20px;color:#ff0000;'>请注意如果不配置,默认选择填写的作为预约参数</p>",
-        "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(是否选择投放量最大门店): true</p>",
-        "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(是否开启茅运[茅运不足100请关闭]): true</p>",
-        "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(省份配置): 贵州省</p>",
-        "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(城市配置): 贵阳市</p>",
-        "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(预约项配置): 10941,10942</p>",
-        "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(详细地址): 贵阳市南明区花果园</p>",
-        "<p style='margin-left:20px;margin-top:20px;color:#ecf0f1;'>如(经纬度): 106.713478,26.573743</p>",
-        "<p style='margin-left:20px;margin-top:20px;color:#9b59b6;'>多说一句,经纬度你知道就填,不知道只填详细地址就好,经纬度优先级高于地址,如果填写经纬度,详细地址的作用将失效</p>"
-      ],
-      "keys": [
-        "imaotai_debug",
-        "imaotai_mobile",
-        "imaotai_code",
-        "imaotai_params",
-        "imaotai__config__islarge",
-        "imaotai__config__istravel",
-        "imaotai__config__province",
-        "imaotai__config__city",
-        "imaotai__config__itemcode",
-        "imaotai__config__address",
-        "imaotai__config__location",
-        "imaotai_debug",
-        "imaotai_bark_key"
-      ],
-      "settings": [
-        {
-          "id": "imaotai_debug",
-          "name": "是否开启调试模式",
-          "val": false,
-          "type": "boolean",
-          "desc": ""
-        },
-        {
-          "id": "imaotai_mobile",
-          "name": "手机号(用于获取验证码)",
-          "val": null,
-          "type": "text",
-          "desc": ""
-        },
-        {
-          "id": "imaotai_code",
-          "name": "验证码",
-          "val": null,
-          "type": "text",
-          "desc": "务必先执行获取验证码接口再填写该字段"
-        },
-        {
-          "id": "imaotai__config__islarge",
-          "name": "预约方式[是否开启最大投放量]",
-          "val": false,
-          "type": "boolean",
-          "desc": ""
-        },
-        {
-          "id": "imaotai__config__istravel",
-          "name": "是否开启茅运旅行[⚠️临时停用]",
-          "val": false,
-          "type": "boolean",
-          "desc": ""
-        },
-        {
-          "id": "imaotai__config__province",
-          "name": "*省份名称, 如: 贵州省",
-          "val": null,
-          "type": "text",
-          "rows": 1,
-          "desc": "必填"
-        },
-        {
-          "id": "imaotai__config__city",
-          "name": "*城市名称, 如: 贵阳市",
-          "val": null,
-          "type": "text",
-          "rows": 1,
-          "desc": "必填"
-        },
-        {
-          "id": "imaotai__config__itemcode",
-          "name": "*预约项",
-          "val": "11318,11317,11319,2478,11240",
-          "type": "checkboxes",
-          "items": [
-            {
-              "key": "11318",
-              "label": "53%vol 500ml贵州茅台酒（乙巳蛇年）"
-            },
-            {
-              "key": "11317",
-              "label": "53%vol 500ml贵州茅台酒（笙乐飞天）"
-            },
-            {
-              "key": "11319",
-              "label": "53%vol 375ml×2贵州茅台酒（乙巳蛇年）"
-            },
-            {
-              "key": "2478",
-              "label": "贵州茅台酒（珍品）"
-            },
-            {
-              "key": "11240",
-              "label": "53%vol 500ml 茅台1935·中国国家地理文创酒（喜逢大运河）"
-            }
-          ]
-        },
-        {
-          "id": "imaotai__config__address",
-          "name": "当前位置(与经纬度二选一, 建议填写地址)",
-          "val": null,
-          "type": "text",
-          "rows": 1,
-          "desc": "尽量具体, 比如: 山东省济南市齐鲁软件园, 精确到标志性建筑物"
-        },
-        {
-          "id": "imaotai__config__location",
-          "name": "(选填)当前经纬度",
-          "val": null,
-          "type": "text",
-          "rows": 1,
-          "desc": "注意经度在前, 纬度在后, 例如: 117.119999,36.651216,不填根据当前位置获取"
-        },
-        {
-          "id": "imaotai_bark_key",
-          "name": "Bark通知",
-          "val": null,
-          "type": "text",
-          "rows": 1,
-          "desc": "填写Bark的app提供的key, 填写后不再使用默认通知方式"
-        },
-        {
-          "id": "amap_api",
-          "name": "(选填)高德开发者Key",
-          "val": null,
-          "type": "text",
-          "rows": 1,
-          "desc": "后续key失效后需要填写"
-        }
-      ],
-      "author": "@yuheng",
-      "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/ae/f4/18/aef41811-955e-e6b0-5d23-6763c2eef1ab/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/144x144.png",
-        "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/ae/f4/18/aef41811-955e-e6b0-5d23-6763c2eef1ab/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/144x144.png"
-      ],
-      "scripts": [
-        {
-          "name": "发送验证码（填 手机号, 保存, 执行）",
-          "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Maotai/msg.js"
-        },
-        {
-          "name": "用验证码登录（填 手机号, 验证码, 保存, 执行 ⚠️ 执行后 记得刷新）",
-          "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Maotai/login.js"
-        }
-      ]
-    },
-    {
-      "id": "yuheng.95598.web",
-      "name": "网上国网",
-      "descs_html": [
-        "<a target='_blank' href='https://github.com/Yuheng0101/X/tree/main/Tasks/95598'>README.md</a>"
-      ],
-      "keys": [
-        "95598_log_debug",
-        "95598_recent_elc_fee",
-        "95598_notify_type",
-        "95598_username",
-        "95598_password",
-        "95598_bizrt",
-        "95598_bindInfo"
-      ],
-      "settings": [
-        {
-          "id": "95598_log_debug",
-          "name": "是否输出日志",
-          "val": false,
-          "type": "boolean",
-          "desc": ""
-        },
-        {
-          "id": "95598_recent_elc_fee",
-          "name": "是否查看近期用电量",
-          "val": false,
-          "type": "boolean",
-          "desc": ""
-        },
-        {
-          "id": "95598_notify_type",
-          "name": "是否通知全部绑定户号",
-          "val": false,
-          "type": "boolean",
-          "desc": ""
-        },
-        {
-          "id": "95598_username",
-          "name": "账号",
-          "val": null,
-          "type": "text",
-          "rows": 1,
-          "desc": "手机号"
-        },
-        {
-          "id": "95598_password",
-          "name": "密码",
-          "val": null,
-          "type": "text",
-          "rows": 1,
-          "desc": ""
-        }
-      ],
-      "author": "@yuheng",
-      "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/83/d8/8a/83d88a92-5a4d-7a2f-118c-80d795e7a9f6/AppIcon-0-0-1x_U007emarketing-0-5-0-0-sRGB-85-220.png/144x144.png",
-        "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/83/d8/8a/83d88a92-5a4d-7a2f-118c-80d795e7a9f6/AppIcon-0-0-1x_U007emarketing-0-5-0-0-sRGB-85-220.png/144x144.png"
-      ],
-      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/95598/95598.js"
-    },
-    {
-      "id": "yuheng.wsgw",
-      "name": "网上国网小程序",
-      "descs_html": [
-        "<a style='margin-left:20px;color:#686de0;' target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/95598/95598.weapp.js'>README.md👈相关配置请点击</a>",
-        "<p style='margin-top:20px;margin-left:20px;color:#eb4d4b;'>本脚本仅提供查询服务, 不牵扯签到相关</p>",
-        "<p style='margin-left:20px;color:#ff7979;'>1.微信小程序搜索 网上国网 ,打开并登录(请提前绑定户号)</p>",
-        "<p style='margin-left:20px;color:#60a3bc;'>2.代理工具添加重写和Cron脚本</p>",
-        "<p style='margin-left:20px;color:#f0932b;'>3.回到小程序重新进入, 提示获取数据成功即可使用该脚本</p>",
-        "<p style='margin-left:20px;color:#38ada9;'>4.回到代理工具执行Cron脚本, 即可查看相关结果</p>",
-        "<p style='margin-left:20px;color:#38ada9;'>❗❗❗ 本脚本已作废</p>"
-      ],
-      "keys": ["wsgw_debug", "wsgw_openid", "wsgw_token", "wsgw_auth"],
-      "settings": [
-        {
-          "id": "wsgw_debug",
-          "name": "是否查看数据日志",
-          "val": "false",
-          "type": "boolean",
-          "desc": ""
-        },
-        {
-          "id": "wsgw_openid",
-          "name": "用户标识",
-          "val": null,
-          "type": "text",
-          "rows": 1,
-          "desc": ""
-        },
-        {
-          "id": "wsgw_token",
-          "name": "用户凭证",
-          "val": null,
-          "type": "text",
-          "rows": 1,
-          "desc": ""
-        },
-        {
-          "id": "wsgw_auth",
-          "name": "登录凭证",
-          "val": null,
-          "type": "textarea",
-          "rows": 5,
-          "desc": ""
-        }
-      ],
-      "author": "@yuheng",
-      "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/83/d8/8a/83d88a92-5a4d-7a2f-118c-80d795e7a9f6/AppIcon-0-0-1x_U007emarketing-0-5-0-0-sRGB-85-220.png/144x144.png",
-        "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/83/d8/8a/83d88a92-5a4d-7a2f-118c-80d795e7a9f6/AppIcon-0-0-1x_U007emarketing-0-5-0-0-sRGB-85-220.png/144x144.png"
-      ],
-      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/95598/95598.weapp.js"
-    },
-    {
-      "id": "yuheng.1024",
-      "name": "某榴最新技術推送",
-      "descs_html": [
-        "<a target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/1024.js'>跳转脚本</a>"
-      ],
-      "keys": ["1024_israndom"],
-      "settings": [
-        {
-          "id": "1024_israndom",
-          "name": "是否随机推贴",
-          "val": false,
-          "type": "boolean",
-          "desc": ""
-        }
-      ],
-      "author": "@yuheng",
-      "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/1024.png",
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/1024.png"
-      ],
-      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/1024.js"
-    },
-    {
-      "id": "yuheng.hlbdy",
-      "name": "最新黑料",
-      "descs_html": [
-        "<a target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/hlbdy.js'>跳转脚本</a>"
-      ],
-      "keys": [
-        "hlbdy_notify_with_media",
-        "hlbdy_debug",
-        "hlbdy_type",
-        "hlbdy_notify_type"
-      ],
-      "settings": [
-        {
-          "id": "hlbdy_notify_type",
-          "name": "通知类型",
-          "val": "0",
-          "type": "radios",
-          "desc": "默认组合通知(没有媒体通知), Surge用户建议使用单独通知",
-          "items": [
-            {
-              "key": "0",
-              "label": "组合通知"
-            },
-            {
-              "key": "1",
-              "label": "单独通知"
-            }
-          ]
-        },
-        {
-          "id": "hlbdy_notify_with_media",
-          "name": "是否开启媒体通知",
-          "val": true,
-          "type": "boolean",
-          "desc": "iOS16.5.x~iOS16.7.x用户请关闭该选项, 默认开启"
-        },
-        {
-          "id": "hlbdy_debug",
-          "name": "是否开启调试模式",
-          "val": false,
-          "type": "boolean",
-          "desc": "默认关闭"
-        },
-        {
-          "id": "hlbdy_type",
-          "name": "是否开启媒体通知",
-          "val": "最新黑料",
-          "type": "radios",
-          "desc": "默认最新黑料",
-          "items": [
-            {
-              "key": "最新黑料",
-              "label": "最新黑料"
-            },
-            {
-              "key": "今日黑料",
-              "label": "今日黑料"
-            },
-            {
-              "key": "今日热搜",
-              "label": "今日热搜"
-            },
-            {
-              "key": "热门大瓜",
-              "label": "热门大瓜"
-            },
-            {
-              "key": "网红乱象",
-              "label": "网红乱象"
-            },
-            {
-              "key": "原创社区",
-              "label": "原创社区"
-            },
-            {
-              "key": "独家爆料",
-              "label": "独家爆料"
-            }
-          ]
-        }
-      ],
-      "author": "@yuheng",
-      "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://raw.githubusercontent.com/Toperlock/Quantumult/main/icon/heiliao.png",
-        "https://raw.githubusercontent.com/Toperlock/Quantumult/main/icon/heiliao.png"
-      ],
-      "script": "http://192.168.68.169:5501/NewProject/Task/%E9%BB%91%E6%96%99%E4%B8%8D%E6%89%93%E7%83%8A/hlbdy.js"
-    },
-    {
-      "id": "yuheng.qinglong",
-      "name": "青龙面板",
-      "descs_html": [
-        "<p style='line-height: 24px;padding-top:20px;'>1.配置面板前务必检查抛出的api是否有读写环境变量权限.</p>",
-        "<p style='line-height: 24px;'>2.配置完成点击右上角运行按钮测试连接是否成功.</p>"
-      ],
-      "keys": [
-        "yuheng_ql_host",
-        "yuheng_ql_clientid",
-        "yuheng_ql_clientsecret",
-        "yuheng_ql_token"
-      ],
-      "settings": [
-        {
-          "id": "yuheng_ql_host",
-          "name": "青龙地址(http://127.0.0.1:5700/)",
-          "val": null,
-          "type": "text",
-          "desc": ""
-        },
-        {
-          "id": "yuheng_ql_clientid",
-          "name": "CLIENT_ID",
-          "val": null,
-          "type": "text",
-          "desc": ""
-        },
-        {
-          "id": "yuheng_ql_clientsecret",
-          "name": "CLIENT_SECRET",
-          "val": null,
-          "type": "text",
-          "desc": ""
-        }
-      ],
-      "author": "@yuheng",
-      "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/ql.png",
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/ql.png"
-      ],
-      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/ql.js"
-    },
-    {
-      "id": "yuheng.60s",
-      "name": "每天60秒读懂世界",
-      "descs_html": [
-        "<a target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/60s.js'>跳转脚本</a>"
-      ],
-      "keys": ["zaobao_debug", "zaobao_original_url"],
-      "settings": [
-        {
-          "id": "zaobao_debug",
-          "name": "是否开启调试模式",
-          "val": false,
-          "type": "boolean",
-          "desc": ""
-        },
-        {
-          "id": "zaobao_original_url",
-          "name": "点击横幅是否跳转原文",
-          "val": false,
-          "type": "boolean",
-          "desc": "开启跳转微信公众号文章, 关闭点击横幅跳转图片链接"
-        }
-      ],
-      "author": "@yuheng",
-      "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/60s.png",
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/60s.png"
-      ],
-      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/60s.js"
-    },
-    {
-      "id": "yuheng.top",
-      "name": "热搜聚合",
-      "descs_html": [
-        "<p>1.自行选择</p>",
-        "<p>2.系统自动选择</p>",
-        "<a target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/top.js'>跳转脚本</a>"
-      ],
-      "keys": ["top_debug", "top_user_select", "top_limit"],
-      "settings": [
-        {
-          "id": "top_debug",
-          "name": "是否开启调试模式",
-          "val": false,
-          "type": "boolean",
-          "desc": ""
-        },
-        {
-          "id": "top_user_select",
-          "name": "自行选择通知类型",
-          "val": null,
-          "type": "radios",
-          "desc": "",
-          "items": [
-            {
-              "key": null,
-              "label": "系统帮选"
-            },
-            {
-              "key": "微博",
-              "label": "微博"
-            },
-            {
-              "key": "知乎",
-              "label": "知乎"
-            },
-            {
-              "key": "今日头条",
-              "label": "今日头条"
-            },
-            {
-              "key": "抖音",
-              "label": "抖音"
-            },
-            {
-              "key": "百度",
-              "label": "百度"
-            },
-            {
-              "key": "哔哩哔哩",
-              "label": "哔哩哔哩"
-            }
-          ]
-        },
-        {
-          "id": "top_limit",
-          "name": "通知条数",
-          "val": 10,
-          "type": "number",
-          "desc": "不建议超过20条[通知会截断]"
-        }
-      ],
-      "author": "@yuheng",
-      "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://is3-ssl.mzstatic.com/image/thumb/Purple126/v4/9a/d8/77/9ad877c6-e3d7-61a1-3911-5036239a41a6/AppIcon-1x_U007emarketing-0-7-0-0-sRGB-85-220.png/144x144bb.png",
-        "https://is3-ssl.mzstatic.com/image/thumb/Purple126/v4/9a/d8/77/9ad877c6-e3d7-61a1-3911-5036239a41a6/AppIcon-1x_U007emarketing-0-7-0-0-sRGB-85-220.png/144x144bb.png"
-      ],
-      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/top.js"
-    },
-    {
-      "id": "yuheng.eshop",
-      "name": "Eshop打折监控",
-      "descs_html": [
-        "<a target='_blank' href='https://github.com/Yuheng0101/X/tree/main/Tasks/eshop'>【README.md】</a>"
-      ],
-      "keys": ["eshop_followedList", "eshop_isClear"],
-      "settings": [
-        {
-          "id": "eshop_followedList",
-          "name": "关注游戏列表",
-          "val": null,
-          "type": "text",
-          "desc": ""
-        },
-        {
-          "id": "eshop_isClear",
-          "name": "是否清理缓存",
-          "val": false,
-          "type": "boolean",
-          "desc": ""
-        }
-      ],
-      "author": "@yuheng",
-      "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/71/e3/98/71e39886-3a94-fb5d-e15b-45beadd64ac0/AppIcon-1x_U007emarketing-0-5-0-85-220.jpeg/144x144.png",
-        "https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/71/e3/98/71e39886-3a94-fb5d-e15b-45beadd64ac0/AppIcon-1x_U007emarketing-0-5-0-85-220.jpeg/144x144.png"
-      ],
-      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/eshop/eshop.js"
-    },
-    {
-      "id": "yuheng.bdyy",
-      "name": "波点音乐自动签到",
-      "descs_html": [
-        "<a target='_blank' href='https://github.com/Yuheng0101/X/tree/main/Tasks/Bdyy'>【README.md】</a>"
-      ],
-      "keys": ["bdyy_account"],
-      "settings": [
-        {
-          "id": "bdyy_account",
-          "name": "账号",
-          "val": null,
-          "type": "text",
-          "desc": ""
-        }
-      ],
-      "author": "@yuheng",
-      "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/05/b9/57/05b9577c-3773-cd2b-5a99-49c0dc3f331d/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/144x144.png",
-        "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/05/b9/57/05b9577c-3773-cd2b-5a99-49c0dc3f331d/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/144x144.png"
-      ],
-      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/Bdyy/bdyy.js"
-    },
-    {
-      "id": "yuheng.huluwa",
-      "name": "葫芦娃预约",
-      "descs_html": [
-        "<p style='margin-left:20px;margin-top:20px;'>多账号配置参考:手机号1:ck1&手机号2:ck2...</p>"
-      ],
-      "keys": [
-        "huluwa_split",
-        "xlth_cookies",
-        "glyp_cookies",
-        "kglg_cookies",
-        "hlqg_cookies",
-        "zhcs_cookies",
-        "gyqp_cookies",
-        "llsc_cookies",
-        "ylqx_cookies"
-      ],
-      "settings": [
-        {
-          "id": "huluwa_split",
-          "name": "多账号分隔符",
-          "val": "&",
-          "type": "text",
-          "desc": ""
-        },
-        {
-          "id": "xlth_cookies",
-          "name": "新联惠购",
-          "val": null,
-          "type": "textarea",
-          "rows": 5,
-          "desc": ""
-        },
-        {
-          "id": "glyp_cookies",
-          "name": "贵旅优品",
-          "val": null,
-          "type": "textarea",
-          "rows": 5,
-          "desc": ""
-        },
-        {
-          "id": "kglg_cookies",
-          "name": "空港乐购",
-          "val": null,
-          "type": "textarea",
-          "rows": 5,
-          "desc": ""
-        },
-        {
-          "id": "hlqg_cookies",
-          "name": "航旅黔购",
-          "val": null,
-          "type": "textarea",
-          "rows": 5,
-          "desc": ""
-        },
-        {
-          "id": "zhcs_cookies",
-          "name": "遵航出山",
-          "val": null,
-          "type": "textarea",
-          "rows": 5,
-          "desc": ""
-        },
-        {
-          "id": "gyqp_cookies",
-          "name": "贵盐黔品",
-          "val": null,
-          "type": "textarea",
-          "rows": 5,
-          "desc": ""
-        },
-        {
-          "id": "llsc_cookies",
-          "name": "乐旅商城",
-          "val": null,
-          "type": "textarea",
-          "rows": 5,
-          "desc": ""
-        },
-        {
-          "id": "ylqx_cookies",
-          "name": "驿路黔寻",
-          "val": null,
-          "type": "textarea",
-          "rows": 5,
-          "desc": ""
-        }
-      ],
-      "author": "@yuheng",
-      "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/70/a4/56/70a456c9-4df9-3bdb-03b6-ecf99f13e7c1/AppIcon-1x_U007epad-0-10-0-85-220.png/144x144bb.png",
-        "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/70/a4/56/70a456c9-4df9-3bdb-03b6-ecf99f13e7c1/AppIcon-1x_U007epad-0-10-0-85-220.png/144x144bb.png"
-      ],
-      "script": ""
-    },
-    {
-      "id": "yuheng.cache",
-      "name": "第三方库缓存查看",
-      "descs_html": [
-        "<p style='margin-left:20px;margin-top:20px;'>查看依赖包, 无需操作</p>"
-      ],
-      "keys": [
-        "CryptoJS.js",
-        "JSEncrypt.js",
-        "cheerio.js",
-        "Buffer.js",
-        "dayjs.js",
-        "crypto.js",
-        "iconv.js"
-      ],
-      "settings": [
-        {
-          "id": "CryptoJS.js",
-          "name": "CryptoJS",
-          "val": null,
-          "type": "textarea",
-          "rows": 5,
-          "desc": ""
-        },
-        {
-          "id": "JSEncrypt.js",
-          "name": "JSEncrypt",
-          "val": null,
-          "type": "textarea",
-          "rows": 5,
-          "desc": ""
-        },
-        {
-          "id": "cheerio.js",
-          "name": "cheerio",
-          "val": null,
-          "type": "textarea",
-          "rows": 5,
-          "desc": ""
-        },
-        {
-          "id": "Buffer.js",
-          "name": "Buffer",
-          "val": null,
-          "type": "textarea",
-          "rows": 5,
-          "desc": ""
-        },
-        {
-          "id": "dayjs.js",
-          "name": "dayjs",
-          "val": null,
-          "type": "textarea",
-          "rows": 5,
-          "desc": ""
-        },
-        {
-          "id": "crypto.js",
-          "name": "crypto",
-          "val": null,
-          "type": "textarea",
-          "rows": 5,
-          "desc": ""
-        },
-        {
-          "id": "iconv.js",
-          "name": "iconv-lite",
-          "val": null,
-          "type": "textarea",
-          "rows": 5,
-          "desc": ""
-        }
-      ],
-      "author": "@yuheng",
-      "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0d/31/0b/0d310b25-aa91-99c5-b23b-af1e8753c4d0/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/144x144.png",
-        "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0d/31/0b/0d310b25-aa91-99c5-b23b-af1e8753c4d0/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/144x144.png"
-      ],
-      "script": ""
-    },
-    {
-      "id": "yuheng.testflight.autoJoin",
-      "name": "TestFlight公测自动加入",
-      "descs_html": [
-        "<p style='margin-left:20px;color:#3498db;'>@mutu佬授权后修改脚本适配其他代理工具</p>",
-        "<a style='margin-left:20px;color:#ff0000;' target='_blank' href='https://raw.githubusercontent.com/githubdulong/Script/master/Auto_join_TF.js'>原脚本</a>"
-      ],
-      "keys": [
-        "tf_key",
-        "tf_session_id",
-        "tf_session_digest",
-        "tf_request_id",
-        "tf_apple_store_front",
-        "tf_apple_ta_device",
-        "tf_apple_amd_m",
-        "tf_apple_device_model",
-        "tf_user_agent",
-        "tf_app_ids",
-        "tf_loon_count",
-        "tf_interval"
-      ],
-      "settings": [
-        {
-          "id": "tf_app_ids",
-          "name": "监控的应用ID",
-          "val": null,
-          "type": "textarea",
-          "rows": 5,
-          "desc": "#后代表加入的状态, 0为未加入, 1为已加入"
-        },
-        {
-          "id": "tf_loon_count",
-          "name": "并发数",
-          "val": 1,
-          "type": "text",
-          "desc": ""
-        },
-        {
-          "id": "tf_interval",
-          "name": "间隔时间(单位: 秒)",
-          "val": 0,
-          "type": "text",
-          "desc": ""
-        },
-        {
-          "id": "tf_key",
-          "name": "用户标识",
-          "val": null,
-          "type": "text",
-          "desc": ""
-        },
-        {
-          "id": "tf_session_id",
-          "name": "SessionId",
-          "val": null,
-          "type": "text",
-          "desc": ""
-        },
-        {
-          "id": "tf_session_digest",
-          "name": "SessionDigest",
-          "val": null,
-          "type": "text",
-          "desc": ""
-        },
-        {
-          "id": "tf_request_id",
-          "name": "RequestId",
-          "val": null,
-          "type": "text",
-          "desc": ""
-        },
-        {
-          "id": "tf_apple_store_front",
-          "name": "AppleStoreFront",
-          "val": null,
-          "type": "text",
-          "desc": ""
-        },
-        {
-          "id": "tf_apple_ta_device",
-          "name": "AppleTaDevice",
-          "val": null,
-          "type": "text",
-          "desc": ""
-        },
-        {
-          "id": "tf_apple_amd_m",
-          "name": "AppleAMDM",
-          "val": null,
-          "type": "text",
-          "desc": ""
-        },
-        {
-          "id": "tf_apple_device_model",
-          "name": "AppleDeviceModel",
-          "val": null,
-          "type": "text",
-          "desc": ""
-        },
-        {
-          "id": "tf_user_agent",
-          "name": "UserAgent",
-          "val": null,
-          "type": "text",
-          "desc": ""
-        }
-      ],
-      "author": "@yuheng",
-      "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://raw.githubusercontent.com/githubdulong/Script/master/Images/testflight.png",
-        "https://raw.githubusercontent.com/githubdulong/Script/master/Images/testflight.png"
-      ],
-      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js"
-    },
-    {
-      "id": "yuheng.4ksj",
-      "name": "4K世界自动签到",
-      "descs_html": [
-        "<p style='color:#3498db;text-align:center;'>说明请查看脚本注释👇</p>",
-        "<a style='color:#686de0;display:block;text-align:center;' target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/4ksj.js'>脚本链接</a>"
-      ],
-      "keys": [
-        "4k_wrold_debug",
-        "4k_world_split_char",
-        "4k_world_accounts",
-        "4k_world_passwords",
-        "4k_world_cookies"
-      ],
-      "settings": [
-        {
-          "id": "4k_wrold_debug",
-          "name": "是否开启调试模式",
-          "val": false,
-          "type": "boolean",
-          "desc": ""
-        },
-        {
-          "id": "4k_world_split_char",
-          "name": "多账号分隔符, 默认即可",
-          "val": "&",
-          "type": "text",
-          "desc": ""
-        },
-        {
-          "id": "4k_world_accounts",
-          "name": "登录账号",
-          "val": null,
-          "type": "text",
-          "desc": ""
-        },
-        {
-          "id": "4k_world_passwords",
-          "name": "登录密码",
-          "val": null,
-          "type": "text",
-          "desc": ""
-        },
-        {
-          "id": "4k_world_cookies",
-          "name": "用户 COOKIE",
-          "val": null,
-          "type": "text",
-          "desc": ""
-        }
-      ],
-      "author": "@yuheng",
-      "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/4ksj.png",
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/4ksj.png"
-      ],
-      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/4ksj.js"
-    },
-    {
-      "id": "yuheng.javday",
-      "name": "𝐉𝐀𝐕𝐃𝐚𝐲每日推荐",
-      "descs_html": [
-        "<p style='color:#3498db;text-align:center;'>说明请查看脚本注释👇</p>",
-        "<a style='color:#686de0;display:block;text-align:center;' target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/javday.js'>脚本链接</a>"
-      ],
-      "keys": ["javday_wrold_debug", "javday_type", "javday_item_type"],
-      "settings": [
-        {
-          "id": "javday_wrold_debug",
-          "name": "是否开启调试模式",
-          "val": false,
-          "type": "boolean",
-          "desc": ""
-        },
-        {
-          "id": "javday_type",
-          "name": "推荐类型",
-          "val": "人氣系列",
-          "type": "radios",
-          "desc": "选择需要通知的类型, 默认'人氣系列'",
-          "items": [
-            {
-              "key": "最新更新",
-              "label": "最新更新"
-            },
-            {
-              "key": "人氣系列",
-              "label": "人氣系列"
-            },
-            {
-              "key": "新作上市",
-              "label": "新作上市"
-            },
-            {
-              "key": "國產AV",
-              "label": "國產AV"
-            },
-            {
-              "key": "糖心VLOG",
-              "label": "糖心VLOG"
-            },
-            {
-              "key": "蘿莉社",
-              "label": "蘿莉社"
-            }
-          ]
-        },
-        {
-          "id": "javday_item_type",
-          "name": "选择类型",
-          "val": "随机",
-          "type": "radios",
-          "desc": "选择推送类型, 默认'随机'",
-          "items": [
-            {
-              "key": "最新",
-              "label": "最新"
-            },
-            {
-              "key": "随机",
-              "label": "随机"
-            }
-          ]
-        }
-      ],
-      "author": "@yuheng",
-      "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/javday.png",
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/javday.png"
-      ],
-      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/javday.js"
-    },
-    {
-      "id": "yuheng.meitu",
-      "name": "美图鉴赏",
-      "descs_html": [
-        "<p style='color:#3498db;text-align:center;'>希望使用脚本让你快乐每一天😊</p>"
-      ],
-      "keys": ["meitu_type"],
-      "settings": [
-        {
-          "id": "meitu_type",
-          "name": "推荐类型",
-          "val": "1024",
-          "type": "radios",
-          "desc": "选择图源, 默认'1024'",
-          "items": [
-            {
-              "key": "4KHD - popular",
-              "label": "4KHD - popular"
-            },
-            {
-              "key": "4KHD - cosplay",
-              "label": "4KHD - cosplay"
-            },
-            {
-              "key": "4KHD - album",
-              "label": "4KHD - album"
-            },
-            {
-              "key": "115ZY - 街拍偷拍",
-              "label": "115ZY - 街拍偷拍"
-            },
-            {
-              "key": "115ZY - 丝袜美腿",
-              "label": "115ZY - 丝袜美腿"
-            },
-            {
-              "key": "115ZY - 欧美风情",
-              "label": "115ZY - 欧美风情"
-            },
-            {
-              "key": "115ZY - 卡通漫画",
-              "label": "115ZY - 卡通漫画"
-            },
-            {
-              "key": "115ZY - 网友自拍",
-              "label": "115ZY - 网友自拍"
-            },
-            {
-              "key": "115ZY - 露出激情",
-              "label": "115ZY - 露出激情"
-            },
-            {
-              "key": "115ZY - 唯美写真",
-              "label": "115ZY - 唯美写真"
-            },
-            {
-              "key": "115ZY - 女优情报",
-              "label": "115ZY - 女优情报"
-            },
-            {
-              "key": "1024 - 唯美写真",
-              "label": "1024 - 唯美写真"
-            },
-            {
-              "key": "1024 - 网友自拍",
-              "label": "1024 - 网友自拍"
-            },
-            {
-              "key": "1024 - 露出激情",
-              "label": "1024 - 露出激情"
-            },
-            {
-              "key": "1024 - 美乳美臀",
-              "label": "1024 - 美乳美臀"
-            },
-            {
-              "key": "1024 - 丝袜美腿",
-              "label": "1024 - 丝袜美腿"
-            },
-            {
-              "key": "1024 - 卡通漫画",
-              "label": "1024 - 卡通漫画"
-            },
-            {
-              "key": "1024 - AI图展",
-              "label": "1024 - AI图展"
-            }
-          ]
-        }
-      ],
-      "author": "@yuheng",
-      "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/meitu.png",
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/meitu.png"
-      ],
-      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/meitu/meitu.js"
-    },
-    {
-      "id": "yuheng.javbus",
-      "name": "巴士论坛签到",
-      "descs_html": [
-        "<p style='color:#16a085;text-align:center;margin-top:20px;'>先添加重写脚本</p>",
-        "<a style='color:#3498db;text-align:center;display:block;margin:20px 0;' href='https://www.javbus.com/forum/' target='_blank'>打开👉 https://www.javbus.com/forum/ 登陆</a>",
-        "<p style='color:#e67e22;text-align:center;'>点击右上角头像</p>",
-        "<p style='color:#e74c3c;text-align:center;'>提示获取Cookie成功即可食用该脚本</p>"
-      ],
-      "keys": [
-        "javbus_bark_push",
-        "javbus_debug",
-        "javbus_users",
-        "javbus_notification_image"
-      ],
-      "settings": [
-        {
-          "id": "javbus_bark_push",
-          "name": "Bark密钥",
-          "val": null,
-          "type": "text",
-          "desc": "仅使用Bark进行通知"
-        },
-        {
-          "id": "javbus_debug",
-          "name": "是否开启调试模式",
-          "val": false,
-          "type": "boolean",
-          "desc": ""
-        },
-        {
-          "id": "javbus_users",
-          "name": "账号",
-          "val": null,
-          "type": "textarea",
-          "rows": 5,
-          "desc": ""
-        },
-        {
-          "id": "javbus_notification_image",
-          "name": "是否开启媒体通知🔞",
-          "val": false,
-          "type": "boolean",
-          "desc": ""
-        }
-      ],
-      "author": "@yuheng",
-      "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/bus.png",
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/bus.png"
-      ],
-      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/javbus.js"
-    },
-    {
-      "id": "yuheng.zippo",
-      "name": "𝐙𝐈𝐏𝐏𝐎会员中心签到",
-      "descs_html": [
-        "<p style='color:#16a085;text-align:center;margin-top:20px;'>小程序搜索[ZIPPO会员中心]</p>",
-        "<p style='color:#e67e22;text-align:center;'>注册/登录 - 右上角 ··· - 重新进入小程序</p>",
-        "<p style='color:#e74c3c;text-align:center;'>提示数据获取成功即可食用该脚本</p>",
-        "<p style='color:#fff;text-align:center;'>为防止不必要的麻烦, 获取完必要数据后请关闭重写</p>"
-      ],
-      "keys": ["zippo_mp_debug", "zippo_mp_auth"],
-      "settings": [
-        {
-          "id": "zippo_mp_debug",
-          "name": "是否开启调试模式",
-          "val": false,
-          "type": "boolean",
-          "desc": ""
-        },
-        {
-          "id": "zippo_mp_auth",
-          "name": "账号",
-          "val": null,
-          "type": "textarea",
-          "rows": 5,
-          "desc": ""
-        }
-      ],
-      "author": "@yuheng",
-      "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/zippo.jpg",
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/zippo.jpg"
-      ],
-      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/zippo.js"
-    },
-    {
-      "id": "yuheng.wuai",
-      "name": "吾爱破解",
-      "descs_html": [
-        "<a style='color:#686de0;display:block;text-align:center;' target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/52pojie.js'>脚本链接</a>"
-      ],
-      "keys": ["wuai_debug", "wuai_cookie", "wuai_bark_key"],
-      "settings": [
-        {
-          "id": "wuai_debug",
-          "name": "是否开启调试模式",
-          "val": false,
-          "type": "boolean",
-          "desc": ""
-        },
-        {
-          "id": "wuai_cookie",
-          "name": "Cookie",
-          "val": null,
-          "type": "textarea",
-          "rows": 5,
-          "desc": ""
-        },
-        {
-          "id": "wuai_bark_key",
-          "name": "Bark密钥",
-          "val": null,
-          "type": "text",
-          "desc": "填写后只使用Bark推送"
-        }
-      ],
-      "author": "@yuheng",
-      "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/52pojie.png",
-        "https://raw.githubusercontent.com/Yuheng0101/X/main/Assets/52pojie.png"
-      ],
-      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/52pojie.js"
-    },
-    {
-      "id": "yuheng.douban",
-      "name": "豆瓣电影日历",
-      "descs_html": [
-        "<a style='color:#686de0;display:block;text-align:center;' target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/douban.js'>脚本链接</a>"
-      ],
-      "keys": ["douban_debug", "douban_api_key", "douban_bark_push"],
-      "settings": [
-        {
-          "id": "douban_debug",
-          "name": "是否开启调试模式",
-          "val": false,
-          "type": "boolean",
-          "desc": ""
-        },
-        {
-          "id": "douban_api_key",
-          "name": "豆瓣接口密钥",
-          "val": null,
-          "type": "textarea",
-          "rows": 5,
-          "desc": "不知道可不填, 已默认"
-        },
-        {
-          "id": "douban_bark_push",
-          "name": "Bark密钥",
-          "val": null,
-          "type": "text",
-          "desc": "填写后只使用Bark推送"
-        }
-      ],
-      "author": "@yuheng",
-      "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://is3-ssl.mzstatic.com/image/thumb/Purple126/v4/90/5d/f8/905df82a-0e2e-5a2c-2be6-cc690fb0bec0/AppIcon-0-0-1x_U007emarketing-0-0-0-6-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/144x144bb.png",
-        "https://is3-ssl.mzstatic.com/image/thumb/Purple126/v4/90/5d/f8/905df82a-0e2e-5a2c-2be6-cc690fb0bec0/AppIcon-0-0-1x_U007emarketing-0-0-0-6-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/144x144bb.png"
-      ],
-      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/douban.js"
-    },
-    {
-      "id": "yuheng.qdreader",
-      "name": "起点读书自动签到",
-      "descs_html": [
-        "<a style='color:#686de0;display:block;text-align:center;' target='_blank' href='https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/QDReader/README.md'>使用说明</a>"
-      ],
-      "keys": ["QDREADER_DEBUG","QDREADER_COOKIE","QDREADER_ADV_JOB_ENABLE","QDREADER_EXTRA_ADV_JOB_ENABLE","QDREADER_LOTTERY_ENABLE","QDREADER_WEEKLY_EXCHANGE_ENABLE","QDREADER_CHAPTER_CARD_ENABLE","QDREADER_MESSAGE_BOX_ENABLE"],
-      "settings": [
-        {
-          "id": "QDREADER_DEBUG",
-          "name": "是否开启调试模式",
-          "val": false,
-          "type": "boolean",
-          "desc": ""
-        },
-        {
-          "id": "QDREADER_COOKIE",
-          "name": "起点读书Cookie",
-          "val": "",
-          "type": "textarea",
-          "rows": 10,
-          "desc": ""
-        },
-        {
-          "id": "QDREADER_ADV_JOB_ENABLE",
-          "name": "激励任务",
-          "val": false,
-          "type": "boolean",
-          "desc": "开启后执行激励碎片任务"
-        },
-        {
-          "id": "QDREADER_EXTRA_ADV_JOB_ENABLE",
-          "name": "每日任务",
-          "val": false,
-          "type": "boolean",
-          "desc": "开启后执行每日广告任务"
-        },
-        {
-          "id": "QDREADER_LOTTERY_ENABLE",
-          "name": "每日抽奖",
-          "val": false,
-          "type": "boolean",
-          "desc": "开启后执行每日抽奖"
-        },
-        {
-          "id": "QDREADER_WEEKLY_EXCHANGE_ENABLE",
-          "name": "每周兑换",
-          "val": false,
-          "type": "boolean",
-          "desc": "开启后周日自动兑换章节卡"
-        },
-        {
-          "id": "QDREADER_CHAPTER_CARD_ENABLE",
-          "name": "章节卡片",
-          "val": false,
-          "type": "boolean",
-          "desc": "开启后查询章节卡信息"
-        },
-        {
-          "id": "QDREADER_MESSAGE_BOX_ENABLE",
-          "name": "大咖荐书",
-          "val": false,
-          "type": "boolean",
-          "desc": "开启后处理大咖荐书消息(加书架抽奖/看视频抽奖)"
-        }
-      ],
-      "author": "@yuheng",
-      "repo": "https://github.com/Yuheng0101/X",
-      "icons": [
-        "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/97/40/5e/97405e49-87bb-3f0a-bf3a-91cf8fdf99a0/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-GLES2_U002c0-85-220.png/144x144.png",
-        "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/97/40/5e/97405e49-87bb-3f0a-bf3a-91cf8fdf99a0/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-GLES2_U002c0-85-220.png/144x144.png"
-      ],
-      "script": "https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/QDReader/qdreader.js"
-    }
-  ]
+    ]
 }
