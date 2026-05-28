@@ -10,7 +10,7 @@
 #!date=2026-05-28
 
 [Script]
-http-response ^https?:\/\/newapi.+\.(sbhq85ek|bhw6gjej)\.c(n|om)\/api\/(video\/play(New|Video)|user\/read|bootstrap|operation\/ads|popup\/|video\/recommend|v1\/homeIndex|rich_new\/index|recommend\/flow|content\/getNav|monographic\/list) script-path=http://192.168.110.62:5502/Scripts/NaiCha/index.js, requires-body=true, timeout=30, tag=奶茶视频解锁
+http-response ^https?:\/\/newapi.+\.(sbhq85ek|bhw6gjej)\.c(n|om)\/api\/(video\/play(New|Video)|user\/read|bootstrap|operation\/ads|popup\/|video\/recommend|v1\/homeIndex|rich_new\/index|recommend\/flow|content\/getNav|monographic\/list) script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/NaiCha/index.js, requires-body=true, timeout=30, tag=奶茶视频解锁
 
 [MITM]
 hostname = newapicf.sbhq85ek.com, newapisd.bhw6gjej.com
