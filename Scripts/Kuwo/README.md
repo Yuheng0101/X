@@ -1,40 +1,51 @@
 # 酷我音乐
 
-去除全局广告、解锁会员权限，支持切换音质（最高无损）。
+**功能：**
 
----
+- 去除全局广告
+- 解锁会员权限
+- 支持切换音质（最高无损）
 
-## 使用方法
+## 安装
 
-### QuantumultX
+### Surge / Egern / Shadowrocket
 
-在 **远程重写** 中粘贴以下链接，并打开 **资源解析器**：
-
-```
-https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Kuwo/kuwo.js
-```
-
-### Surge / Egern
-
-在模块管理中安装 `.sgmodule` 文件：
+1. 复制以下安装链接，在 Surge / Egern / Shadowrocket 中安装：
 
 ```
 https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Kuwo/kuwo.sgmodule
 ```
 
-### Loon / Shadowrocket / Stash 等
+2. 或手动添加：**模块 → 安装新模块**，粘贴上方链接
+3. 确保已开启 MITM 并信任证书
 
-通过 [Script-Hub](https://github.com/Script-Hub-Org/Script-Hub) 将脚本转换为对应平台格式后使用。
+### Quantumult X
+
+1. 确保 QX 已开启 **资源解析器**
+2. 复制以下安装链接，在 QX 中添加：
+
+```
+https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Kuwo/kuwo.js
+```
+
+### Loon / Stash
+
+使用 [Script-Hub](https://github.com/Script-Hub-Org/Script-Hub) 将 `kuwo.sgmodule` 转换为对应平台格式后导入。
+
+## BoxJS
+
+```
+https://raw.githubusercontent.com/Yuheng0101/X/refs/heads/main/Tasks/boxjs.json
+```
+
+## 注意事项
+
+- 首次使用需在 BoxJS 中同意免责声明
+- 脚本仅修改客户端本地响应数据，不提供任何破解或盗版内容
+- 严禁付费分发、转卖或二次分装本脚本
 
 ---
 
-📢 [频道](https://t.me/onz3v_channel) · 👥 [群组](https://t.me/onz3v_group)
+加入 [群组](https://t.me/onz3v_group) 反馈问题。
 
----
-
-## 免责声明
-
-- 本项目仅供个人学习与研究，所有脚本运行于本地，不收集、不上传任何用户数据。
-- 脚本通过修改本地响应内容实现功能，不对任何服务器发起攻击或干扰。
-- 使用本项目所产生的一切后果由使用者自行承担，作者不承担任何法律责任。
-- 请勿将本项目用于商业用途或任何违反当地法律法规的行为。
+订阅 [频道](https://t.me/onz3v_channel) 获取更新动态。

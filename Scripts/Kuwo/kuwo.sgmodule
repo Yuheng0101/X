@@ -6,32 +6,17 @@
 #!homepage= https://t.me/onz3v_channel
 #!openUrl= https://t.me/onz3v_channel
 #!feedback= https://t.me/onz3v_group
-#!version= 3.0.0
-#!date= 2026-05-11
+#!version= 4.0.0
+#!date= 2026-05-29
 
 [Map Local]
-^https?:\/\/mobilead\.kuwo\.cn\/EcomResourceServer\/(getIOSIsHideAd|getMotor)\.do data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/mobilead\.kuwo\.cn\/EcomResourceServer\/get(IOSIsHideAd|Motor)\.do data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https?:\/\/rich\.kuwo\.cn\/(AdService|ecom)\/kaiping\/ad[iI]nfo data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https?:\/\/wapi\.kuwo\.cn\/openapi\/v1\/user\/adVip\/info data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https?:\/\/wapi\.kuwo\.cn\/openapi\/v1\/operate(\/(adVip|freeMode\/h5))?\/text data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https?:\/\/ad\.tencentmusic\.com\/config\/uni data-type=text data=" " status-code=200 header="Content-Type:application/json"
-^https?:\/\abt-kuwo\.tencentmusic\.com\/kuwo\/ui\/info data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-
+^https?:\/\/wapi\.kuwo\.cn\/openapi\/v1\/user\/((adVip|pop|freeMode\/h5)\/)?(info|text|homePage) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/appi\.kuwo\.cn\/kuwopay\vip-tab\/setting data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
-酷我修改会员信息 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/vip\/enc\/user\/vip, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Kuwo/kuwo.js, requires-body=true, max-size=-1, timeout=60
-酷我修改音乐信息 = type=http-request, pattern=^https?:\/\/music(pay)?\.kuwo\.cn\/music.pay\?newver=3, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Kuwo/kuwo.js, requires-body=true, max-size=-1, timeout=60
-酷我修改播放接口 = type=http-response, pattern=^https?:\/\/.+\.kuwo\.cn\/mobi\.s\?f=kwxs&q=, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Kuwo/kuwo.js, requires-body=true, max-size=-1, timeout=60
-酷我听书伪装会员 = type=http-response, pattern=^https?:\/\/tingshu\.kuwo\.cn\/api\/v2\/pay\/app\/getConfigInfo, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Kuwo/kuwo.js, requires-body=true, max-size=-1, timeout=60
-酷我听书列表横幅 = type=http-response, pattern=^https?:\/\/tingshu\.kuwo\.cn\/v2\/api\/pay\/payInfo\/kwplayer\/payMiniBar, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Kuwo/kuwo.js, requires-body=true, max-size=-1, timeout=60
-酷我修改听书信息 = type=http-request, pattern=^https?:\/\/audiobookpay\.kuwo\.cn\/a\.p\?simpleToken=1, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Kuwo/kuwo.js, requires-body=true, max-size=-1, timeout=60
-酷我修改漫剧信息 = type=http-response, pattern=^https?:\/\/audiobookpay\.kuwo\.cn\/a\.p\?newver=3, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Kuwo/kuwo.js, requires-body=true, max-size=-1, timeout=60
-酷我解锁会员皮肤 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/(commercia\/)?vip\/(v2\/theme\?op\=gd|(player\/getStyleListByModel|hanger\/wear)), script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Kuwo/kuwo.js, requires-body=true, max-size=-1, timeout=60
-酷我解锁会员信息 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/vip\/v2\/user\/vip, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Kuwo/kuwo.js, requires-body=true, max-size=-1, timeout=60
-酷我去除装扮横幅 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/commercia\/vip\/dressCenter\/getTabList, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Kuwo/kuwo.js, requires-body=true, max-size=-1, timeout=60
-酷我个人信息修改 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/commercia\/vipTab\/myTab\/base, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Kuwo/kuwo.js, requires-body=true, max-size=-1, timeout=60
-酷我下载信息修改 = type=http-response, pattern=^https?:\/\/vip1\.kuwo\.cn\/commercia\/userAssets\/downloadCoupon\/reduce, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Kuwo/kuwo.js, requires-body=true, max-size=-1, timeout=60
-酷我首页去除推广 = type=http-response, pattern=^https?:\/\/homepages\.kuwo\.cn(\.eo\.dnse1\.com)?\/mgxh\.s, script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Kuwo/kuwo.js, requires-body=true, max-size=-1, timeout=60
+酷我音乐重写 = type=http-response, pattern=^https?:\/\/(?:vip1\.kuwo\.cn\/(?:vip\/enc\/user\/vip|vip\/v2\/user\/vip|(?:commercia\/)?vip\/(?:v2\/theme\?op=gd|player\/getStyleListByModel|hanger\/wear)|commercia\/vip\/dressCenter\/getTabList|commercia\/vipTab\/myTab\/base)|.+\.kuwo\.cn\/mobi\.s\?f=(?:kuwo|kwxs)\&q=|music(?:pay)?\.kuwo\.cn\/music\.pay\?newver=3|tingshu\.kuwo\.cn\/(?:api\/v2\/pay\/app\/getConfigInfo|v2\/api\/pay\/payInfo\/kwplayer\/payMiniBar)|audiobookpay\.kuwo\.cn\/a\.p|homepages\.kuwo\.cn(?:\.eo\.dnse1\.com)?\/mgxh\.s), script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Kuwo/kuwo.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
-hostname = %APPEND% *.kuwo.cn, ad.tencentmusic.com, abt-kuwo.tencentmusic.com
+hostname = %APPEND% *.kuwo.cn

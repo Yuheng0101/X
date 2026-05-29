@@ -5,14 +5,6 @@
 - 去除全局广告
 - 解锁会员权限
 
-## 支持平台
-
-| 平台                         | 安装方式                                                        | 插件文件      |
-| ---------------------------- | --------------------------------------------------------------- | ------------- |
-| Loon / Egern                 | 安装 Plugin                                                     | `loon.plugin` |
-| Quantumult X                 | 安装 `远程重写`（需开启资源解析器）                             | —             |
-| Surge / Shadowrocket / Stash | [Script-Hub](https://github.com/Script-Hub-Org/Script-Hub) 转换 | —             |
-
 ## 安装
 
 ### Loon / Egern
