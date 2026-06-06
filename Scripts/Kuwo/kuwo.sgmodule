@@ -12,11 +12,11 @@
 [Map Local]
 ^https?:\/\/mobilead\.kuwo\.cn\/EcomResourceServer\/get(IOSIsHideAd|Motor)\.do data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https?:\/\/rich\.kuwo\.cn\/(AdService|ecom)\/kaiping\/ad[iI]nfo data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https?:\/\/wapi\.kuwo\.cn\/openapi\/v1\/user\/((adVip|pop|freeMode\/h5)\/)?(info|text|homePage) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/wapi\.kuwo\.cn\/openapi\/v\d+\/(?:user\/)?(?:(?:config|adVip|pop|freeMode(?:\/h5)?)(?:\/))?(?:info|text|homePage|message|give\/time)(?:[/?#]|$) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https?:\/\/appi\.kuwo\.cn\/kuwopay\vip-tab\/setting data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
-酷我音乐重写 = type=http-response, pattern=^https?:\/\/(?:vip1\.kuwo\.cn\/(?:vip\/enc\/user\/vip|vip\/v2\/user\/vip|(?:commercia\/)?vip\/(?:v2\/theme\?op=gd|player\/getStyleListByModel|hanger\/wear)|commercia\/vip\/dressCenter\/getTabList|commercia\/vipTab\/myTab\/base)|.+\.kuwo\.cn\/mobi\.s\?f=(?:kuwo|kwxs)\&q=|music(?:pay)?\.kuwo\.cn\/music\.pay\?newver=3|tingshu\.kuwo\.cn\/(?:api\/v2\/pay\/app\/getConfigInfo|v2\/api\/pay\/payInfo\/kwplayer\/payMiniBar)|audiobookpay\.kuwo\.cn\/a\.p|homepages\.kuwo\.cn(?:\.eo\.dnse1\.com)?\/mgxh\.s), script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Kuwo/kuwo.js, requires-body=true, max-size=-1, timeout=60
+酷我音乐 = type=http-response, pattern=^https?:\/\/(?:vip1\.kuwo\.cn\/(?:vip\/enc\/user\/vip|vip\/v2\/user\/vip|(?:commercia\/)?vip\/(?:v2\/theme\?op=gd|player\/getStyleListByModel|hanger\/wear)|commercia\/vip\/dressCenter\/getTabList|commercia\/vipTab\/myTab\/base)|.+\.kuwo\.cn\/mobi\.s\?f=(?:kuwo|kwxs)\&q=|music(?:pay)?\.kuwo\.cn\/music\.pay\?newver=3|wapi\.kuwo\.cn\/openapi\/v1\/user\/freeMode\/give\/time|tingshu\.kuwo\.cn\/(?:api\/v2\/pay\/app\/getConfigInfo|v2\/api\/pay\/payInfo\/kwplayer\/payMiniBar)|audiobookpay\.kuwo\.cn\/a\.p|homepages\.kuwo\.cn(?:\.eo\.dnse1\.com)?\/mgxh\.s), script-path=http://192.168.110.62:9999/scripts-webpack/src/Crack/kuwo/kuwo.min.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
 hostname = %APPEND% *.kuwo.cn
